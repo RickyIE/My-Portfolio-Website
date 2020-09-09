@@ -1,0 +1,1021 @@
+
+
+/*    */
+
+
+:root {
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+/*  BODY STYLE - the below code gets rid of empty space on the borders and centres the background
+  to give the effect of stable presence */
+
+body {
+
+    background-size: cover;
+    background: url("../Images/abstract-background-1061100_1920.jpg") fixed;
+    /*Credits - https://pixabay.com/bg/illustrations/%D0%B0%D0%B1%D1%81%D1%82%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D0%BD-%D1%84%D0%BE%D0%BD-%D0%B0%D0%B1%D1%81%D1%82%D1%80%D0%B0%D0%BA%D1%82%D0%BD%D0%BE-%D0%BC%D0%B8%D0%BD%D0%B8%D0%BC%D0%B0%D0%BB%D0%BD%D0%BE-1061100/*/
+    margin: 0;
+    padding: 0;
+    height: auto;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*    */
+
+.Wrapper{
+    background-color: rgba(211,212,216,0.70);
+    width: 75vw;
+    min-height: 100vh;
+    margin:auto;
+    box-shadow:10px 0px 30px black;
+    border-radius: 20px 20px 0px 0px;
+    position: relative;
+    opacity: 1.000;
+
+
+}
+
+
+
+
+/*  ---------------------------------------- Nav bar ---------------------------------------- */
+
+.NavBar {
+    width: 75vw;
+    position:fixed;
+    z-index: 100;
+
+}
+
+
+.NavBarTop {
+
+    height: 2rem;
+    width: 100%;
+    background: url("../Images/abstract-1063236_1280.jpg")center center;
+    /*Credit - https://pixabay.com/bg/illustrations/%D0%B0%D0%B1%D1%81%D1%82%D1%80%D0%B0%D0%BA%D1%82%D0%BD%D0%BE-%D1%81%D0%B2%D0%B5%D1%82%D1%8F%D1%82-%D0%BA%D0%B0%D0%BB%D0%B5%D0%B9%D0%B4%D0%BE%D1%81%D0%BA%D0%BE%D0%BF%D0%B8%D1%87%D0%BD%D0%B0-1063236/*/
+    opacity: 0.650;
+    border-radius: 20px 20px 0 0;
+    z-index: 109;
+
+}
+
+.MenuList {
+    position: relative;
+    max-height: 80vh;
+    z-index: 0;
+    padding: 3rem 1rem;
+    margin: 0;
+    display: none;
+    grid-gap:3rem;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2, 2.5rem);
+
+}
+
+.MenuList a {
+    background-color: whitesmoke;
+    padding: 0.5rem;
+    list-style: none;
+    text-align: center;
+    border-radius: 2rem;
+    font-size: 0.8rem;
+    z-index: 111;
+    max-width: 15rem;
+    border: 1px black solid;
+
+}
+
+.MenuList a:hover{
+    background-color: yellowgreen;
+    transform:scale(1.1);
+    transition-duration: 0.4s;
+    border: white 2px solid;
+    box-shadow: 5px 5px 20px black;
+    cursor: pointer;
+}
+
+
+
+.MenuListBackground {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url("../Images/abstract-1063236_1280.jpg")center no-repeat;
+    /* Credits - https://pixabay.com/bg/illustrations/%D0%B0%D0%B1%D1%81%D1%82%D1%80%D0%B0%D0%BA%D1%82%D0%BD%D0%BE-%D1%81%D0%B2%D0%B5%D1%82%D1%8F%D1%82-%D0%BA%D0%B0%D0%BB%D0%B5%D0%B9%D0%B4%D0%BE%D1%81%D0%BA%D0%BE%D0%BF%D0%B8%D1%87%D0%BD%D0%B0-1063236/*/
+    background-size: cover;
+    z-index: 107;
+    opacity: 1;
+
+}
+
+.MenuListBackground {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: whitesmoke;
+    opacity: 0.650;
+
+}
+
+.NavBarBottom {
+
+    height: 2rem;
+    width: 100%;
+    background: url("../Images/abstract-background-1061100_1920.jpg");
+    opacity: 0.350;
+    border-radius:  0 0 20px 20px;
+    box-shadow: 10px 10px 20px black;
+    z-index: 109;
+
+
+}
+
+
+.MenuButton {
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 2.1rem;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    z-index: 150;
+    border: 2px rgba(40,40,80,0.86) solid;
+}
+
+.MenuButton:hover {
+    /*transform:scale(1.0);*/
+    transition-duration: 0.4s;
+    border: 2px lightcyan solid;
+    box-shadow: 5px 5px 10px lightcyan;
+    color: lightblue;
+    cursor: pointer;
+}
+
+
+
+.MenuButton p {
+    font-size: .8rem;
+    font-weight: bold;
+}
+
+
+/*  ---------------------------------------- Nav bar ---------------------------------------- */
+
+
+
+/*  ---------------------------------------- Index Grid ---------------------------------------- */
+
+#indexWrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,1fr);
+    grid-auto-rows: auto;
+    grid-gap:5rem;
+}
+
+
+
+/*  ---------------------------------------- SlideShow ---------------------------------------- */
+
+
+
+
+ #SlideShow {
+     grid-column: 2/ -2;
+     grid-row:2/3;
+     display: flex;
+     flex-direction: column;
+     height: 25rem;
+
+ }
+
+
+ #Container {
+     display: flex;
+     position: relative;
+     border:0.35rem white solid;
+     width: 98%;
+     height: 100%;
+     max-width: 50rem;
+     border-radius: 1rem;
+     background-color: yellow;
+     box-shadow: 20px 20px 50px -20px black;
+     transition-duration: 2s;
+     align-self: center;
+
+
+ }
+
+#Slide1, #Slide2, #Slide3, #Slide4 {
+
+    width: 100px;
+    height: 100%;
+    overflow: hidden;
+    background-color: green;
+    transition-duration: 2s;
+    transform-style: preserve-3d;
+}
+
+
+#Slide1{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #2d6200;
+    left: 0;
+    border-radius: 1rem;
+ }
+
+.Slide1Div1 {
+    background:url("../Images/Head_Pic.jpg") center center;
+    background-size: cover;
+    border-radius: 1rem 0 0 1rem;
+
+}
+
+.Slide1Div2 {
+    background:url("../Images/laptop-3174729_1280.jpg") center center;
+    /*Credits https://pixabay.com/bg/photos/%D0%BB%D0%B0%D0%BF%D1%82%D0%BE%D0%BF-%D0%B1%D0%B5%D0%BB%D0%B5%D0%B6%D0%BD%D0%B8%D0%BA%D0%B0-macbook-%D0%BF%D1%80%D0%BE-3174729/*/
+    background-size: cover;
+
+    border-radius: 0 1rem 1rem 0;
+
+
+}
+
+
+.Slide1Div2 p {
+    color: black;
+    padding: 4rem;
+
+}
+
+
+
+
+#Slide2{
+    background-color: rebeccapurple;
+    left: 100px;
+}
+
+#Slide3{
+    background-color: #01BBFF;
+    left: 200px;
+}
+
+#Slide4{
+    left: 300px;
+    background-color: #3c4043;
+
+}
+
+#PageCounter {
+    width: 100%;
+    height: 5px;
+    background-color: cyan;
+    position: absolute;
+    align-self: flex-end;
+}
+
+#MobileButtons {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    min-height: 20%;
+    align-self: center;
+    margin-bottom: auto;
+    transition-duration: 2s;
+}
+
+
+#LeftButton, #RightButton {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    text-align: center;
+    background-color: ghostwhite;
+    opacity: 0.500;
+    margin: 5px;
+    transition-duration: 2s;
+
+}
+
+
+#LeftButton:hover, #RightButton:hover {
+    opacity: 1.000;
+    transition-duration: 1s;
+    cursor: pointer;
+
+}
+
+
+
+
+
+
+
+/*  ---------------------------------------- SlideShow ---------------------------------------- */
+
+/*  ---------------------------------------- Language Buttons ---------------------------------------- */
+
+
+
+#LanguagePanel {
+    grid-row: 3/4;
+    grid-column: 1/-2;
+    background-color: #3c4043;
+    display: flex;
+    justify-content: center;
+    box-shadow: 20px 20px 50px -20px black;
+    border-radius: 20rem 2rem 20rem 2rem;
+    text-align: left;
+    color: gold;
+    font-size: 1.5rem;
+    min-height: 5rem;
+
+
+}
+
+#LanguagePanel p {
+
+    padding: 1rem;
+}
+
+#LanguageButtons {
+    grid-row: 4/5;
+    grid-column: 2/-2;
+    grid-gap: 5px;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(12rem,1fr));
+    grid-auto-rows: 12rem;
+    justify-content: center;
+    justify-items: center;
+    min-height: 25rem;
+
+}
+
+.LanguageButton{
+    display: flex;
+    position: relative;
+    width: 10rem;
+    height: 10rem;
+    border: 1px white solid;
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 10px 50px -20px  black;
+
+
+}
+
+.LanguageButton:active {
+    transform: scale(0.950);
+}
+
+.LanguageButtonInner {
+    position: absolute;
+    border-radius: 100%;
+    width: 9rem;
+    height: 9rem;
+    box-shadow: none;
+    transition-duration: 1s;
+    animation-duration: 2s;
+    transform-origin: bottom;
+}
+
+.LanguageButton:hover {
+    cursor:pointer;
+}
+
+
+.LanguageButtonInner:hover{
+    transform-style: preserve-3d;
+}
+
+#LanguageButtonInner1 {
+    background: url("../Images/Icons/HTML5Icon.png") center,center no-repeat;
+    border: 2px solid orangered;
+    background-size: cover;
+
+}
+
+#LanguageButtonInner1:hover {
+    box-shadow: 0px 0px 15px 10px orangered;
+
+}
+
+#LanguageButtonInner2 {
+    background: url("../Images/Icons/CSS3Icon.png") center, center no-repeat;
+    border: 2px solid dodgerblue;
+    background-size: cover;
+
+}
+
+#LanguageButtonInner2:hover {
+    box-shadow: 0px 0px 15px 10px dodgerblue;
+
+}
+
+#LanguageButtonInner3 {
+    background: url("../Images/Icons/JSIcon.png") center, center no-repeat;
+    border: 2px solid yellow;
+    background-size: cover;
+
+
+}
+
+#LanguageButtonInner3:hover {
+    box-shadow: 0px 0px 15px 10px yellow;
+
+}
+#LanguageButtonInner4 {
+    background: url("../Images/Icons/JavaIcon.png") center, center no-repeat;
+    border: 2px solid dodgerblue;
+    background-size: cover;
+
+
+}
+
+#LanguageButtonInner4:hover {
+    box-shadow: 0px 0px 15px 10px red;
+
+}
+
+
+footer {
+    width: 100%;
+    height:100%;
+    background-color: #3c4043;
+    grid-row: 5/6;
+    grid-column: 2/-2;
+    min-height: 20rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 5fr 2fr;
+}
+
+.FooterSection2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.Contact {
+    width: 100%;
+    color: white;
+}
+
+.Contact p{
+    padding-left: 2rem;
+}
+
+.SocialContentLoadBarTop {
+    height: 0.2rem;
+    width: 0%;
+    background-color: white;
+    align-self: flex-start;
+    border-radius: 2px;
+    margin:0.1rem;
+    transition-duration: 1s;
+
+}
+
+
+.fab {
+    color: limegreen;
+    font-size: 2rem;
+}
+
+.fas {
+    font-size: 2rem;
+    color: limegreen;
+}
+
+.fab:hover, .fas:hover{
+    transform: scale(1.3);
+    color: orange;
+    cursor: pointer;
+
+}
+.fab:active, .fas:active{
+    transform: scale(0.980);
+
+}
+
+
+.SocialContent {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
+}
+
+.SocialContentLoadBarBottom {
+    height: 0.2rem;
+    width: 0%;
+    background-color: white;
+    align-self: flex-end;
+    border-radius: 2px;
+    margin:0.1rem;
+    transition-duration: 1s;
+}
+
+
+
+.Disclaimer {
+    grid-column: 1/-1;
+    padding: 0.3rem;
+    background-color: forestgreen;
+    color: white;
+    font-size: 0.8rem;
+    border-radius: 0.5rem;
+}
+
+
+
+
+
+
+
+/*  ---------------------------------------- Language Buttons ---------------------------------------- */
+
+
+/*  ---------------------------------------- Index Grid  ---------------------------------------- */
+
+/*  ---------------------------------------- Projects Grid---------------------------------------- */
+
+
+#ProjectsWrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,1fr);
+    grid-auto-rows: auto;
+    grid-gap:5rem;
+}
+
+.ProgramingLanguagesPanel{
+    grid-column: 2/-2;
+    grid-row: 1/-1;
+    width: 100%;
+    min-height: 35rem;
+    background-color: rgba(255,255,255,0.50);
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+    grid-auto-rows: 300px;
+
+}
+
+
+.LanguageName{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    background-color: #3c4043;
+    display: flex;
+    justify-content: center;
+    box-shadow: 20px 20px 50px -20px black;
+    text-align: left;
+    color: gold;
+    font-size: 1.5rem;
+    height: 5rem;
+    border: 1px solid goldenrod;
+
+
+}
+
+.ProgramingLanguagesPanel2{
+    grid-column: 2/-2;
+    grid-row: 2/0;
+    width: 100%;
+    min-height: 35rem;
+    background-color: rgba(255,255,255,0.50);
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+    grid-auto-rows: 300px;
+
+}
+
+.LanguageName2{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    background-color: #3c4043;
+    display: flex;
+    justify-content: center;
+    box-shadow: 20px 20px 50px -20px black;
+    text-align: left;
+    color: gold;
+    font-size: 1.5rem;
+    height: 5rem;
+    border: 1px solid goldenrod;
+
+
+}
+
+#LanguageName p {
+    padding: 1rem;
+}
+
+.Card {
+    width: 160px;
+    height: 250px;
+    border-radius: 8px;
+    display: grid;
+    grid-template-rows: 130px 70px 50px;
+    grid-template-columns: 160px;
+    box-shadow: 10px 10px 20px black;
+    border: 1px solid yellowgreen;
+
+
+
+    /*position: fixed;*/
+    /*z-index: 1100;*/
+    /*left: 50%;*/
+    /*margin-right: -50%;*/
+    /*transform: translate(-50%, -50%);*/
+    /*top:20vh;*/
+
+
+}
+
+.CardImage {
+    border-radius: 8px 8px 0 0;
+    background: url("../Images/placeholder-1-e1533569576673-960x960.png") center center;
+    background-size: cover;
+
+}
+
+.CardText {
+    background-color: whitesmoke;
+
+}
+.CardText p{
+    text-align: justify;
+    font-size: 10px;
+    margin: 2px;
+    font-family: "Comic Sans MS", Arial;
+}
+
+
+.CardBase {
+    border-radius: 0px 0px 8px 8px;
+    display: grid;
+    background-color: whitesmoke;
+    justify-items: center;
+    align-items: center;
+    /*position: absolute;*/
+
+}
+
+.CardButtonOne {
+    background-color: rgba(133,255,85,0.10);
+    display: flex;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border: 1px yellowgreen solid   ;
+    color: yellowgreen;
+    box-shadow: 5px 5px 5px -5px black;
+
+}
+.CardButtonOne p{
+    position: absolute;
+    font-size: 8px;
+    font-weight: bold;
+}
+
+.CardButtonOne:hover {
+    transition-duration: 0.4s;
+    border: 2px lightcyan solid;
+    box-shadow: 5px 5px 15px -5px lightgreen;
+    color: lightgreen;
+}
+
+.CardButtonOne:active {
+    transform: scale(0.800); /* fix and adjust when turning back the scew property for teh proper card code view window*/
+    transition-duration: 0s;
+}
+
+
+
+
+.Card:hover {
+    cursor: pointer;
+    /*transform: rotate(-5deg);*/
+    transform: scale(1.5);
+    transition-duration: 0.5s;
+}
+
+.Card:active {
+    cursor: pointer;
+    transform: scale(1.400); /* fix and adjust when turning back the scew property for teh proper card code view window 0.900*/
+    transition-duration: 0.1s;
+}
+
+#Panel1CardImage1 {
+    background: url("../Images/myfirstwebsite.jpg") left, center no-repeat;
+    background-size: cover;
+}
+
+#Panel1CardImage2 {
+    background: url("../Images/mysecondwebsite.jpg") left, center no-repeat;
+    background-size: cover;
+}
+#Panel1CardImage3 {
+    background: url("../Images/mythirdwebsite.jpg") center, center no-repeat;
+    background-size: cover;
+}
+#Panel1CardImage4 {
+    background: url("../Images/myforthwebsite.jpg") center, center no-repeat;
+    background-size: cover;
+}
+#Panel1CardImage5 {
+    background: url("../Images/myfifthwebsite.jpg") left, center no-repeat;
+    background-size: cover;
+}
+
+#Panel2CardImage1 {
+    background: url("../Images/lottery-3846567_640.jpg") left, center no-repeat;
+    background-size: cover;
+    /* Credit  -  https://pixabay.com/bg/photos/lotto-%D0%B1%D0%B8%D0%BD%D0%B3%D0%BE-%D0%BB%D0%BE%D1%82%D0%B0%D1%80%D0%B8%D1%8F-%D0%BF%D0%BE%D0%B1%D0%B5%D0%B4%D0%B8%D1%82%D0%B5%D0%BB-3846567/*/
+}
+
+#Panel2CardImage2 {
+    background: url("../Images/2048_Monotonicity.png") left, center no-repeat;
+    background-size: cover;
+    /* Credit  -  https://upload.wikimedia.org/wikipedia/commons/8/83/2048_Monotonicity.png*/
+}
+#Panel2CardImage3 {
+    background: url("../Images/rotor-cipher-machine-1147801_640.jpg") center, center no-repeat;
+    background-size: cover;
+    /* Credit  -  https://pixabay.com/bg/photos/%D1%80%D0%BE%D1%82%D0%BE%D1%80%D0%BD%D0%B0-%D0%BC%D0%B0%D1%88%D0%B8%D0%BD%D0%B0-%D1%88%D0%B8%D1%84%D1%8A%D1%80-%D0%B5%D0%BD%D0%B8%D0%B3%D0%BC%D0%B0-1147801/*/
+}
+#Panel2CardImage4 {
+    background: url("../Images/clinic-5180863_640.jpg") center, center no-repeat;
+    background-size: cover;
+    /* Credit  -  https://pixabay.com/bg/photos/clinic-clinical-cure-%D0%B4%D0%B5%D1%82%D0%B0%D0%B9%D0%BB-doctor-5180863/ */
+}
+#Panel2CardImage5 {
+    background: url("../Images/college-students-3990783_640.jpg") left, center no-repeat;
+    background-size: cover;
+    /* Credit  - https://pixabay.com/bg/photos/%D1%81%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D0%B8-%D0%B4%D0%B8%D0%BF%D0%BB%D0%BE%D0%BC%D0%B0-%D0%B7%D0%B0%D0%B2%D1%8A%D1%80%D1%88%D0%B8%D0%BB-%D0%BF%D0%B8%D1%81%D0%BA%D1%8E%D0%BB-3990783/ */
+}
+
+
+
+
+
+
+
+/*  ---------------------------------------- Projects Grid---------------------------------------- */
+
+
+/*  ---------------------------------------- About Grid---------------------------------------- */
+
+#AboutWrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,1fr);
+    grid-auto-rows: auto;
+    grid-gap:5rem;
+}
+
+.MyNoteAboutMe {
+    grid-column: 2/-2;
+    grid-row: 1/-1;
+    width: 100%;
+    margin-top: 5rem;
+
+}
+
+.NoteContainer {
+    display: flex;
+    justify-content: center;
+
+}
+
+.Note {
+    background-color: #3c4043;
+    width: 70%;
+    border: 2px lightcyan solid;
+    border-radius: 1rem;
+    box-shadow: 20px 20px 50px -20px black;
+}
+
+.Note p {
+    padding: 1rem;
+    border-top: 2px lightcyan solid;
+    border-bottom: 2px lightcyan solid;
+    border-radius: 1rem;
+    color: lightcyan;
+}
+
+.MyCV {
+    grid-column: 2/-2;
+    grid-row: 2/3;
+    width: 100%;
+    min-height: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.MyCVContainer {
+    background-color: #3c4043;
+    border: 2px lightcyan solid;
+    box-shadow: 20px 20px 50px -20px black;
+    width: 60vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+
+}
+
+.CV {
+    width: 90%;
+    height: 90%;
+    align-self: center;
+    justify-self: center;
+    border: 2px lightcyan solid;
+
+}
+
+
+
+/*  ---------------------------------------- About Grid---------------------------------------- */
+
+
+
+
+/* --------------------------------- Styling for mobil devices ipad and smaller ---------------------------------   */
+
+@media screen and (max-width: 768px) {
+
+    .Wrapper  {
+        width: 100vw;
+        border-radius:0;
+    }
+
+
+    /*  ---------------------------------------- Nav bar ---------------------------------------- */
+
+    .NavBar {
+        width: 100vw;
+
+    }
+
+    .NavBarTop {
+        border-radius: 0;
+    }
+
+    .NavBarBottom{
+        border-radius: 0;
+    }
+
+    .MenuList {
+        grid-template-columns: repeat(2,1fr);
+
+    }
+
+    .MenuList a {
+
+        font-size: 0.8rem;
+        max-width: 10rem;
+    }
+
+
+
+
+    /*  ---------------------------------------- Nav bar ---------------------------------------- */
+
+    /*  ---------------------------------------- SlideShow ---------------------------------------- */
+
+    #SlideShow {
+        max-height: 45vh;
+    }
+
+    #MobileButtons {
+        align-self: flex-end;
+
+    }
+
+    #LeftButton, #RightButton {
+        width: 10rem;
+        height: 4.7rem;
+        text-align: center;
+        background-color: ghostwhite;
+        opacity: 0.500;
+        margin:0;
+
+    }
+
+    #LeftButton {
+        border-radius: 0 5rem 0 0;
+        transition-duration: 2s;
+    }
+
+    #RightButton {
+        border-radius: 5rem 0 0 0;
+        transition-duration: 2s;
+    }
+
+    .Slide1Div1 {
+
+    }
+
+    .Slide1Div2 {
+        background:url("../Images/laptop-3174729_1280.jpg") center center;
+        background-size: cover;
+
+
+    }
+
+    .Slide1Div2 p {
+        font-size: 10px;
+        padding: 1rem;
+
+    }
+
+    /*  ---------------------------------------- SlideShow ---------------------------------------- */
+
+    /*  ---------------------------------------- Language Panel ---------------------------------------- */
+
+    #LanguagePanel p {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+    /*  ---------------------------------------- Language Panel ---------------------------------------- */
+
+    /*  ---------------------------------------- Footer ---------------------------------------- */
+
+        footer {
+            grid-template-columns: auto;
+            grid-template-rows: auto;
+        }
+
+        .FooterSection2 {
+            max-width: 100vw;
+        }
+
+    /*  ---------------------------------------- Footer ---------------------------------------- */
+
+
+
+    /*  ---------------------------------------- Projects ---------------------------------------- */
+
+    .ProgramingLanguagesPanel{
+        justify-items: center;
+        grid-template-columns: 1fr;
+
+    }
+
+    .ProgramingLanguagesPanel2{
+        justify-items: center;
+        grid-template-columns: 1fr;
+
+    }
+
+    .LanguageName{
+        font-size: 1rem;
+    }
+
+    .LanguageName2{
+        font-size: 1rem;
+    }
+
+
+    /*  ---------------------------------------- Projects ---------------------------------------- */
+
+
+
+
+    /*  ---------------------------------------- About Me ---------------------------------------- */
+
+
+
+    /*  ---------------------------------------- About Me ---------------------------------------- */
+
+
+
+}
