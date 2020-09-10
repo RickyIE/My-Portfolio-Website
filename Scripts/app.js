@@ -3,9 +3,8 @@
 // -----------------------Index Code -----------------------------//
 
 
-const button = document.querySelector(".MenuButton");
-const menuList = document.querySelector(".MenuList");
-const menuListBackground = document.querySelector(".MenuListBackground");
+
+
 const footerSection2ON = document.querySelector(".FooterSection2");
 footerSection2ON.addEventListener('mouseover', footerSection2AnimationON);
 const footerSection2OFF = document.querySelector(".FooterSection2");
@@ -18,22 +17,11 @@ let currentPage = document.getElementById("Slide");
 
 
 
-button.addEventListener('click', navBarControl);
+
 button.addEventListener('mouseover', navBarLightsOn);
 button.addEventListener('mouseout', navBarLightsOff);
 
 
-
-function navBarControl () {
-    if (menuList.style.display === 'none'){
-        menuList.style.display = 'grid'
-
-    } else {
-        menuList.style.display = 'none'
-    }
-
-
-}
 
 
 function navBarLightsOn () {
