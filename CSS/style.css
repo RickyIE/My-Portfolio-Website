@@ -730,24 +730,24 @@ footer {
 }
 
 #Panel1CardImage1 {
-    background: url("../Images/myfirstwebsite.jpg") left, center no-repeat;
+    background: url("../Images/ProjectsGaleryThumbnails/Website1.jpg") left, center no-repeat;
     background-size: cover;
 }
 
 #Panel1CardImage2 {
-    background: url("../Images/mysecondwebsite.jpg") left, center no-repeat;
+    background: url("../Images/ProjectsGaleryThumbnails/Website2.jpg") left, center no-repeat;
     background-size: cover;
 }
 #Panel1CardImage3 {
-    background: url("../Images/mythirdwebsite.jpg") center, center no-repeat;
+    background: url("../Images/ProjectsGaleryThumbnails/Website3.jpg") center, center no-repeat;
     background-size: cover;
 }
 #Panel1CardImage4 {
-    background: url("../Images/myforthwebsite.jpg") center, center no-repeat;
+    background: url("../Images/ProjectsGaleryThumbnails/Website4.jpg") center, center no-repeat;
     background-size: cover;
 }
 #Panel1CardImage5 {
-    background: url("../Images/myfifthwebsite.jpg") left, center no-repeat;
+    background: url("../Images/ProjectsGaleryThumbnails/Website5.jpg") left, center no-repeat;
     background-size: cover;
 }
 
