@@ -6,13 +6,13 @@ const MiddlePanelAcademicYear = document.querySelector(".MiddlePanelAcademicYear
 let panelIsOpen = false;
 
 function openPanel () {
-    alert(panelIsOpen)
+    // alert(panelIsOpen)
 
     if (panelIsOpen === true) {
         MiddlePanelAcademicYear.style.width = "0%";
-        panelIsOpen = true;
+        panelIsOpen = false;
     } else if (panelIsOpen === false) {
         MiddlePanelAcademicYear.style.width = "60%";
-        panelIsOpen = false;
+        panelIsOpen = true;
     }
 }
