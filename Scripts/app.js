@@ -26,8 +26,8 @@ button.addEventListener('mouseout', navBarLightsOff);
 
 function navBarLightsOn () {
 
-    document.querySelector(".NavBarBottom").style.boxShadow ='5px 5px 10px lightcyan';
-    document.querySelector(".NavBarTop").style.boxShadow ='5px 5px 100px 10px lightcyan';
+    document.querySelector(".NavBarBottom").style.boxShadow ='5px 5px 10px 10px lightcyan';
+    document.querySelector(".NavBarTop").style.boxShadow ='5px 5px 10px 10px lightcyan';
 
 }
 

@@ -159,6 +159,7 @@ body {
     transform: translate(-50%, -50%);
     z-index: 150;
     border: 2px rgba(40,40,80,0.86) solid;
+    outline: none;
 }
 
 .MenuButton:hover {
@@ -168,7 +169,6 @@ body {
     color: lightblue;
     cursor: pointer;
 }
-
 
 
 .MenuButton p {
@@ -219,6 +219,7 @@ body {
      box-shadow: 20px 20px 50px -20px black;
      transition-duration: 2s;
      align-self: center;
+     overflow: hidden;
 
 
  }
@@ -488,10 +489,19 @@ footer {
 .Contact {
     width: 100%;
     color: white;
+
+
+
+
+
+
 }
 
 .Contact p{
     padding-left: 2rem;
+    font-family: "Malgun Gothic", Arial, Helvetica, sans-serif;
+
+
 }
 
 .SocialContentLoadBarTop {
@@ -530,7 +540,7 @@ footer {
 
 .SocialContent {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     padding: 2rem;
 }
 
@@ -557,6 +567,7 @@ footer {
     background-color: forestgreen;
     color: white;
     font-size: 0.8rem;
+    font-family: "Malgun Gothic", Arial, Helvetica, sans-serif;
 }
 
 
@@ -873,6 +884,160 @@ footer {
 
 }
 
+/*.Education * div, .Education > div {*/
+/*    border: 1px red solid;*/
+/*}*/
+
+.Education {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    grid-auto-rows: auto;
+    grid-column: 2/-2;
+    grid-row: 3/4;
+    grid-gap: 5rem;
+}
+
+.EducationBanner {
+    display: flex;
+    border: 2px lightcyan solid;
+    width: 100%;
+    min-height: 5rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    background-color: #3c4043;
+    color: whitesmoke;
+    font-size: 1.3rem;
+    box-shadow: 20px 20px 50px -20px black;
+}
+
+
+.AcademicYear {
+    width: 100%;
+    display: flex;
+    min-height: 30rem;
+    position: relative;
+    align-content: center;
+    justify-content: left;
+    border: 1px red solid;
+    align-self: flex-end;
+
+}
+
+.LeftPanelAcademicYear {
+    min-height: 100%;
+    min-width: 4rem;
+    background-color: #3c4043;
+    box-shadow: 20px 20px 50px -20px black;
+    border-radius: 2rem 0 0 2rem;
+    z-index: 10;
+    border: 1px goldenrod solid;
+}
+.MiddlePanelAcademicYear {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition-duration: 2s;
+    width: 0%;
+    height: 25rem;
+    background-color: rgba(255,255,255,0.26);
+    box-shadow: 20px 20px 50px -20px black;
+    align-self: center;
+}
+
+.MiddlePanelAcademicYear ul{
+    padding-left: 2rem;
+}
+
+.MiddlePanelAcademicYear p{
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: Consolas, Arial, Helvetica, sans-serif;
+
+
+
+}
+
+.MiddlePanelAcademicYear ul > li{
+    padding: 0.20rem;
+    font-style: italic;
+    font-family: "Font Awesome 5 Free", "Arial";
+
+}
+
+
+.MiddlePanelAcademicYearTopRay {
+    height: 0.2rem;
+    background-color: white;
+    box-shadow: 0 0 10px 5px lightgreen;
+}
+
+.MiddlePanelAcademicYearMiddlePanel {
+    height: 90%;
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.MiddlePanelAcademicYearBottomRay {
+    height: 0.2rem;
+    background-color: white;
+    box-shadow: 0 0 10px 5px lightgreen;
+}
+
+
+.RightPanelAcademicYear {
+    display: flex;
+    position: relative;
+    min-height: 100%;
+    min-width: 4rem;
+    background-color: #3c4043;
+    box-shadow: 20px 20px 50px -20px black;
+    border-radius: 0 2rem 2rem 0;
+    z-index: 10;
+    border: 1px goldenrod solid;
+    align-items: center;
+}
+
+
+
+.AcademicPanelButton {
+    position: absolute;
+    height: 5rem;
+    width: 5rem;
+    right: 25px;
+    border-radius: 50%;
+    border: 2px goldenrod solid;
+    outline: none;
+    color: goldenrod;
+
+
+}
+
+.AcademicPanelButton:hover {
+    transition-duration: 0.4s;
+    border: 2px lightgreen solid;
+    box-shadow: 5px 5px 10px lightgreen;
+    cursor: pointer;
+    color: lightgreen;
+}
+
+
+
+.AcademicPanelButton p {
+    font-size: .8rem;
+    font-weight: bold;
+
+}
+
+.AcademicPanelButton:active {
+    transform: scale(0.970);
+    transition-duration: 0s;
+}
+
+
+
+
 
 
 /*  ---------------------------------------- About Grid---------------------------------------- */
@@ -989,6 +1154,26 @@ footer {
 
         .FooterSection2 {
             max-width: 100vw;
+            border: 1px red solid;
+
+
+        }
+
+        .SocialContent {
+            justify-content: center;
+            padding: 1rem;
+            transform: none;
+        }
+
+        .SocialContent * {
+            margin: 0.2rem;
+        }
+        .Contact {
+            align-self: center;
+            text-align: center;
+        }
+        .Disclaimer {
+            font-size: 0.8rem;
         }
 
     /*  ---------------------------------------- Footer ---------------------------------------- */
@@ -1020,7 +1205,11 @@ footer {
 
     /*  ---------------------------------------- Projects ---------------------------------------- */
 
+    /*.MiddlePanelAcademicYear {*/
+    /*    max-width: 90%;*/
+    /*    font-size: 0.9rem;*/
 
+    /*}*/
 
 
     /*  ---------------------------------------- About Me ---------------------------------------- */
@@ -1031,4 +1220,29 @@ footer {
 
 
 
+}
+
+@media screen and (max-width: 475px) {
+
+
+
+
+    /*  ---------------------------------------- Footer ---------------------------------------- */
+
+    .Disclaimer {
+        font-size: 0.6rem;
+    }
+
+    /*  ---------------------------------------- Footer ---------------------------------------- */
+
+
+    /*  ---------------------------------------- Academic Panel ---------------------------------------- */
+
+    .MiddlePanelAcademicYear ul > li{
+
+        font-size: 0.6rem;
+
+    }
+
+    /*  ---------------------------------------- Academic Panel ---------------------------------------- */
 }
