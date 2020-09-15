@@ -18,9 +18,8 @@ a {
   to give the effect of stable presence */
 
 body {
-
     background-size: cover;
-    background: url("../Images/abstract-background-1061100_1920.jpg") fixed;
+    background: url("../Images/abstract-background-1061100_1920.jpg") fixed ;
     /*Credits - https://pixabay.com/bg/illustrations/%D0%B0%D0%B1%D1%81%D1%82%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D0%BD-%D1%84%D0%BE%D0%BD-%D0%B0%D0%B1%D1%81%D1%82%D1%80%D0%B0%D0%BA%D1%82%D0%BD%D0%BE-%D0%BC%D0%B8%D0%BD%D0%B8%D0%BC%D0%B0%D0%BB%D0%BD%D0%BE-1061100/*/
     margin: 0;
     padding: 0;
@@ -263,6 +262,8 @@ body {
 
 .Slide1Div2 p {
     color: black;
+    font-family: "Yu Gothic Medium";
+    font-weight: bold;
     padding: 4rem;
 
 }
@@ -717,6 +718,10 @@ footer {
 
 }
 
+.Card:hover {
+    box-shadow: 0px 0px 10px 3px yellowgreen;
+}
+
 .CardButtonOne {
     background-color: rgba(133,255,85,0.10);
     display: flex;
@@ -811,6 +816,60 @@ footer {
     background: url("../Images/college-students-3990783_640.jpg") left, center no-repeat;
     background-size: cover;
     /* Credit  - https://pixabay.com/bg/photos/%D1%81%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D0%B8-%D0%B4%D0%B8%D0%BF%D0%BB%D0%BE%D0%BC%D0%B0-%D0%B7%D0%B0%D0%B2%D1%8A%D1%80%D1%88%D0%B8%D0%BB-%D0%BF%D0%B8%D1%81%D0%BA%D1%8E%D0%BB-3990783/ */
+}
+
+.OverLay  {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    position: absolute;
+    border: 2px red solid;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 200vh;
+    z-index: 1000;
+}
+
+
+.OverLay *  {
+    border: 2px red solid;
+}
+
+.HaloIcon {
+    position: absolute;
+    background-color: rgba(255,255,255,0.50);
+    width: 15rem;
+    height: 15rem;
+    border-radius: 100%;
+    border: 3px white solid;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 10%);
+    box-shadow: 0px 0px 1px 1px goldenrod;
+
+}
+
+.ProjectDisplayBody {
+    position: absolute;
+    width: 80vw;
+    height: 100px;
+}
+
+
+.Test {
+    width: 100px;
+    height: 2000px;
+    background-color: #2d6200;
+
+
+}
+
+#ProjectsWrapper {
+    filter: blur(10px);
+
 }
 
 
