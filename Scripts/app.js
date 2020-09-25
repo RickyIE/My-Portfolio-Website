@@ -17,13 +17,6 @@ let currentPage = document.getElementById("Slide");
 
 
 
-
-button.addEventListener('mouseover', navBarLightsOn);
-button.addEventListener('mouseout', navBarLightsOff);
-
-
-
-
 function navBarLightsOn () {
 
     document.querySelector(".NavBarBottom").style.boxShadow ='5px 5px 10px 10px lightcyan';
@@ -39,8 +32,8 @@ function navBarLightsOff () {
 
 }
 
-let leftButton = document.getElementById("LeftButton").addEventListener('click', carouselMovementBackward);;
-let rightButton = document.getElementById("RightButton").addEventListener('click', carouselMovementForward);;
+// let leftButton = document.getElementById("LeftButton").addEventListener('click', carouselMovementBackward);
+// let rightButton = document.getElementById("RightButton").addEventListener('click', carouselMovementForward);
 let count=1;
 
 
