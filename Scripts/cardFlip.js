@@ -62,7 +62,8 @@ styleArray = () => { // store all the original values for the cards
             window.getComputedStyle(cardsClassArray[i]).transform,
             window.getComputedStyle(cardsClassArray[i]).zIndex,
             window.getComputedStyle(cardsClassArray[i]).rotate,
-            cardsClassArray[i].parentElement.className
+            cardsClassArray[i].parentElement.className,
+            window.getComputedStyle(cardsClassArray[i]).animationDuration
         ];
 
     }
