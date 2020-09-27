@@ -15,19 +15,33 @@ let cardsOriginalValues=[];
 var flipped = false;
 
 
+/* ------------------------------ Overlay Builder ------------------------------ */
+
+var documentTabsSelector = document.querySelector(".DocumentTabs");
+var documentButton = [];
+var documentButtonInner = [];
+var codeTabsSelector = document.querySelector(".CodeTabs");
+var codeTabButton = [];
+var codeTabButtonInner = [];
+var gitHubOverlayLink = document.getElementById("ViewFullCodeLink");
+var downloadCodeOverlayLink = document.getElementById("HalloButtonDownloadCodeLink");
+
+/* ------------------------------ Overlay Builder ------------------------------ */
+
+
 
 /*                 FOR TESTING element target function                  */
 
-window.onclick = e => {
-    console.log("ITEM CLICKED")
-    console.log(e.target);
-    console.log("PARENT ELEMENT")
-    console.log(e.target.parentNode);
-    console.log("CHILDREN ELEMENT")
-    console.log(e.target.children);
-    console.log(e.target.children[1]);
-    console.log(cardsClassArray);
-}
+// window.onclick = e => {
+//     console.log("ITEM CLICKED")
+//     console.log(e.target);
+//     console.log("PARENT ELEMENT")
+//     console.log(e.target.parentNode);
+//     console.log("CHILDREN ELEMENT")
+//     console.log(e.target.children);
+//     console.log(e.target.children[1]);
+//     console.log(cardsClassArray);
+// }
 
 
 /*                 FOR TESTING element target function                  */
@@ -35,15 +49,16 @@ window.onclick = e => {
 
 
 
-cardsStack = document.onclick = () => {
+cardsStack = document.onclick = (e) => {
 
 
-    let clickedElement = event.target;
+    let clickedElement = e.target;
 
     for (i=0; i<cardsClassArray.length; i++) {
 
         if (clickedElement === cardsClassArray[i] || clickedElement.parentElement === cardsClassArray[i]){
-            cardFlip(cardsClassArray[i]);
+
+            overlayBuilder(cardsClassArray[i]);
             break;
         }
     }
@@ -67,8 +82,171 @@ styleArray = () => { // store all the original values for the cards
         ];
 
     }
-    console.table(cardsOriginalValues)
-    console.log(cardsClassArray);
+    // console.table(cardsOriginalValues)
+    // console.log(cardsClassArray);
+}
+
+
+function overlayBuilder (e) { // build overlay for each project depending on card clicked
+
+
+
+    for (var i=0; i<cardsClassArray.length; i++) {
+        if (e === cardsClassArray[i]){
+
+
+            var programingTabs = [];
+
+            console.log(documentButton.length);
+
+            if (documentButton.length > 0) {
+
+                buttonRemoval();
+
+            }
+
+
+            var passedReference;
+
+            switch (cardsClassArray[i].id) {
+
+
+
+
+                case "MyFirstWebsite":
+
+                    gitHubOverlayLink.href="https://github.com/RickyIE/Website-Project-1";
+                    downloadCodeOverlayLink.href="Files/HTML_CSS_JS/AleksandarMladenovMyFirstWebsite.zip";
+
+
+                    for (var j=0; j<2; j++) {
+                        documentButton[j] = document.createElement('div');
+                        documentButton[j].setAttribute('class', 'DocumentButton');
+                        documentTabsSelector.appendChild(documentButton[j]);
+
+                        documentButtonInner[j] = document.createElement("div");
+                        documentButtonInner[j].setAttribute("class", "DocumentButtonInner");
+                        documentButtonInner[j].textContent = "Placeholder";
+                        documentButton[j].appendChild(documentButtonInner[j]);
+
+                    }
+
+                    documentButtonInner[0].textContent = "Requirements Document";
+                    documentButtonInner[1].textContent = "Test";
+
+                    for (var k=0; k<2; k++) {
+                        codeTabButton[k] = document.createElement('div');
+                        codeTabButton[k].setAttribute('class', 'CodeTabButton');
+                        codeTabsSelector.appendChild(codeTabButton[k]);
+
+                        codeTabButtonInner[k] = document.createElement("div");
+                        codeTabButtonInner[k].setAttribute("class", "CodeTabButtonInner");
+                        codeTabButtonInner[k].textContent = "Placeholder";
+                        codeTabButton[k].appendChild(codeTabButtonInner[k]);
+
+                    }
+
+                    codeTabButtonInner[0].textContent = "index.html";
+                    codeTabButtonInner[1].textContent = "facts.html";
+
+
+                    cardFlip(cardsClassArray[i]);
+                    break;
+
+
+                case "MySecondWebsite":
+
+                    gitHubOverlayLink.href="https://github.com/RickyIE/Website-Project-2";
+                    downloadCodeOverlayLink.href="Files/HTML_CSS_JS/AleksandarMladenovMySecondWebsite.zip";
+
+                    for (var j=0; j<3; j++) {
+                        documentButton[j] = document.createElement('div');
+                        documentButton[j].setAttribute('class', 'DocumentButton');
+                        documentTabsSelector.appendChild(documentButton[j]);
+
+                        documentButtonInner[j] = document.createElement("div");
+                        documentButtonInner[j].setAttribute("class", "DocumentButtonInner");
+                        documentButtonInner[j].textContent = "Placeholder";
+                        documentButton[j].appendChild(documentButtonInner[j]);
+
+                    }
+
+                    documentButtonInner[0].textContent = "Requirements Document";
+                    documentButtonInner[1].textContent = "Test 1";
+                    documentButtonInner[2].textContent = "Test 2";
+
+
+
+                    for (var k=0; k<6; k++) {
+                        codeTabButton[k] = document.createElement('div');
+                        codeTabButton[k].setAttribute('class', 'CodeTabButton');
+                        codeTabsSelector.appendChild(codeTabButton[k]);
+
+                        codeTabButtonInner[k] = document.createElement("div");
+                        codeTabButtonInner[k].setAttribute("class", "CodeTabButtonInner");
+                        codeTabButtonInner[k].textContent = "Placeholder";
+                        codeTabButton[k].appendChild(codeTabButtonInner[k]);
+
+                    }
+
+                    codeTabButtonInner[0].textContent = "index.html";
+                    codeTabButtonInner[1].textContent = "about.html";
+                    codeTabButtonInner[2].textContent = "bibliography.html";
+                    codeTabButtonInner[3].textContent = "index.css";
+                    codeTabButtonInner[4].textContent = "about.css";
+                    codeTabButtonInner[5].textContent = "bibliography.html";
+
+
+                    cardFlip(cardsClassArray[i]);
+                    break;
+
+                case "MyThirdWebsite":
+
+                    cardFlip(cardsClassArray[i]);
+                    break;
+
+                case "MyForthWebsite":
+
+                    cardFlip(cardsClassArray[i]);
+                    break;
+
+                case "MyFifthWebsite":
+
+                    cardFlip(cardsClassArray[i]);
+                    break;
+
+
+            }
+
+            break;
+        }
+    }
+
+    function buttonRemoval () {
+
+        console.log(documentButton.length)
+
+
+        for (var i=0; i<documentButton.length; i++) {
+            documentButton[i].remove();
+        }
+
+        for (var j=0; j<codeTabButton.length; j++) {
+            codeTabButton[j].remove();
+        }
+
+        documentButton.splice(0,documentButton.length) ; // Clear variables from array
+        documentButtonInner.splice(0,documentButtonInner.length); // Clear variables from array
+        codeTabButton.splice(0,codeTabButton.length) ; // Clear variables from array
+        codeTabButtonInner.splice(0,codeTabButtonInner.length); // Clear variables from array
+
+        console.log(documentButton)
+        console.log(codeTabButton)
+
+
+
+    }
+
 }
 
 
@@ -91,10 +269,7 @@ function cardFlip(card){
             flipped = true;
         }
         else if (flipped === true) {
-            console.log("else");
             for(i=0; i<cardsOriginalValues.length; i++) {
-                    console.log(card);
-                    console.log(i);
                 if (card === cardsOriginalValues[i][0]) {
 
                     card.style.transform = cardsOriginalValues [i][1]
@@ -112,5 +287,6 @@ function cardFlip(card){
             flipped = false;
         }
 }
+
 
 styleArray();

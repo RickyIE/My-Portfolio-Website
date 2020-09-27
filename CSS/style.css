@@ -198,6 +198,17 @@ body {
 
 
 
+.PurpleText {
+    color: #7d2e7e;
+    font-weight: bold;
+}
+
+.BlueText {
+    color: #1a0dab;
+    font-style: italic;
+}
+
+
  #SlideShow {
      grid-column: 2/ -2;
      grid-row:2/3;
@@ -255,7 +266,7 @@ body {
     background:url("../Images/laptop-3174729_1280.jpg") center center;
     /*Credits https://pixabay.com/bg/photos/%D0%BB%D0%B0%D0%BF%D1%82%D0%BE%D0%BF-%D0%B1%D0%B5%D0%BB%D0%B5%D0%B6%D0%BD%D0%B8%D0%BA%D0%B0-macbook-%D0%BF%D1%80%D0%BE-3174729/*/
     background-size: cover;
-
+    font-family: Consolas, Arial, Helvetica, sans-serif;
     border-radius: 0 1rem 1rem 0;
 
 
@@ -266,7 +277,8 @@ body {
     color: black;
     font-family: "Yu Gothic Medium";
     font-weight: bold;
-    padding: 1.5rem;
+    font-size: 0.8rem;
+    padding: 1rem;
 
 }
 
@@ -839,7 +851,7 @@ footer {
     right: 0;
     width: 100vw;
     z-index: 1000;
-    display: grid;
+    display: none;
 
 }
 
@@ -998,8 +1010,8 @@ footer {
     position: relative;
     justify-content: center;
     align-items: center;
-    min-width: 60%;
-    max-width: 60%;
+    min-width: 7rem;
+    max-width: 15rem;
     min-height: 4rem;
     border-radius: 1rem;
     margin: 0.5rem;;
@@ -1020,7 +1032,10 @@ footer {
     border-radius: 1rem;
     align-items: center;
     justify-content: center;
+    font-size: 0.8rem;
+    padding: 2px;
 }
+
 
 .DocumentButtonInner:hover, .CodeTabButtonInner:hover {
     cursor: pointer;
@@ -1430,8 +1445,8 @@ footer {
     }
 
     .Slide1Div2 p {
-        font-size: 10px;
-        padding: 1rem;
+        font-size: 6px;
+        padding: 0.2rem;
 
 
     }
@@ -1510,6 +1525,11 @@ footer {
         max-width: 100vw;
     }
 
+    .outputDocuments, .outputCode {
+        min-height: 40rem;
+
+    }
+
 
     /*  ---------------------------------------- Projects ---------------------------------------- */
 
@@ -1532,8 +1552,18 @@ footer {
 
 @media screen and (max-width: 475px) {
 
+    /*  ---------------------------------------- Index ---------------------------------------- */
 
 
+    .Slide1Div2 {
+        font-size: 0.8rem;
+        padding: 1rem;
+
+
+    }
+
+
+    /*  ---------------------------------------- Index ---------------------------------------- */
 
     /*  ---------------------------------------- Footer ---------------------------------------- */
 
@@ -1548,7 +1578,7 @@ footer {
 
     .BodyWrapper {
         padding: 0;
-        max-width: 100vw;
+        width: 90vw;
     }
 
     .DocumentTabs, .CodeTabs{
@@ -1558,23 +1588,19 @@ footer {
 
     .RequirementsSection, .CodeSection {
         flex-direction: column;
+        max-height: 45rem;
+        margin: 1rem;
     }
 
 
     .DocumentOutputWindow, .CodeOutputWindow  {
         border-radius: 2rem;
-        max-height: 15rem;
+        max-height: 30rem;
         width: 100%;
         box-shadow: 0 -20px 35px -30px black;
         font-size: 0.8rem;
     }
 
-    .CodeSection {
-        grid-column: 1/5;
-        grid-row: 2/2;
-        display: flex;
-
-    }
 
 
 
