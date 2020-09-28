@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About</title> <!-- Page title  -->
+    <link href="css/Page7.css" rel="stylesheet" > <!-- CSS reference  -->
+    <meta name="viewport" content="width=device-width, initial - scale=1.0"> <!-- Meta tag to scale for mobile devices setting the scale to 1 to avoid elements appearing to small   -->
+</head>
+<body>
+        <div class="Grid" id="Top"> <!-- Wrapping Grid for positioning and an Anchor for my to top button  -->
+            <section class="NavigationBar"> <!-- Made sections solely for syntax separation purposes the first contains the header with the navigation bar   -->
+                <header class="Header"> <!-- Header  -->
+                    <div class="NavigationBar"> <!-- Navigation bar  -->
+                        <a href="https://www.linkedin.com/in/aleksandar-mladenov-59b15385/" target="_blank" class="Name">About me: Aleksandar Mladenov 2976196</a> <!--navigation bar with my name linking to my Linked In profile   -->
+                        <input class="Button" type="Checkbox" id="Hamburger"/> <!-- Tag to turn on and off the in-build hamburger menu checkbox will turn to 3 bars mnu  -->
+                        <label class="Bar" for="Hamburger"><span class="Icon"></span></label> <!--  Label for the hamburger menu   -->
+                        <ul class="menu"> <!-- unordered list which will become the menu  -->
+                            <li><a href="Index.html">Main</a></li> <!-- Links to my individual pages  -->
+                            <li><a href="Page2.html">Temujin</a></li><!-- Links to my individual pages  -->
+                            <li><a href="Page3.html">Genghis</a></li><!-- Links to my individual pages  -->
+                            <li><a href="Page4.html">Mongol Empire</a></li><!-- Links to my individual pages  -->
+                            <li><a href="Page5.html">Conclusion</a></li><!-- Links to my individual pages  -->
+                            <li><a href="Page6.html">Bibliography</a></li><!-- Links to my individual pages  -->
+                            <li class="CurrentPage"><a href="Page7.html">About</a></li><!-- Links to my individual pages  -->
+                        </ul>
+                    </div>
+                </header>
+            </section>
+            <div class="Grid1">
+                <section class="GridSub1"><!-- opted in favour of using CSS over HTML inserted images as the Third assignment focuses mostly on CSS -->
+                    <div class="Frame">
+                        <div class="Window">
+                            <div class="Left"></div>
+                            <div class="Right"></div>
+                        </div>
+                    </div>
+                </section>
+                <section class="GridSub2"> <!-- Contains one of several "Paper Panels" this one has the mongol script alphabet on it, decided to use this instead of images as its more flexible and i can amend these inscriptions however i like if i find suitable text to replace them with   -->
+                    <div class="CloudPanel">  <!-- external container  -->
+                        <div class="Cloud"> <!--internal container  -->
+                            <p class="p1">
+                                About Me<!-- would have liked to use <br> on below but did not as not part of assignment-->
+                            <p>
+                                <br>Name: Aleksandar Mladenov.I take my work and my studies seriously but myself not so much.
+                            My spelling is shocking and my coding skills are not much better but im giving it my best.Im originally from Bulgaria but Ireland is home now.
+                            Part-time Financial Adviser part time gym-bunny i have always had a passion for computers since i was a child.
+                            I will do my best to finish this course and I hope to enjoy my work in the field I have always wanted to try.
+                            </p>
+                            <blockquote><p><i><br>Life is what happens to you while you’re busy making other plans...</i></p></blockquote>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="Grid2">
+                <section class="GridSub3"> <!-- Contains one of several "Paper Panels" this one has the mongol script alphabet on it, decided to use this instead of images as its more flexible and i can amend these inscriptions however i like if i find suitable text to replace them with   -->
+                    <div class="PaperPanel">  <!-- external container  -->
+                        <div class="Paper"> <!--internal container  -->
+                            <h1 class="h1">Analysis Document ( <span class="Span1">for full document please see Assignment3/Documents/AnalysisDocument.docx </span>)</h1>
+                            <h2 class="h2">Site Design</h2>
+                            <p>
+                                Initially all I knew is I wanted to do a <span class="Span3">historically based site</span>. After a bit of research, I decided to <span class="Span3">style it like a book</span> running in a linear fashion from left to right and channelling the flow. <span class="Span3">I didn’t do a header</span> because I wanted to naturally incorporate the flow like a person reading a book and flipping pages. I also wanted to let the user have the option to skip chapters or navigate between then which is why I added the navigation bar to let them do that. I wanted to make a clear blue “airflow” bar modern on top of old but in the end, <span class="Span3">I ended up making the “Shadow bar” like a shadow on an old book</span>. I started meddling with mobile design for it and the whole site as visible in the body but that didn’t get far as I didn’t have the time for it.
+                            </p>
+                            <p>
+                                I decided to start by creating self-containing elements and keep stylesheets separated in order to keep the project manageable. <span class="Span3">My idea was to reuse elements</span> and change them according to the specific need of the page. Rather than an overall site design I started building the elements first and then seeing how they fit.
+                            </p>
+                            <p>
+                                The first Idea I had was to build glass panels and overlay them on top of old medieval images, however that didn’t work very well as I wasn’t able to find the right texture. After experimenting a little I found out that <span class="Span3">a good cloud texture I found works very well</span> on some pages I left its position fixed and the clouds are literally moving on scroll. That worked out and then I just <span class="Span3">simplified the cloud panels and made some parchment or paper panels from that</span>. The two panels look very different but are in fact along with <span class="Span3">all the other elements essentially the same thing. A div inside a div inside a div ext. with animations manipulating its parts and positioning it inside a grid</span>
+                            </p>
+                            <p>
+                                <span class="Span3">I didn’t want to overwhelm the user with information</span> though which is why I decided to make the site more <span class="Span3">animated like a comic book</span> or a graphic novel. While I was <span class="Span3">learning from w3school CSS lessons I encountered a lesson about flipping images</span> and that inspired me to play around I wanted to make cards or pages flip with CSS only animations as I thought that would be a more engaging way of storytelling rather than overwhelming them with information. <span class="Span3">A made a simple zooming card and a more complicated flipping one but essentially all the elements are the same although they don’t look like it.</span>
+                                After the flip-cards I played around with the transform origin property and found out that the flip can be manipulated from left to right and depending on the Y, Z and X axis the <span class="Span3">cards can flip like a page</span>. After that I decided to add a few div behind paly around with the transform3d and I was able to make a book which was perfect for a bibliography. Although perhaps not as functional as a scrolling list in my opining at least it’s a very effective way of storytelling.
+
+                            </p>
+                            <p>
+                                <span class="Span3">From the books came the windows</span>, I decided to experiment with one of the books copied 2 covers expanded a div twice the width and used the same rotate property. Moved one of the covers by 50% to the right changed its transform origin to the right side replaced the paper with an image and voila. The wooden and glass window are the same but with a different texture. The Glass texture came from my previous attempts with the glass panel and after reducing the opacity and giving it the minimum possible blur, I was surprised how good it looked. <span class="Span3">The glass panels never materialised but the window looks good</span> (apart from my Head Pic).
+                            </p>
+                            <p>
+                                Finally, the Buttons were born out of necessity I needed a button class, but I couldn’t think of anything better or interesting I could do so I used them. I wanted something better and I did have more ideas for my site but unfortunately, I run out if time and I wasn’t able to accomplish all of them. I chose the bright green colour as its my favourite colour and the rest of the team wasn’t too colourful in that specific range.
+                            </p>
+                            <p>
+                                I started <span class="Span3">experimenting with both flexbox and CSS grid</span> which is why although the page layout says CSS Grid, I do tend to use both. I added shadows to almost all my elements as I noticed that made a huge difference. <span class="Span3">Without the shadows</span> the whole site looks like a flat canvas without much life but with them especially on the moving elements <span class="Span3">they almost look real in some places</span>. The Images are all from <span class="Span3">Wikimedia Commons, Pixabay and a few other sites free licences</span> all were resized and/or optimised with the website https://compressimage.toolur.com/ as most needed custom fitting and or optimisation. I tried to make the site <span class="Span3">as user friendly for navigation as possible</span> although most images are not in html but instead in CSS as I wanted to focus more on that part of the assignment I wanted to experiment and <span class="Span3">use CSS as much as possible if I could over HTML</span>. Although both are used together in harmony the latest part of our semester covered CSS which is why I wanted to practice it as much as I can.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+</body>
+</html>

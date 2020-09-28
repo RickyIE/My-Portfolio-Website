@@ -1,0 +1,402 @@
+*
+    /*   */
+
+{
+    padding: 0px;/*Removes default margins from HTML and sets corners*/
+    margin: 0px; /*Removes default margins from HTML and sets corners*/
+    font-family: "Times New Roman", "Arial";/*change font to a web safe font */
+
+}
+
+
+
+body {/*   */
+    background-size: cover; /*sets the size of the background to cover the whole page no white borders*/
+    background: url('../Images/_tumanba_khan__his_w_dVCf8.jpg') repeat center;/* will allow for a responsive background to change
+       along with window resizing will also repeat if item overflow for any reason occurs to avoid white background*/
+}
+
+a {/*Hyperlinks manipulation   */
+    color: whitesmoke; /* Color change  */
+    text-decoration: none;
+}
+
+
+/*----------------------------------------------------- Navigation Bar ----------------------------------------------   */
+
+
+
+.NavigationBar {/* sets properties inside the Navigation Bar   */
+    background-color: black;/* Color for the whole Navigation Bar  */
+    opacity: 0.9;/* Transparent effect to the whole navigation bar  */
+    position: fixed;/* position will be fixed for the bar on top all the time  */
+    width: 100%;/* stretches the navigation bar to the whole page width  */
+    z-index: 3; /* if there is other content underneath menu it will slide over  */
+    min-height: 60px;/* Sets the minimum size of the bar   */
+    filter: drop-shadow(0px 15px 15px black); /*adds a white hue drop shadow effect below nav bar*/
+
+}
+
+.NavigationBar ul {/* Targets the ul list inside the Navigation Bar  */
+    margin: 0; /* sets the margin and padding to 0 for a tight menu  */
+    padding: 0; /* sets the margin and padding to 0 for a tight menu  */
+    lis-style:none; /* Clears the bullets from the hyperlinks  */
+    overflow: hidden; /* Hides anything going out of bounds  */
+    background-image:url("../Images/genghis_khan___jebe.jpg") ; /* Color for the UL  */
+    background-size: cover; /* stretches the image to cover the container*/
+    border-radius: 10px; /* Curves drop down menu */
+}
+
+.NavigationBar li a {/* Targets th individual hyperlinks inside the list  */
+    display: block; /* will change the hyperlinks to blocks  */
+    padding: 20px 20px; /*change back to 10 overall */
+    text-decoration: none; /* remove underlining   */
+    color: black; /* Set color of hyperlinks inside menu for individual pages   */
+    font-style: oblique; /* Changes the font style of the menu individual pages   */
+    font-size: 2em; /* changes the font-size relative to the element   */
+    font-weight: bolder ;
+}
+
+.NavigationBar li a:hover , .NavigationBar .Button:hover{/* Targets th individual hyperlinks inside the list while hovering  */
+    background-color:lightblue;/* color when hovering over   */
+    border-radius: 10px;  /*ads smooth edges to highlight*/
+    text-decoration: none; /* Removes decoration  */
+}
+
+.NavigationBar .Name {
+    float: left; /* Floats name to the left  */
+    display: block;/* will display the hyperlinks in block format as a whole element  */
+    font-size: 2em; /* Changes font size relative to other elements to X times size  */
+    padding: 20px 0px 0px 0px; /* adds padding on top of name only  */
+    text-decoration: none; /* remove underlining   */
+    font-style: italic;/* Changes font to italic  */
+    font-weight: bold; /* emphasises text  */
+}
+.NavigationBar .menu{
+    clear:both;/* Menu will be cleared below left floated element name, and my name will appear above  */
+    max-height:0; /* will collapse and expand the menu, starting by default as 0 the menu is collapses   */
+    transition: max-height 0.8s ease; /* will animate above property transition */
+
+}
+
+
+.NavigationBar .Bar{/* will target element to form the menu icon on right hand side   */
+    user-select: none;
+    float: right; /* moves menu to the right  */
+    position: relative; /* parent for span (child) which will have absolute positioning  */
+    padding: 30px; /* padding for hamburger */
+    cursor: pointer; /* will change cursor to pointer when hovering over menu  */
+    background-color:WindowFrame; /* adds a separate color to hamburger  */
+    border-radius: 20px 0px 0px 20px; /* smooth edges on left side */
+    border: 1px solid white; /* adds a small border for styling purposes around hamburger */
+
+
+
+}
+.NavigationBar .Bar .Icon:before{/* Pseudo element to create the hamburger top icon  */
+    background-color: darkgoldenrod; /* set color of bars  */
+    content:''; /* Needed to add bars  */
+    display: block; /* set to display as a block element  */
+    height: 100%; /* Sets size same as parent */
+    position: absolute;/* Will position the element in the same place as parent   */
+    width: 100%; /* Sets size same as parent */
+    top: 7px; /* bar above parent*/
+    transition:all .2s ease-out;/* Animation for the menu  */
+
+}
+
+.NavigationBar .Bar .Icon{/* To create the hamburger middle icon  */
+    background-color: darkgoldenrod; /* set color of bars  */
+    display: block; /* set to display as a block element  */
+    height: 2px; /* height size  */
+    width: 20px; /* width size   */
+    position: relative; /* position of element relative to others  */
+    transition: background .2s ease-out; /* Animation for the menu  */
+}
+
+.NavigationBar .Bar .Icon:after { /* Pseudo element to create the hamburger bottom icon  */
+    background-color: darkgoldenrod; /* set color of bars  */
+    content: ''; /* Needed to add bars  */
+    display: block; /* set to display as a block element  */
+    height: 100%; /* Sets size same as parent */
+    position: absolute; /* Will position the element in the same place as parent   */
+    width: 100%; /* Sets size same as parent */
+    top: -7px; /* bar above parent*/
+    transition:all .2s ease-out;/* Animation for the menu  */
+
+}
+
+.NavigationBar .Button {
+    display: none; /* removes the checkbox needed for hamburger   */
+}
+.NavigationBar .Button:checked ~ .menu { /* when the menu button is checked the ~ symbol will target all UL in the menu */
+    max-height: 550px; /* menu will expand with above transition max height to fit all 7 pages or more if needed  */
+}
+
+@media (min-width: 40em) { /* media query to size set to 40em mostly for mobile devices, the media query will run the statement in the curly brackets only if condition inside brackets is true min-width*/
+    .NavigationBar li { /* Make sure that the menu list is always floated to teh   */
+        float: left;
+    }
+    .NavigationBar li a { /* Add appropriate padding   */
+        padding: 20px 30px;
+    }
+    .NavigationBar .menu {
+        clear: none; /* clears the menu so the elements do not overlap each other  */
+        float: right; /* floats them to the right */
+        max-height: none; /* sets the max height to none */
+    }
+    .NavigationBar .Bar {
+        display: none; /* Removes the hamburger if menu is stretched and fully visible   */
+    }
+
+}
+
+.NavigationBar .CurrentPage a { /* targets current page links on the bar to give a sense of which page teh user is on*/
+    font-weight: bold;
+    background: greenyellow;
+    border-radius: 10px;
+}
+
+
+
+/*----------------------------------------------------- Navigation Bar ----------------------------------------------   */
+
+
+/*----------------------------------------------------- Cloud Panels /  ----------------------------------------------   */
+
+.CloudPanel { /* Base control element, highly customisable no need to rewrite the same code over and over but can simply amend on each page    */
+    position: relative; /* sets positioning for the elements  */
+    display: flex; /* will display items flexibly  */
+    justify-content: center; /* centers the content  */
+    align-items: center; /* centers the item  */
+    max-width: 100%;/* set max size  */
+    max-height: 600px; /* set max size  */
+
+}
+
+.CloudPanel .Cloud {/* offset element   */
+    position: relative;/* sets positioning for the elements  */
+    padding: 50px;
+    filter: drop-shadow(100px 100px 100px black);  /* Gives a small sense of 3D perspective  */
+    overflow: hidden;
+    border-radius: 20px;
+
+}
+.CloudPanel .Cloud h1 {  /* paragraph element  */
+    position: relative;/* sets positioning for the elements  */
+    font-size: 3em; /* font size in em  */
+    overflow: hidden; /* hide overflow */
+    color: black; /* font colour  */
+    font-weight: bold; /* font bold  */
+    font-style: italic;
+    font-family: SansSerif;
+
+}
+.CloudPanel .Cloud p {  /* paragraph element  */
+    position: relative;/* sets positioning for the elements  */
+    margin: 0px; /* margin inside element that is handled above in the upper element */
+    padding: 0px;/* adding inside element hat is handled above in the upper element */
+    font-size: 1.8em; /* font size in em  */
+    overflow: hidden; /* hide overflow */
+    color: black; /* font colour  */
+    font-weight: bold; /* font bold  */
+    line-height: 1.5; /* sets space between lines for better readability  */
+
+}
+.CloudPanel .Cloud p a {  /* paragraph element  */
+    color: blue;
+}
+
+.CloudPanel .Cloud:before { /* before pseudo element */
+    content: ''; /* insert content property used in pseudo element  */
+    position: absolute;/* sets positioning for the elements  */
+    top: -30px; /* offset by 30 px */
+    left: -30px; /* offset by 30 px */
+    right: -30px; /* offset by 30 px */
+    bottom: -30px; /* offset by 30 px */
+    filter: blur(0px); /* blur filter still unsure of which value works best */
+    background: url("../Images/light_1282314_1280.jpg"); /* Fixed property creates a nice movement effect for the clouds as the user is scrolling  */
+    background-size: cover; /* stretch teh background */
+    opacity: 0.80; /* set opacity */
+    border: solid 2px red; /* mostly for testing */
+}
+
+
+/*----------------------------------------------------- Cloud Panels  ----------------------------------------------   */
+
+/*----------------------------------------------------- Cards  ----------------------------------------------   */
+/*   */
+
+.Card {/* Main containing element for cards  */
+    position: relative; /* position will be relative to its normal position   */
+    min-height: 500px; /* Minimal height  */
+    min-width:350px; /* Minimal weight allowed  */
+    border-radius: 3%; /* curve corners for better styling  */
+}
+.CardBody { /* Holds the front and back elements */
+    position: absolute; /* will be positioned relative to the nearest positioned ancestor keeping the cards together  */
+    width: 100%; /* Width will be 100% of parent container  */
+    height: 100%; /* Height will be 100% of parent container  */
+    transform-style: preserve-3d;/* will let the element preserve the transformation  */
+    transition:all 1s ease; /* will determine the time it will take to flip card  */
+    border-radius: 3%; /* curve corners for better styling  */
+
+}
+.CardFront {
+    position: absolute; /* will be positioned relative to the nearest positioned ancestor keeping the cards together  */
+    width: 100%; /* Width will be 100% of parent container  */
+    height: 100%; /* Height will be 100% of parent container  */
+    backface-visibility: hidden; /* hiding backface will eliminate flicker bugs   */
+    display: flex; /* Will allow to use flexbox for below alignments   */
+    background-size: cover; /* will contain element if a resize is necessary without overlapping on bottom card text  */
+    align-items: flex-end; /* using flex puts text on the bottom  */
+    justify-content: center; /* using flex centers text on the bottom  */
+    border-radius: 3%; /* curve corners for better styling  */
+}
+
+.CardFront p{
+    font-style: italic; /* Sets font to italic  */
+    font-family: "Times New Roman"; /* Choose font  */
+    font-size: 2em; /* Size of text in em  */
+    padding: 3%; /* Adds padding */
+    color: black; /* Front font color   */
+    text-transform: uppercase;/* Styling to bring attention  */
+}
+.CardBack p a{
+    color: blue;
+}
+.CardBack {
+    position: absolute; /* will be positioned relative to the nearest positioned ancestor keeping the cards together  */
+    width: 100%; /* Width will be 100% of parent container  */
+    height: 100%; /* Height will be 100% of parent container  */
+    backface-visibility: hidden;/* hiding backface will eliminate flicker bugs   */
+    transform: rotateY(180deg); /* rotate the card horizontally along the Y axis 180 degrees   */
+    align-items: center; /* centres text  */
+    justify-content: space-around; /* justify elements   */
+    border-radius: 3%; /* curve corners for better styling  */
+    display: flex; /* Will allow to use flexbox for below alignments   */
+    background-image: url("../Images/Old_paper7.jpg"); /* Back of card image  */
+
+}
+.CardBack p { /* formats paragraphs   */
+    padding: 10%; /* padding around text  */
+    font-style: italic; /* font style   */
+    font-family: "Times New Roman"; /* font type  */
+    font-size: 2.0em; /* font size in em   */
+    color: black; /* font color   */
+    line-height: 1.5; /* sets space between lines for better readability  */
+}
+.CardBody:hover{ /* rotates body on hoover  */
+    transform:rotateY(180deg);/* rotate the card horizontally along the Y axis 180 degrees  */
+}
+
+
+/*----------------------------------------------------- Cards  ----------------------------------------------   */
+
+
+
+/*----------------------------------------------------- Button  ----------------------------------------------   */
+
+.ButtonBanner {/* Gives me the option of adding multiple buttons instead of 1  */
+    display: flex;/* Display as flex to allow formatting  */
+    justify-content: center;/* Format center of button elements */
+    align-items: center;/* Format center of button elements   */
+}
+
+.Button {/*   */
+    display: inline-block;/* Display as an inline block container allowing for inline format but keeping structure as a block*/
+    background-color: limegreen;/* Default color  */
+    cursor: pointer; /* Visual indication when over a hyperlink button  */
+    border-radius: 10px; /* Smooth borders  */
+    padding: 10px; /* Padding inside buttons inside banner  */
+    filter: drop-shadow(0 5px 5px black); /* Shadow for effect  */
+    transition: background-color 0.8s; /* adds a transition animation   */
+    margin: 20px; /* margin outside buttons inside banner  */
+    min-height: 25px; /* size height purely added to keep buttons the same size and shape if adding different text  */
+    min-width:100px; /* size wide purely added to keep buttons the same size and shape if adding different text  */
+    text-transform: uppercase;
+}
+
+.Button:hover{
+    background-color: greenyellow;/* Hover colour  */
+
+}
+.Button a { /* Button hyperlink format  */
+    color: black; /* text color  */
+    display: flex; /* format flex  */
+    justify-content: stretch;/* Format center of button elements */
+    align-items: center;/* Format center of button elements   */
+}
+
+/*----------------------------------------------------- Button  ----------------------------------------------   */
+
+/*----------------------------------------------------- CSS Grid   ----------------------------------------------   */
+
+#Card1 {     /* Individual control of cards with ID as different images have a different attributes  */
+    min-height: 770px;
+    min-width: 640px;
+}
+#CardFront1{
+    background: url("../Images/mongol_soldiers_by_r_HsJoA.jpg") no-repeat; /* will avoid brick style repeat and braking of image  */
+    background-size: cover;
+}
+#Card2 {    /* Individual control of cards with ID as different images have a different attributes  */
+    min-height: 770px;
+    min-width: 640px;
+}
+#CardFront2{
+    background: url("../Images/babur_setting_out_wi_4mcws.jpg") no-repeat; /* will avoid brick style repeat and braking of image  */
+    background-size: cover;
+}
+#Card3 {    /* Individual control of cards with ID as different images have a different attributes  */
+    min-height: 770px;
+    min-width: 640px;
+}
+#CardFront3{
+    background: url("../Images/tuluiwithqueensorgaq_PTIRf.jpg") no-repeat center; /* will avoid brick style repeat and braking of image  */
+    background-size: cover;
+}
+#Card4 {    /* Individual control of cards with ID as different images have a different attributes  */
+    min-height: 770px;
+    min-width: 640px;
+}
+#CardFront4{
+    background: url("../Images/tangra_.jpg") no-repeat center; /* will avoid brick style repeat and braking */
+    background-size: cover;
+}
+
+
+.Grid1 { /* main wrapper for grid   */
+    padding-top: 200px;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-column-gap: 1em;
+    grid-row-gap: 3em ;
+
+}
+
+.GridSub1 {/* houses left side elements  */
+    justify-self: center;
+    align-self: center;
+    max-width: 90%;
+    max-height: 90%;
+    margin: 100px;
+
+
+}
+.GridSub2 {/* houses right side elements   */
+    justify-self: center;
+    align-self: center;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 50px;
+    border-radius: 2%;
+    /*background:url("../Images/Old_paper2.jpg");*/
+    background-size: cover;
+    filter: drop-shadow(100px 100px 100px black);  /* Gives a small sense of 3D perspective  */
+    margin: 50px;
+}
+
+.ButtonBanner {/* sets properties for this page specifically*/
+    font-size: 2em;
+}

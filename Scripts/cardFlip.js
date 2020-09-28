@@ -11,6 +11,7 @@ const closeButton = document.getElementById("HalloButtonClose").onclick = ()=>{
     cardFlip(currentCardOnDisplay);
 };
 
+
 let cardsOriginalValues=[];
 var flipped = false;
 
@@ -25,6 +26,7 @@ var codeTabButton = [];
 var codeTabButtonInner = [];
 var gitHubOverlayLink = document.getElementById("ViewFullCodeLink");
 var downloadCodeOverlayLink = document.getElementById("HalloButtonDownloadCodeLink");
+var projectReference;
 
 /* ------------------------------ Overlay Builder ------------------------------ */
 
@@ -45,6 +47,7 @@ var downloadCodeOverlayLink = document.getElementById("HalloButtonDownloadCodeLi
 
 
 /*                 FOR TESTING element target function                  */
+
 
 
 
@@ -117,6 +120,8 @@ function overlayBuilder (e) { // build overlay for each project depending on car
 
                     gitHubOverlayLink.href="https://github.com/RickyIE/Website-Project-1";
                     downloadCodeOverlayLink.href="Files/HTML_CSS_JS/AleksandarMladenovMyFirstWebsite.zip";
+                    projectReference = "MyFirstWebsite";
+
 
 
                     for (var j=0; j<2; j++) {
@@ -132,7 +137,12 @@ function overlayBuilder (e) { // build overlay for each project depending on car
                     }
 
                     documentButtonInner[0].textContent = "Requirements Document";
+                    documentButtonInner[0].onclick = () => {
+                        document.getElementById("populateDocumentsIframe").src="https://meetalex.org/";
+
+                    }
                     documentButtonInner[1].textContent = "Test";
+                    // documentButtonInner[0].addEventListener('onclick',overlayButtonsControl(projectReference));
 
                     for (var k=0; k<2; k++) {
                         codeTabButton[k] = document.createElement('div');
@@ -247,6 +257,10 @@ function overlayBuilder (e) { // build overlay for each project depending on car
 
     }
 
+}
+
+function overlayButtonsControl (e) {
+    alert(e)
 }
 
 
