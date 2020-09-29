@@ -118,13 +118,13 @@ function overlayBuilder (e) { // build overlay for each project depending on car
 
                 case "MyFirstWebsite":
 
-                    gitHubOverlayLink.href="https://github.com/RickyIE/Website-Project-1";
-                    downloadCodeOverlayLink.href="Files/HTML_CSS_JS/AleksandarMladenovMyFirstWebsite.zip";
-                    projectReference = "MyFirstWebsite";
+                    gitHubOverlayLink.href="https://github.com/RickyIE/Website-Project-2"; // AMEND
+                    downloadCodeOverlayLink.href="Files/HTML_CSS_JS/AleksandarMladenovMySecondWebsite.zip"; // AMEND
+                    projectReference = "MySecondtWebsite"; // AMEND
 
 
 
-                    for (var j=0; j<2; j++) {
+                    for (var j=0; j<3; j++) { // AMEND
                         documentButton[j] = document.createElement('div');
                         documentButton[j].setAttribute('class', 'DocumentButton');
                         documentTabsSelector.appendChild(documentButton[j]);
@@ -136,13 +136,28 @@ function overlayBuilder (e) { // build overlay for each project depending on car
 
                     }
 
-                    documentButtonInner[0].textContent = "Requirements Document";
+                    document.getElementById("populateDocumentsIframe").src = "ProjectsArchive/0001_MyFirstWebsite/PreviewDocs/Introduction.pdf"  // AMEND
+
+                    documentButtonInner[0].textContent = "Introduction";
+
                     documentButtonInner[0].onclick = () => {
-                        document.getElementById("populateDocumentsIframe").src="https://meetalex.org/";
+                        document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0001_MyFirstWebsite/PreviewDocs/Introduction.pdf";
 
                     }
-                    documentButtonInner[1].textContent = "Test";
-                    // documentButtonInner[0].addEventListener('onclick',overlayButtonsControl(projectReference));
+
+                    documentButtonInner[1].textContent = "Document Requirements";
+
+                    documentButtonInner[1].onclick = () => {
+                        document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0001_MyFirstWebsite/PreviewDocs/Requirements.pdf";
+
+                    }
+
+                    documentButtonInner[2].textContent = "View Website";
+
+                    documentButtonInner[2].onclick = () => {
+                        document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0001_MyFirstWebsite/index.html";
+
+                    }
 
                     for (var k=0; k<2; k++) {
                         codeTabButton[k] = document.createElement('div');
@@ -156,8 +171,21 @@ function overlayBuilder (e) { // build overlay for each project depending on car
 
                     }
 
+                    document.getElementById("populateCodeIframe").src="ProjectsArchive/0001_MyFirstWebsite/PreviewDocs/index.pdf";
+
                     codeTabButtonInner[0].textContent = "index.html";
+
+                    codeTabButtonInner[0].onclick = () => {
+                        document.getElementById("populateCodeIframe").src="ProjectsArchive/0001_MyFirstWebsite/PreviewDocs/index.pdf";
+
+                    }
+
                     codeTabButtonInner[1].textContent = "facts.html";
+
+                    codeTabButtonInner[1].onclick = () => {
+                        document.getElementById("populateCodeIframe").src="ProjectsArchive/0001_MyFirstWebsite/PreviewDocs/facts.pdf";
+
+                    }
 
 
                     cardFlip(cardsClassArray[i]);
@@ -166,10 +194,13 @@ function overlayBuilder (e) { // build overlay for each project depending on car
 
                 case "MySecondWebsite":
 
-                    gitHubOverlayLink.href="https://github.com/RickyIE/Website-Project-2";
-                    downloadCodeOverlayLink.href="Files/HTML_CSS_JS/AleksandarMladenovMySecondWebsite.zip";
+                    gitHubOverlayLink.href="https://github.com/RickyIE/Website-Project-2"; // AMEND
+                    downloadCodeOverlayLink.href="Files/HTML_CSS_JS/AleksandarMladenovMySecondWebsite.zip"; // AMEND
+                    projectReference = "MySecondWebsite"; // AMEND
 
-                    for (var j=0; j<3; j++) {
+
+
+                    for (var j=0; j<3; j++) { // AMEND
                         documentButton[j] = document.createElement('div');
                         documentButton[j].setAttribute('class', 'DocumentButton');
                         documentTabsSelector.appendChild(documentButton[j]);
@@ -181,11 +212,14 @@ function overlayBuilder (e) { // build overlay for each project depending on car
 
                     }
 
-                    documentButtonInner[0].textContent = "Requirements Document";
-                    documentButtonInner[1].textContent = "Test 1";
-                    documentButtonInner[2].textContent = "Test 2";
+                    document.getElementById("populateDocumentsIframe").src = "ProjectsArchive/0001_MyFirstWebsite/PreviewDocs/Introduction.pdf"  // AMEND
 
+                    documentButtonInner[0].textContent = "Introduction";
 
+                    documentButtonInner[0].onclick = () => {
+                        document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0001_MyFirstWebsite/PreviewDocs/Introduction.pdf";
+
+                    }
 
                     for (var k=0; k<6; k++) {
                         codeTabButton[k] = document.createElement('div');
@@ -199,12 +233,14 @@ function overlayBuilder (e) { // build overlay for each project depending on car
 
                     }
 
+                    document.getElementById("populateCodeIframe").src = "ProjectsArchive/0001_MySecondWebsite/PreviewDocs/index.pdf"
+
                     codeTabButtonInner[0].textContent = "index.html";
-                    codeTabButtonInner[1].textContent = "about.html";
-                    codeTabButtonInner[2].textContent = "bibliography.html";
-                    codeTabButtonInner[3].textContent = "index.css";
-                    codeTabButtonInner[4].textContent = "about.css";
-                    codeTabButtonInner[5].textContent = "bibliography.html";
+
+                    codeTabButtonInner[0].onclick = () => {
+                        document.getElementById("populateCodeIframe").src="ProjectsArchive/0001_MyFirstWebsite/PreviewDocs/index.pdf"
+
+                    }
 
 
                     cardFlip(cardsClassArray[i]);

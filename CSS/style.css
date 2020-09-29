@@ -719,10 +719,11 @@ footer {
 
 .CardBase {
     border-radius: 0px 0px 8px 8px;
-    display: grid;
+    display: flex;
     background-color: whitesmoke;
-    justify-items: center;
     align-items: center;
+    justify-content: space-evenly;
+
     border-bottom: 1.5px yellowgreen solid;
     border-left: 1.5px yellowgreen solid;
     border-right: 1.5px yellowgreen solid;
@@ -735,13 +736,13 @@ footer {
             , inset 0px 0px 10px 1px green   ;
 }
 
-.CardButtonOne {
-    background-color: rgba(133,255,85,0.10);
+.CardButtonOpenCode {
+    background-color:rgba(246,255,36,0.31);
     display: flex;
     width: 45px;
     height: 45px;
+    padding: 0.3rem;
     border-radius: 100%;
-    text-align: center;
     align-items: center;
     justify-content: center;
     border: 1px yellowgreen solid   ;
@@ -749,20 +750,55 @@ footer {
     box-shadow: 5px 5px 5px -5px black;
 
 }
-.CardButtonOne p{
+.CardButtonOpenCode p{
     position: absolute;
     font-size: 8px;
     font-weight: bold;
+    text-align: center;
 }
 
-.CardButtonOne:hover {
+.CardButtonOpenCode:hover {
     transition-duration: 0.4s;
     border: 2px lightcyan solid;
     box-shadow: 5px 5px 15px -5px lightgreen;
     color: lightgreen;
 }
 
-.CardButtonOne:active {
+.CardButtonOpenCode:active {
+    transform: scale(0.800); /* fix and adjust when turning back the scew property for teh proper card code view window*/
+    transition-duration: 0s;
+}
+
+
+.CardButtonDownload {
+    background-color: rgba(133,255,85,0.10);
+    display: flex;
+    width: 45px;
+    height: 45px;
+    padding: 0.3rem;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+    border: 1px yellowgreen solid   ;
+    color: yellowgreen;
+    box-shadow: 5px 5px 5px -5px black;
+
+}
+.CardButtonDownload p{
+    position: absolute;
+    font-size: 8px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.CardButtonDownload:hover {
+    transition-duration: 0.4s;
+    border: 2px lightcyan solid;
+    box-shadow: 5px 5px 15px -5px lightgreen;
+    color: lightgreen;
+}
+
+.CardButtonDownload:active {
     transform: scale(0.800); /* fix and adjust when turning back the scew property for teh proper card code view window*/
     transition-duration: 0s;
 }
@@ -844,7 +880,6 @@ footer {
     grid-gap: 1rem;
     transition-duration: 1s;
     position: absolute;
-    border: 2px red solid;
     top: 0;
     left: 0;
     bottom: 0;
@@ -1034,6 +1069,7 @@ footer {
     justify-content: center;
     font-size: 0.8rem;
     padding: 2px;
+    text-align: center;
 }
 
 
