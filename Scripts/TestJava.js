@@ -51,3 +51,12 @@ const test3 = document.querySelector('.Card');
 //     }
 // };
 // loopFunction();
+
+
+// let array = ["Some","one","new"];
+//
+// console.log(array);
+//
+// array.unshift("Is there");
+//
+// console.log(array);

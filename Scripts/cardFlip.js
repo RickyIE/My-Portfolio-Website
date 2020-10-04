@@ -2,9 +2,11 @@
 
 
 
-const cardsClassArray= document.getElementsByClassName('Card'); // every element in the cards class inside this arrary
+let cardsClassArray= document.getElementsByClassName('Card'); // every element in the cards class inside this arrary
 const overlay = document.querySelector(".OverLay");
 const projectsWrapper = document.getElementById("ProjectsWrapper");
+
+
 let currentCardOnDisplay;
 
 const closeButton = document.getElementById("HalloButtonClose").onclick = ()=>{
@@ -27,6 +29,41 @@ var codeTabButtonInner = [];
 var gitHubOverlayLink = document.getElementById("ViewFullCodeLink");
 var downloadCodeOverlayLink = document.getElementById("HalloButtonDownloadCodeLink");
 var projectReference;
+
+
+
+
+for (var i=0; i<cardsClassArray.length; i++) {
+        cardsClassArray[i].addEventListener("click", function (e){
+
+            let clickedElement = e.target;
+
+            console.log("cardsClassArray[i]")
+
+            console.log(cardsClassArray[i])
+
+            console.log(e.target)
+
+
+
+            for (i=0; i<cardsClassArray.length; i++) {
+
+                if (clickedElement === cardsClassArray[i] ||
+                    clickedElement.parentElement === cardsClassArray[i] ||
+                    clickedElement === cardsClassArray[i].childNodes[5].childNodes[3] ||
+                    clickedElement === cardsClassArray[i].childNodes[5].childNodes[3].childNodes[1]){
+
+                    overlayBuilder(cardsClassArray[i]);
+                    break;
+                }
+            }
+
+            // cardsClassArray[i].childNodes[5].childNodes[3]
+
+    })
+}
+
+
 
 /* ------------------------------ Overlay Builder ------------------------------ */
 
@@ -52,20 +89,26 @@ var projectReference;
 
 
 
-cardsStack = document.onclick = (e) => {
-
-
-    let clickedElement = e.target;
-
-    for (i=0; i<cardsClassArray.length; i++) {
-
-        if (clickedElement === cardsClassArray[i] || clickedElement.parentElement === cardsClassArray[i]){
-
-            overlayBuilder(cardsClassArray[i]);
-            break;
-        }
-    }
-};
+// cardsStack = document.onclick = (e) => {
+//
+//
+//     let clickedElement = e.target;
+//
+//     // console.log(clickedElement)
+//     //
+//     // console.log(cardsClassArray[0].childNodes[5].childNodes[3])
+//     //
+//     // console.log(cardsClassArray[0].childNodes[5].childNodes[3].childNodes[1])
+//
+//     for (i=0; i<cardsClassArray.length; i++) {
+//
+//         if (clickedElement === cardsClassArray[i] || clickedElement.parentElement === cardsClassArray[i]){
+//
+//             overlayBuilder(cardsClassArray[i]);
+//             break;
+//         }
+//     }
+// };
 
 
 
@@ -100,7 +143,7 @@ function overlayBuilder (e) { // build overlay for each project depending on car
 
             var programingTabs = [];
 
-            console.log(documentButton.length);
+            // console.log(documentButton.length);
 
             if (documentButton.length > 0) {
 
@@ -270,7 +313,7 @@ function overlayBuilder (e) { // build overlay for each project depending on car
 
     function buttonRemoval () {
 
-        console.log(documentButton.length)
+        // console.log(documentButton.length)
 
 
         for (var i=0; i<documentButton.length; i++) {
@@ -286,8 +329,8 @@ function overlayBuilder (e) { // build overlay for each project depending on car
         codeTabButton.splice(0,codeTabButton.length) ; // Clear variables from array
         codeTabButtonInner.splice(0,codeTabButtonInner.length); // Clear variables from array
 
-        console.log(documentButton)
-        console.log(codeTabButton)
+        // console.log(documentButton)
+        // console.log(codeTabButton)
 
 
 
@@ -310,23 +353,23 @@ function cardFlip(card){
         if (flipped === false) {
             card.style.transform = "scale(0.3)";
             card.style.zIndex = "2000";
-            card.style.rotate = "-10deg";
+            card.style.rotate = "-5deg";
             document.querySelector(".HaloIcon").appendChild(card);
-
 
             projectsWrapper.style.filter = "blur(10px)";
             overlay.style.display = "grid";
             flipped = true;
+            console.log(card)
         }
         else if (flipped === true) {
-            for(i=0; i<cardsOriginalValues.length; i++) {
+            for(var i=0; i<cardsOriginalValues.length; i++) {
                 if (card === cardsOriginalValues[i][0]) {
 
                     card.style.transform = cardsOriginalValues [i][1]
                     card.style.zIndex = cardsOriginalValues [i][2];
                     card.style.rotate = cardsOriginalValues [i][3];
                     var cardClassName = "." + cardsOriginalValues [i][4];
-                    document.querySelector(cardClassName).appendChild(card);
+                    document.querySelector(cardClassName).append(card);
                     break;
                 }
             }
@@ -337,6 +380,7 @@ function cardFlip(card){
             flipped = false;
         }
 }
+
 
 
 styleArray();

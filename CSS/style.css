@@ -20,9 +20,9 @@ a {
   to give the effect of stable presence */
 
 body {
-    background-size: cover;
-    background: url("../Images/abstract-background-1061100_1920.jpg") fixed ;
+    background: url("../Images/abstract-background-1061100_1920.jpg")fixed no-repeat;
     /*Credits - https://pixabay.com/bg/illustrations/%D0%B0%D0%B1%D1%81%D1%82%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D0%BD-%D1%84%D0%BE%D0%BD-%D0%B0%D0%B1%D1%81%D1%82%D1%80%D0%B0%D0%BA%D1%82%D0%BD%D0%BE-%D0%BC%D0%B8%D0%BD%D0%B8%D0%BC%D0%B0%D0%BB%D0%BD%D0%BE-1061100/*/
+    background-size: cover;
     margin: 0;
     padding: 0;
     height: auto;
@@ -692,52 +692,149 @@ footer {
 }
 
 .CardImage {
+    display: flex;
     border-radius: 8px 8px 0 0;
     background: url("../Images/placeholder-1-e1533569576673-960x960.png") center center;
     background-size: cover;
+    justify-content: center;
     border-top: 1.5px yellowgreen solid;
     border-left: 1.5px yellowgreen solid;
     border-right: 1.5px yellowgreen solid;
+}
+
+
+.CardPlaqueMasque {
+
+    position: absolute;
+    width: 11rem;
+    height: 2rem;
+    border: 1px solid yellowgreen;
+    border-radius: 0 0 0.5rem 0.5rem;
+    background-color:rgba(255,255,255, 0.50);
+    filter: blur(7px);
+    z-index: 0;
+
+
+}
+
+.CardPlaque {
+    position: absolute;
+    /*background-color: rgba(224,255,255,0.30);*/
+    /*background-color: rgba(154,205,50,0.20);*/
+    background-color:rgba(255,255,255,0.50);
+    width: 11rem;
+    height: 2rem;
+    border: 1px solid yellowgreen;
+    border-radius: 0 0 0.5rem 0.5rem;
+    text-align: center;
+    color: rgba(0,0,0,0.70);
+    z-index: 1;
+    box-shadow: 5px 5px 5px -4px black;
+    text-shadow:
+
+            -1px 1px rgba(154,205,50, 0.50),
+            -1px 1px rgba(154,205,50, 0.50),
+            1px 0px rgba(154,205,50, 0.50),
+            1px 0px rgba(154,205,50, 0.50);
+}
 
 
 
+
+.CardText {
+    display: flex;
+    flex-direction: column;
+    /*grid-template-rows: 3fr 96fr 3fr;*/
+    background-color: rgba(255,255,255,0.31);
+    border-right: 1.5px yellowgreen solid;
+    border-left: 1.5px yellowgreen solid;
+    text-align: justify;
+    font-size: 12px;
+    transition-duration: 1s;
+
+
+
+    box-shadow:
+            inset 0px 0px 10px -1px black;
+
+    font-family: "Comic Sans MS", Arial;
+    overflow: hidden;
+    -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+    scrollbar-width:none;/* Hide scrollbar for Firefox */
+}
+
+
+.CardTextTop {
+    display: none;
+    margin-top: 5px;
+    height: 5%;
+    background-color: white;
+    filter: blur(1px);
+    z-index: 10;
+    width: 0%;
+    align-self: flex-start;
+    box-shadow: 0px 0px 10px 5px lightgreen;
 
 
 
 }
 
-.CardText {
-    background-color: whitesmoke;
-    border-right: 1.5px yellowgreen solid;
-    border-left: 1.5px yellowgreen solid;
-    text-align: justify;
-    font-size: 10px;
-    padding: 1em;
-    font-family: "Comic Sans MS", Arial;
+.CardTextMiddle {
+    height: 90%;
+    overflow: scroll;
+    padding: 4px;
+    transition-duration: 1s;
+    -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+    scrollbar-width:none;/* Hide scrollbar for Firefox */
 
+
+}
+
+.CardTextMiddle::-webkit-scrollbar {
+    display: none;
+}
+
+
+.CardTextBottom {
+    display: none;
+    margin-bottom: 5px;
+    height: 5%;
+    background-color: white;
+    filter: blur(1px);
+    z-index: 10;
+    width: 0;
+    align-self: flex-end;
+    box-shadow: 0px 0px 10px 5px lightgreen;
 }
 
 .CardBase {
     border-radius: 0px 0px 8px 8px;
     display: flex;
     background-color: whitesmoke;
-    align-items: center;
-    justify-content: space-evenly;
-
     border-bottom: 1.5px yellowgreen solid;
     border-left: 1.5px yellowgreen solid;
     border-right: 1.5px yellowgreen solid;
+    justify-content: space-between;
+    align-content: center;
+
+
+
+
+
 
 }
 
 .Card:hover {
     box-shadow:
-            inset 0px 0px 15px 1px yellowgreen
-            , inset 0px 0px 10px 1px green   ;
+            inset 0px 0px 15px 1px yellowgreen;
+            , inset 0px 0px 10px 5px white;
+    , outset 10px 10px 20px black;
+
+    border: 1px solid white;
 }
 
 .CardButtonOpenCode {
-    background-color:rgba(246,255,36,0.31);
+    background-color: rgba(133,255,85,0.10);
     display: flex;
     width: 45px;
     height: 45px;
@@ -745,9 +842,10 @@ footer {
     border-radius: 100%;
     align-items: center;
     justify-content: center;
-    border: 1px yellowgreen solid   ;
+    border: 1px goldenrod solid   ;
     color: yellowgreen;
     box-shadow: 5px 5px 5px -5px black;
+    align-self: center;
 
 }
 .CardButtonOpenCode p{
@@ -770,35 +868,73 @@ footer {
 }
 
 
-.CardButtonDownload {
-    background-color: rgba(133,255,85,0.10);
+
+
+.CardLeftButton {
+    background-color: rgba(0,0,0,0.70);
     display: flex;
-    width: 45px;
+    width: 60px;
     height: 45px;
     padding: 0.3rem;
-    border-radius: 100%;
+    border-radius: 40% 100% 100% 40%;
     align-items: center;
     justify-content: center;
-    border: 1px yellowgreen solid   ;
-    color: yellowgreen;
+    border: 1px goldenrod solid;
+    color: goldenrod;
     box-shadow: 5px 5px 5px -5px black;
 
+
 }
-.CardButtonDownload p{
+.CardLeftButton p{
     position: absolute;
-    font-size: 8px;
+    font-size: 9px;
     font-weight: bold;
     text-align: center;
+    align-self: center;
+    justify-self: center;
 }
 
-.CardButtonDownload:hover {
+.CardLeftButton:hover {
     transition-duration: 0.4s;
     border: 2px lightcyan solid;
     box-shadow: 5px 5px 15px -5px lightgreen;
     color: lightgreen;
 }
 
-.CardButtonDownload:active {
+.CardLeftButton:active {
+    transform: scale(0.800); /* fix and adjust when turning back the scew property for teh proper card code view window*/
+    transition-duration: 0s;
+}
+
+
+.CardRightButton {
+    background-color: rgba(0,0,0,0.70);
+    display: flex;
+    width: 60px;
+    height: 45px;
+    padding: 0.3rem;
+    border-radius: 100% 40% 40% 100%;
+    align-items: center;
+    justify-content: center;
+    border: 1px yellowgreen solid   ;
+    color: yellowgreen;
+    box-shadow: 5px 5px 5px -5px black;
+}
+.CardRightButton p{
+    position: absolute;
+    font-size: 9px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.CardRightButton:hover {
+    transition-duration: 0.4s;
+    border: 2px lightcyan solid;
+    box-shadow: 5px 5px 15px -5px lightgreen;
+    color: lightgreen;
+}
+
+.CardRightButton:active {
     transform: scale(0.800); /* fix and adjust when turning back the scew property for teh proper card code view window*/
     transition-duration: 0s;
 }
@@ -808,7 +944,7 @@ footer {
 
 .Card:hover {
     cursor: pointer;
-    transform: rotate(-5deg);
+    transform: rotate(-2deg);
     transition-duration: 0.5s;
 }
 
@@ -1024,8 +1160,7 @@ footer {
 
 .DocumentTabs, .CodeTabs{
     display: flex;
-    min-width: 30%;
-    max-width: 30%;
+    min-width: 25%;
     justify-content: flex-start;
     align-items: center;
     border-radius: 2rem 0 0 2rem;
@@ -1092,7 +1227,7 @@ footer {
 
 .DocumentOutputWindow, .CodeOutputWindow{
     margin: 0;
-    width: 70%;
+    min-width: 75%;
     border-radius: 0 2rem 2rem 0;
     color: black;
     font-size: 1rem;
@@ -1123,6 +1258,10 @@ footer {
     display: none; /* Hide scrollbar for chrome, Opera Safary */
 
 }
+.outputCode::-webkit-scrollbar{
+    display: none; /* Hide scrollbar for chrome, Opera Safary */
+
+}
 
 
 
@@ -1132,7 +1271,6 @@ footer {
     grid-column: 1/5;
     grid-row: 2/2;
     display: flex;
-    height: 25rem;
     border-radius: 2rem;
     border: 3px white solid;
     box-shadow: 0px 0px 1px 1px black;
