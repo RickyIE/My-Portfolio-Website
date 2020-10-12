@@ -604,6 +604,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fit,1fr);
     grid-auto-rows: auto;
+
 }
 
 .ProgramingLanguagesPanel{
@@ -723,7 +724,7 @@ footer {
     /*background-color: rgba(154,205,50,0.20);*/
     background-color:rgba(255,255,255,0.50);
     width: 11rem;
-    height: 2rem;
+    min-height: 2.8rem;
     border: 1px solid yellowgreen;
     border-radius: 0 0 0.5rem 0.5rem;
     text-align: center;
@@ -1003,19 +1004,21 @@ footer {
     /* Credit  - https://pixabay.com/bg/photos/%D1%81%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D0%B8-%D0%B4%D0%B8%D0%BF%D0%BB%D0%BE%D0%BC%D0%B0-%D0%B7%D0%B0%D0%B2%D1%8A%D1%80%D1%88%D0%B8%D0%BB-%D0%BF%D0%B8%D1%81%D0%BA%D1%8E%D0%BB-3990783/ */
 }
 
+#Panel2CardImage6 {
+    background: url("../Images/Cappuccino.png") left, center no-repeat;
+    background-size: cover;
+    /* Credit  - me*/
+}
 
-/*.OverLay *  {*/
-/*    border: 2px red solid;*/
-/*}*/
 
 
 .OverLay  {
 
+    background-color: rgba(255,255,255,0);
     grid-template-columns: 1fr;
     grid-template-rows:20rem;
     grid-gap: 1rem;
     transition-duration: 1s;
-    position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
@@ -1023,8 +1026,18 @@ footer {
     width: 100vw;
     z-index: 1000;
     display: none;
-
+    overflow: scroll;
+    position: fixed;
+    -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+    scrollbar-width:none;/* Hide scrollbar for Firefox */
 }
+
+.OverLay ::-webkit-scrollbar {
+    display: none;
+}
+
+
+
 
 .HaloIconSection {
     grid-row: 0/1;
@@ -1177,10 +1190,9 @@ footer {
 
 .DocumentButton, .CodeTabButton {
     display: flex;
-    position: relative;
     justify-content: center;
     align-items: center;
-    min-width: 7rem;
+    min-width: 8rem;
     max-width: 15rem;
     min-height: 4rem;
     border-radius: 1rem;
@@ -1195,9 +1207,8 @@ footer {
 .DocumentButtonInner, .CodeTabButtonInner{
     display: flex;
     border: 2px solid white;
-    position: absolute;
     background-color: rgba(75,67,74,0.15);
-    width: 90%;
+    min-width: 90%;
     height: 80%;
     border-radius: 1rem;
     align-items: center;
@@ -1210,13 +1221,15 @@ footer {
 
 .DocumentButtonInner:hover, .CodeTabButtonInner:hover {
     cursor: pointer;
-    box-shadow: 0px 0px 100px 1px goldenrod;
+    box-shadow: 0px 0px 100px 3px goldenrod;
+    background-color:rgba(154,205,50,0.35) ;
     transition-duration: 1s;
 
 }
 
-.DocumentButtonInner:active, .CodeTabButtonInner:active{
-    transform: scale(0.950);
+
+.DocumentButtonInner:checked, .CodeTabButtonInner:checked{
+    transform: scale(1.950);
     transition-duration: 0s;
 }
 .DocumentButton:active, .CodeTabButton:active {
@@ -1236,6 +1249,9 @@ footer {
     -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
     scrollbar-width:none;/* Hide scrollbar for Firefox */
 }
+
+
+
 
 .DocumentOutputWindow::-webkit-scrollbar, .CodeOutputWindow::-webkit-scrollbar{
     display: none; /* Hide scrollbar for chrome, Opera Safary */
@@ -1284,7 +1300,6 @@ footer {
     display: none; /* Hide scrollbar for chrome, Opera Safary */
 
 }
-
 
 
 

@@ -9,7 +9,7 @@ const cardListArrayDefaultValues = []; // store the values fom HTML card plaques
 var result;
 
 
-for (var i=0; i<5; i++) {
+for (var i=0; i<cardList.length; i++) {
 
     cardListArrayDefaultValues[i] = [
 
@@ -28,7 +28,7 @@ const cardPlaques = document.getElementsByClassName("CardLeftButton"); //array g
 
 for (var i=0; i<cardPlaques.length; i++) { //adds event listeners to all elements
     cardPlaques[i].addEventListener("click", cardPlaqueChangeText);
-    cardPlaques[i].childNodes[1].addEventListener("click", cardPlaqueChangeText)
+    console.log(cardPlaques[i].childNodes[1])
 }
 
 
@@ -41,9 +41,13 @@ function cardPlaqueChangeText (e) {
     var chosenCard;
     var newPlaqueValue;
 
+
+
+
+
     for (var j=0; j<cardList.length; j++) {
         if(cardList[j].childNodes[5].childNodes[1].id === target.id
-        || cardList[j].childNodes[5].childNodes[1].id === targetParent.id){
+            || targetParent.id === cardList[j].childNodes[5].childNodes[1].id ){
             chosenCard = cardList[j];
             break;
         }
@@ -51,11 +55,13 @@ function cardPlaqueChangeText (e) {
 
     var chosenCardPlaque = chosenCard.childNodes[5].childNodes[1];
 
+
+
     switch (chosenCardPlaque.id) {
 
         case "Plaque0":
 
-            newPlaqueValue = "Complete October 2019 <br /> HTML <br /> lines of code: 61 "
+            newPlaqueValue = "Complete October 2019 <br /> HTML <br /> lines of code: 61 <br /> Contributors: Aleksandar Mladenov"
 
             cardControl(chosenCard,chosenCardPlaque);
 
@@ -63,7 +69,7 @@ function cardPlaqueChangeText (e) {
 
         case "Plaque1":
 
-            newPlaqueValue = "Complete November 2019 <br /> HTML/CSS <br /> lines of code: 61 "
+            newPlaqueValue = "Complete November 2019 <br /> HTML/CSS <br /> lines of code: 462 <br /> Contributors: Aleksandar Mladenov"
 
             cardControl(chosenCard,chosenCardPlaque);
 
@@ -71,7 +77,7 @@ function cardPlaqueChangeText (e) {
 
         case "Plaque2":
 
-            newPlaqueValue = "Complete January 2020 <br /> HTML/CSS <br /> lines of code: 61 "
+            newPlaqueValue = "Complete November 2019 <br /> HTML/CSS <br /> lines of code: 3445 <br /> Contributors: Aleksandar Mladenov"
 
             cardControl(chosenCard,chosenCardPlaque);
 
@@ -79,7 +85,7 @@ function cardPlaqueChangeText (e) {
 
         case "Plaque3":
 
-            newPlaqueValue = "Complete March 2020 <br /> HTML/CSS/JS <br /> lines of code: 61 "
+            newPlaqueValue = "Complete March 2020 <br /> HTML/CSS/JS <br /> lines of code: 1218 <br /> Contributors: Aleksandar Mladenov"
 
             cardControl(chosenCard,chosenCardPlaque);
 
@@ -87,7 +93,55 @@ function cardPlaqueChangeText (e) {
 
         case "Plaque4":
 
-            newPlaqueValue = "Complete May 2020 <br /> HTML/CSS/JS <br /> lines of code: 61 "
+            newPlaqueValue = "Complete May 2020 <br /> HTML/CSS/JS <br /> lines of code: 2826 <br /> Contributors: Aleksandar Mladenov, Luca Biondani"
+
+            cardControl(chosenCard,chosenCardPlaque);
+
+            break;
+
+        case "Plaque5":
+
+            newPlaqueValue = "Complete October 2019 <br /> Java <br /> lines of code: 276 <br /> Contributors: Aleksandar Mladenov"
+
+            cardControl(chosenCard,chosenCardPlaque);
+
+            break;
+
+        case "Plaque6":
+
+            newPlaqueValue = "Complete December 2019 <br /> Java <br /> lines of code: 665 <br /> Contributors: Aleksandar Mladenov"
+
+            cardControl(chosenCard,chosenCardPlaque);
+
+            break;
+
+        case "Plaque7":
+
+            newPlaqueValue = "Complete February 2020 <br /> Java <br /> lines of code: 385 <br /> Contributors: Aleksandar Mladenov"
+
+            cardControl(chosenCard,chosenCardPlaque);
+
+            break;
+
+        case "Plaque8":
+
+            newPlaqueValue = "Complete March 2020 <br /> Java <br /> lines of code: 730 <br /> Contributors: Aleksandar Mladenov"
+
+            cardControl(chosenCard,chosenCardPlaque);
+
+            break;
+
+        case "Plaque9":
+
+            newPlaqueValue = "Complete April 2020 <br /> HTML/CSS/JS <br /> lines of code: 481 <br /> Contributors: Aleksandar Mladenov"
+
+            cardControl(chosenCard,chosenCardPlaque);
+
+            break;
+
+        case "Plaque11":
+
+            newPlaqueValue = "Complete June 2020 <br /> Java <br /> lines of code: 289 <br /> Contributors: Aleksandar Mladenov, Deborah Rimei, Ana Trevisan"
 
             cardControl(chosenCard,chosenCardPlaque);
 
@@ -101,8 +155,6 @@ function cardPlaqueChangeText (e) {
     function cardControl (chosenCard,chosenCardPlaque ) {
 
 
-        console.log("chosenCardPlaque.id")
-        console.log(chosenCardPlaque.id)
 
         loopThroughCardListDefaultValues(chosenCardPlaque.id, 0, 2)
 
@@ -126,8 +178,8 @@ function cardPlaqueChangeText (e) {
 
 function loopThroughCardListDefaultValues (cardPlaque) {
 
-    console.log(cardPlaque)
-    console.log(cardListArrayDefaultValues)
+    // console.log(cardPlaque)
+    // console.log(cardListArrayDefaultValues)
 
     outer:
 

@@ -1,11 +1,8 @@
 
 
-
-
 let cardsClassArray= document.getElementsByClassName('Card'); // every element in the cards class inside this arrary
 const overlay = document.querySelector(".OverLay");
 const projectsWrapper = document.getElementById("ProjectsWrapper");
-
 
 let currentCardOnDisplay;
 
@@ -38,11 +35,11 @@ for (var i=0; i<cardsClassArray.length; i++) {
 
             let clickedElement = e.target;
 
-            console.log("cardsClassArray[i]")
-
-            console.log(cardsClassArray[i])
-
-            console.log(e.target)
+            // console.log("cardsClassArray[i]")
+            //
+            // console.log(cardsClassArray[i])
+            //
+            // console.log(e.target)
 
 
 
@@ -72,6 +69,7 @@ for (var i=0; i<cardsClassArray.length; i++) {
 /*                 FOR TESTING element target function                  */
 
 // window.onclick = e => {
+//
 //     console.log("ITEM CLICKED")
 //     console.log(e.target);
 //     console.log("PARENT ELEMENT")
@@ -80,6 +78,7 @@ for (var i=0; i<cardsClassArray.length; i++) {
 //     console.log(e.target.children);
 //     console.log(e.target.children[1]);
 //     console.log(cardsClassArray);
+//
 // }
 
 
@@ -141,8 +140,6 @@ function overlayBuilder (e) { // build overlay for each project depending on car
         if (e === cardsClassArray[i]){
 
 
-            var programingTabs = [];
-
             // console.log(documentButton.length);
 
             if (documentButton.length > 0) {
@@ -152,9 +149,66 @@ function overlayBuilder (e) { // build overlay for each project depending on car
             }
 
 
-            var passedReference;
-
             switch (cardsClassArray[i].id) {
+
+
+                /****************************************** Template ******************************************/
+
+                // gitHubOverlayLink.href="https://github.com/RickyIE/Website-Project-2"; // AMEND
+                //     downloadCodeOverlayLink.href="Files/HTML_CSS_JS/AleksandarMladenovMySecondWebsite.zip"; // AMEND
+                //     projectReference = "MySecondWebsite"; // AMEND
+                //
+                //
+                //
+                //     for (var j=0; j<3; j++) { // AMEND
+                //         documentButton[j] = document.createElement('div');
+                //         documentButton[j].setAttribute('class', 'DocumentButton');
+                //         documentTabsSelector.appendChild(documentButton[j]);
+                //
+                //         documentButtonInner[j] = document.createElement("div");
+                //         documentButtonInner[j].setAttribute("class", "DocumentButtonInner");
+                //         documentButtonInner[j].textContent = "Placeholder";
+                //         documentButton[j].appendChild(documentButtonInner[j]);
+                //
+                //     }
+                //
+                //     document.getElementById("populateDocumentsIframe").src = "ProjectsArchive/0002_MySecondWebsite/index.html"  // AMEND
+                //
+                //     documentButtonInner[0].textContent = "View Website";
+                //
+                //     documentButtonInner[0].onclick = () => {
+                //         document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0001_MyFirstWebsite/index.html";
+                //
+                //     }
+                //     documentButtonInner[1].textContent = "Open Website in a Separate Window";
+                //
+                //     documentButtonInner[1].onclick = () => {
+                //         window.open("ProjectsArchive/0001_MyFirstWebsite/index.html");
+                //
+                //     }
+                //
+                //
+                //
+                //     for (var k=0; k<6; k++) {
+                //         codeTabButton[k] = document.createElement('div');
+                //         codeTabButton[k].setAttribute('class', 'CodeTabButton');
+                //         codeTabsSelector.appendChild(codeTabButton[k]);
+                //
+                //         codeTabButtonInner[k] = document.createElement("div");
+                //         codeTabButtonInner[k].setAttribute("class", "CodeTabButtonInner");
+                //         codeTabButtonInner[k].textContent = "Placeholder";
+                //         codeTabButton[k].appendChild(codeTabButtonInner[k]);
+                //
+                //     }
+                //
+                //     document.getElementById("populateCodeIframe").src = "ProjectsArchive/0002_MySecondWebsite/PreviewDocs/index.pdf"  // AMEND
+                //
+                //     codeTabButtonInner[0].textContent = "index.html";
+                //
+                //     codeTabButtonInner[0].onclick = () => {
+                //         document.getElementById("populateCodeIframe").src="ProjectsArchive/0002_MySecondWebsite/PreviewDocs/index.pdf"
+                //
+                //     }
 
 
 
@@ -162,12 +216,12 @@ function overlayBuilder (e) { // build overlay for each project depending on car
                 case "MyFirstWebsite":
 
                     gitHubOverlayLink.href="https://github.com/RickyIE/Website-Project-2"; // AMEND
-                    downloadCodeOverlayLink.href="Files/HTML_CSS_JS/AleksandarMladenovMySecondWebsite.zip"; // AMEND
-                    projectReference = "MySecondtWebsite"; // AMEND
+                    downloadCodeOverlayLink.href="Files/HTML_CSS_JS/AleksandarMladenovMyFirstWebsite.zip"; // AMEND
+                    projectReference = "MyFirstWebsite"; // AMEND
 
 
 
-                    for (var j=0; j<3; j++) { // AMEND
+                    for (var j=0; j<4; j++) { // AMEND
                         documentButton[j] = document.createElement('div');
                         documentButton[j].setAttribute('class', 'DocumentButton');
                         documentTabsSelector.appendChild(documentButton[j]);
@@ -179,28 +233,36 @@ function overlayBuilder (e) { // build overlay for each project depending on car
 
                     }
 
-                    document.getElementById("populateDocumentsIframe").src = "ProjectsArchive/0001_MyFirstWebsite/PreviewDocs/Introduction.pdf"  // AMEND
+                    document.getElementById("populateDocumentsIframe").src = "ProjectsArchive/0001_MyFirstWebsite/index.html"  // AMEND
 
-                    documentButtonInner[0].textContent = "Introduction";
+                    documentButtonInner[0].textContent = "Preview Website";
 
                     documentButtonInner[0].onclick = () => {
+                        document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0001_MyFirstWebsite/index.html";
+
+                    }
+
+                    documentButtonInner[1].textContent = "Open Website in Separate Window";
+
+                    documentButtonInner[1].onclick = () => {
+                        window.open("ProjectsArchive/0001_MyFirstWebsite/index.html")
+
+                    }
+
+                    documentButtonInner[2].textContent = "Introduction";
+
+                    documentButtonInner[2].onclick = () => {
                         document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0001_MyFirstWebsite/PreviewDocs/Introduction.pdf";
 
                     }
 
-                    documentButtonInner[1].textContent = "Document Requirements";
+                    documentButtonInner[3].textContent = "Document Requirements";
 
-                    documentButtonInner[1].onclick = () => {
+                    documentButtonInner[3].onclick = () => {
                         document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0001_MyFirstWebsite/PreviewDocs/Requirements.pdf";
 
                     }
 
-                    documentButtonInner[2].textContent = "View Website";
-
-                    documentButtonInner[2].onclick = () => {
-                        document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0001_MyFirstWebsite/index.html";
-
-                    }
 
                     for (var k=0; k<2; k++) {
                         codeTabButton[k] = document.createElement('div');
@@ -230,7 +292,6 @@ function overlayBuilder (e) { // build overlay for each project depending on car
 
                     }
 
-
                     cardFlip(cardsClassArray[i]);
                     break;
 
@@ -243,7 +304,7 @@ function overlayBuilder (e) { // build overlay for each project depending on car
 
 
 
-                    for (var j=0; j<3; j++) { // AMEND
+                    for (var j=0; j<4; j++) { // AMEND
                         documentButton[j] = document.createElement('div');
                         documentButton[j].setAttribute('class', 'DocumentButton');
                         documentTabsSelector.appendChild(documentButton[j]);
@@ -255,12 +316,32 @@ function overlayBuilder (e) { // build overlay for each project depending on car
 
                     }
 
-                    document.getElementById("populateDocumentsIframe").src = "ProjectsArchive/0001_MyFirstWebsite/PreviewDocs/Introduction.pdf"  // AMEND
+                    document.getElementById("populateDocumentsIframe").src = "ProjectsArchive/0002_MySecondWebsite/index.html"  // AMEND
 
-                    documentButtonInner[0].textContent = "Introduction";
+                    documentButtonInner[0].textContent = "View Website";
 
                     documentButtonInner[0].onclick = () => {
-                        document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0001_MyFirstWebsite/PreviewDocs/Introduction.pdf";
+                        document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0002_MySecondWebsite/index.html";
+
+                    }
+
+                    documentButtonInner[1].textContent = "Open Website in Separate Window";
+
+                    documentButtonInner[1].onclick = () => {
+                        document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0002_MySecondWebsite/PreviewDocs/Introduction.pdf";
+                        window.open("ProjectsArchive/0002_MySecondWebsite/index.html")
+
+                    }
+                    documentButtonInner[2].textContent = "Introduction";
+
+                    documentButtonInner[2].onclick = () => {
+                        document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0002_MySecondWebsite/PreviewDocs/Introduction.pdf";
+
+                    }
+                    documentButtonInner[3].textContent = "Requirements";
+
+                    documentButtonInner[3].onclick = () => {
+                        document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0002_MySecondWebsite/PreviewDocs/Requirements.pdf";
 
                     }
 
@@ -276,12 +357,48 @@ function overlayBuilder (e) { // build overlay for each project depending on car
 
                     }
 
-                    document.getElementById("populateCodeIframe").src = "ProjectsArchive/0001_MySecondWebsite/PreviewDocs/index.pdf"
+
+                    document.getElementById("populateCodeIframe").src = "ProjectsArchive/0002_MySecondWebsite/PreviewDocs/index.pdf"
 
                     codeTabButtonInner[0].textContent = "index.html";
 
                     codeTabButtonInner[0].onclick = () => {
-                        document.getElementById("populateCodeIframe").src="ProjectsArchive/0001_MyFirstWebsite/PreviewDocs/index.pdf"
+                        document.getElementById("populateCodeIframe").src="ProjectsArchive/0002_MySecondWebsite/PreviewDocs/index.pdf"
+
+                    }
+
+                    codeTabButtonInner[1].textContent = "about.html";
+
+                    codeTabButtonInner[1].onclick = () => {
+                        document.getElementById("populateCodeIframe").src="ProjectsArchive/0002_MySecondWebsite/PreviewDocs/about.pdf"
+
+                    }
+
+                    codeTabButtonInner[2].textContent = "bibliography.html";
+
+                    codeTabButtonInner[2].onclick = () => {
+                        document.getElementById("populateCodeIframe").src="ProjectsArchive/0002_MySecondWebsite/PreviewDocs/bibliography.pdf"
+
+                    }
+
+                    codeTabButtonInner[3].textContent = "index.css";
+
+                    codeTabButtonInner[3].onclick = () => {
+                        document.getElementById("populateCodeIframe").src="ProjectsArchive/0002_MySecondWebsite/PreviewDocs/index_css.pdf"
+
+                    }
+
+                    codeTabButtonInner[4].textContent = "about.css";
+
+                    codeTabButtonInner[4].onclick = () => {
+                        document.getElementById("populateCodeIframe").src="ProjectsArchive/0002_MySecondWebsite/PreviewDocs/about_css.pdf"
+
+                    }
+
+                    codeTabButtonInner[5].textContent = "bibliography.css";
+
+                    codeTabButtonInner[5].onclick = () => {
+                        document.getElementById("populateCodeIframe").src="ProjectsArchive/0002_MySecondWebsite/PreviewDocs/bibliography_css.pdf"
 
                     }
 
@@ -291,15 +408,769 @@ function overlayBuilder (e) { // build overlay for each project depending on car
 
                 case "MyThirdWebsite":
 
+                    gitHubOverlayLink.href="https://github.com/RickyIE/Website-Project-3"; // AMEND
+                    downloadCodeOverlayLink.href="Files/HTML_CSS_JS/AleksandarMladenovMyThirdWebsite.zip"; // AMEND
+                    projectReference = "MyThirdWebsite"; // AMEND
+
+
+
+                    for (var j=0; j<4; j++) { // AMEND
+                        documentButton[j] = document.createElement('div');
+                        documentButton[j].setAttribute('class', 'DocumentButton');
+                        documentTabsSelector.appendChild(documentButton[j]);
+
+                        documentButtonInner[j] = document.createElement("div");
+                        documentButtonInner[j].setAttribute("class", "DocumentButtonInner");
+                        documentButtonInner[j].textContent = "Placeholder";
+                        documentButton[j].appendChild(documentButtonInner[j]);
+
+                    }
+
+                    document.getElementById("populateDocumentsIframe").src = "ProjectsArchive/0003_MyThirdWebsite/index.html"  // AMEND
+
+                        documentButtonInner[0].textContent = "View Website";
+
+                        documentButtonInner[0].onclick = () => {
+                            document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0003_MyThirdWebsite/index.html";
+
+                        }
+                        documentButtonInner[1].textContent = "Open Website in a Separate Window";
+
+                        documentButtonInner[1].onclick = () => {
+                            window.open("ProjectsArchive/0003_MyThirdWebsite/index.html")
+
+                        }
+
+                        documentButtonInner[2].textContent = "Introduction";
+
+                        documentButtonInner[2].onclick = () => {
+                            document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0003_MyThirdWebsite/PreviewDocs/introduction.pdf";
+
+                        }
+
+                        documentButtonInner[3].textContent = "Document Requirements";
+
+                        documentButtonInner[3].onclick = () => {
+                            document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0003_MyThirdWebsite/PreviewDocs/Requiremetns.pdf";
+
+                        }
+
+
+
+
+                    for (var k=0; k<14; k++) {
+                        codeTabButton[k] = document.createElement('div');
+                        codeTabButton[k].setAttribute('class', 'CodeTabButton');
+                        codeTabsSelector.appendChild(codeTabButton[k]);
+
+                        codeTabButtonInner[k] = document.createElement("div");
+                        codeTabButtonInner[k].setAttribute("class", "CodeTabButtonInner");
+                        codeTabButtonInner[k].textContent = "Placeholder";
+                        codeTabButton[k].appendChild(codeTabButtonInner[k]);
+
+                    }
+
+                    document.getElementById("populateCodeIframe").src = "ProjectsArchive/0003_MyThirdWebsite/PreviewDocs/index.pdf"  // AMEND
+
+                    codeTabButtonInner[0].textContent = "index.html";
+
+                    codeTabButtonInner[0].onclick = () => {
+                        document.getElementById("populateCodeIframe").src="ProjectsArchive/0003_MyThirdWebsite/PreviewDocs/index.pdf"
+
+                    }
+
+                    codeTabButtonInner[1].textContent = "index.css";
+
+                    codeTabButtonInner[1].onclick = () => {
+                        document.getElementById("populateCodeIframe").src="ProjectsArchive/0003_MyThirdWebsite/PreviewDocs/index_css.pdf"
+
+                    }
+
+                    codeTabButtonInner[2].textContent = "page2.html";
+
+                    codeTabButtonInner[2].onclick = () => {
+                        document.getElementById("populateCodeIframe").src="ProjectsArchive/0003_MyThirdWebsite/PreviewDocs/page2.pdf"
+
+                    }
+
+                    codeTabButtonInner[3].textContent = "page2.css";
+
+                    codeTabButtonInner[3].onclick = () => {
+                        document.getElementById("populateCodeIframe").src="ProjectsArchive/0003_MyThirdWebsite/PreviewDocs/page2_css.pdf"
+
+                    }
+
+                    codeTabButtonInner[4].textContent = "page3.html";
+
+                    codeTabButtonInner[4].onclick = () => {
+                        document.getElementById("populateCodeIframe").src="ProjectsArchive/0003_MyThirdWebsite/PreviewDocs/page3.pdf"
+
+                    }
+
+                    codeTabButtonInner[5].textContent = "page3.css";
+
+                    codeTabButtonInner[5].onclick = () => {
+                        document.getElementById("populateCodeIframe").src="ProjectsArchive/0003_MyThirdWebsite/PreviewDocs/page3_css.pdf"
+
+                    }
+                    codeTabButtonInner[6].textContent = "page4.html";
+
+                    codeTabButtonInner[6].onclick = () => {
+                        document.getElementById("populateCodeIframe").src="ProjectsArchive/0003_MyThirdWebsite/PreviewDocs/page4.pdf"
+
+                    }
+                    codeTabButtonInner[7].textContent = "page4.css";
+
+                    codeTabButtonInner[7].onclick = () => {
+                        document.getElementById("populateCodeIframe").src="ProjectsArchive/0003_MyThirdWebsite/PreviewDocs/page4_css.pdf"
+
+                    }
+                    codeTabButtonInner[8].textContent = "page5.html";
+
+                    codeTabButtonInner[8].onclick = () => {
+                        document.getElementById("populateCodeIframe").src="ProjectsArchive/0003_MyThirdWebsite/PreviewDocs/page5.pdf"
+
+                    }
+                    codeTabButtonInner[9].textContent = "page5.css";
+
+                    codeTabButtonInner[9].onclick = () => {
+                        document.getElementById("populateCodeIframe").src="ProjectsArchive/0003_MyThirdWebsite/PreviewDocs/page5_css.pdf"
+
+                    }
+                    codeTabButtonInner[10].textContent = "page6.html";
+
+                    codeTabButtonInner[10].onclick = () => {
+                        document.getElementById("populateCodeIframe").src="ProjectsArchive/0003_MyThirdWebsite/PreviewDocs/page6.pdf"
+
+                    }
+                    codeTabButtonInner[11].textContent = "page6.css";
+
+                    codeTabButtonInner[11].onclick = () => {
+                        document.getElementById("populateCodeIframe").src="ProjectsArchive/0003_MyThirdWebsite/PreviewDocs/page6_css.pdf"
+
+                    }
+                    codeTabButtonInner[12].textContent = "page7.html";
+
+                    codeTabButtonInner[12].onclick = () => {
+                        document.getElementById("populateCodeIframe").src="ProjectsArchive/0003_MyThirdWebsite/PreviewDocs/page7.pdf"
+
+                    }
+                    codeTabButtonInner[13].textContent = "page7.css";
+
+                    codeTabButtonInner[13].onclick = () => {
+                        document.getElementById("populateCodeIframe").src="ProjectsArchive/0003_MyThirdWebsite/PreviewDocs/page7_css.pdf"
+
+                    }
+
+
+
                     cardFlip(cardsClassArray[i]);
                     break;
 
                 case "MyForthWebsite":
 
+                        gitHubOverlayLink.href="https://github.com/RickyIE/Website-Project-4"; // AMEND
+                        downloadCodeOverlayLink.href="Files/HTML_CSS_JS/AleksandarMladenovMyForthWebsite.zip"; // AMEND
+                        projectReference = "MyForthWebsite"; // AMEND
+
+
+
+                        for (var j=0; j<4; j++) { // AMEND
+                            documentButton[j] = document.createElement('div');
+                            documentButton[j].setAttribute('class', 'DocumentButton');
+                            documentTabsSelector.appendChild(documentButton[j]);
+
+                            documentButtonInner[j] = document.createElement("div");
+                            documentButtonInner[j].setAttribute("class", "DocumentButtonInner");
+                            documentButtonInner[j].textContent = "Placeholder";
+                            documentButton[j].appendChild(documentButtonInner[j]);
+
+                        }
+
+                        document.getElementById("populateDocumentsIframe").src = "ProjectsArchive/0004_MyForthWebsite/index.html"  // AMEND
+
+                        documentButtonInner[0].textContent = "View Website";
+
+                        documentButtonInner[0].onclick = () => {
+                            document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0004_MyForthWebsite/index.html";
+
+                        }
+
+                        documentButtonInner[1].textContent = "Open Website in a Separate Window";
+
+                        documentButtonInner[1].onclick = () => {
+                            window.open("ProjectsArchive/0004_MyForthWebsite/index.html");
+
+                        }
+
+                        documentButtonInner[2].textContent = "Introduction";
+
+                        documentButtonInner[2].onclick = () => {
+                            document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0004_MyForthWebsite/PreviewDocs/Introduction.pdf";
+
+                        }
+
+                        documentButtonInner[3].textContent = "Requirements";
+
+                        documentButtonInner[3].onclick = () => {
+                            document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0004_MyForthWebsite/PreviewDocs/Requiremetns.pdf";
+
+                        }
+
+
+
+                        for (var k=0; k<3; k++) {
+                            codeTabButton[k] = document.createElement('div');
+                            codeTabButton[k].setAttribute('class', 'CodeTabButton');
+                            codeTabsSelector.appendChild(codeTabButton[k]);
+
+                            codeTabButtonInner[k] = document.createElement("div");
+                            codeTabButtonInner[k].setAttribute("class", "CodeTabButtonInner");
+                            codeTabButtonInner[k].textContent = "Placeholder";
+                            codeTabButton[k].appendChild(codeTabButtonInner[k]);
+
+                        }
+
+                        document.getElementById("populateCodeIframe").src = "ProjectsArchive/0004_MyForthWebsite/PreviewDocs/index.pdf"  // AMEND
+
+                        codeTabButtonInner[0].textContent = "index.html";
+
+                        codeTabButtonInner[0].onclick = () => {
+                            document.getElementById("populateCodeIframe").src="ProjectsArchive/0004_MyForthWebsite/PreviewDocs/index.pdf"
+
+                        }
+
+                        codeTabButtonInner[1].textContent = "style.css";
+
+                        codeTabButtonInner[1].onclick = () => {
+                            document.getElementById("populateCodeIframe").src="ProjectsArchive/0004_MyForthWebsite/PreviewDocs/style_css.pdf"
+
+                        }
+
+                        codeTabButtonInner[2].textContent = "app.js";
+
+                        codeTabButtonInner[2].onclick = () => {
+                            document.getElementById("populateCodeIframe").src="ProjectsArchive/0004_MyForthWebsite/PreviewDocs/app_js.pdf"
+
+                        }
+
                     cardFlip(cardsClassArray[i]);
                     break;
 
                 case "MyFifthWebsite":
+
+                    gitHubOverlayLink.href="https://github.com/RickyIE/Website-Project-5"; // AMEND
+                        downloadCodeOverlayLink.href="Files/HTML_CSS_JS/AleksandarMladenovMyFifthWebsite.zip"; // AMEND
+                        projectReference = "MyFifthWebsite"; // AMEND
+
+
+
+                        for (var j=0; j<4; j++) { // AMEND
+                            documentButton[j] = document.createElement('div');
+                            documentButton[j].setAttribute('class', 'DocumentButton');
+                            documentTabsSelector.appendChild(documentButton[j]);
+
+                            documentButtonInner[j] = document.createElement("div");
+                            documentButtonInner[j].setAttribute("class", "DocumentButtonInner");
+                            documentButtonInner[j].textContent = "Placeholder";
+                            documentButton[j].appendChild(documentButtonInner[j]);
+
+                        }
+
+                        document.getElementById("populateDocumentsIframe").src = "ProjectsArchive/0005_MyFifthWebsite/index.html"  // AMEND
+
+                        documentButtonInner[0].textContent = "View Website";
+
+                        documentButtonInner[0].onclick = () => {
+                            document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0005_MyFifthWebsite/index.html";
+
+                        }
+                        documentButtonInner[1].textContent = "Open Website in a Separate Window";
+
+                        documentButtonInner[1].onclick = () => {
+                            window.open("ProjectsArchive/0005_MyFifthWebsite/index.html");
+
+                        }
+
+                        documentButtonInner[2].textContent = "Introduction";
+                        documentButtonInner[2].onclick = () => {
+                            document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0005_MyFifthWebsite/PreviewDocs/Introduction.pdf";
+
+                        }
+
+                        documentButtonInner[3].textContent = "Requirements";
+                        documentButtonInner[3].onclick = () => {
+                            document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0005_MyFifthWebsite/PreviewDocs/Requirements.pdf";
+
+                        }
+
+
+
+                        for (var k=0; k<10; k++) {
+                            codeTabButton[k] = document.createElement('div');
+                            codeTabButton[k].setAttribute('class', 'CodeTabButton');
+                            codeTabsSelector.appendChild(codeTabButton[k]);
+
+                            codeTabButtonInner[k] = document.createElement("div");
+                            codeTabButtonInner[k].setAttribute("class", "CodeTabButtonInner");
+                            codeTabButtonInner[k].textContent = "Placeholder";
+                            codeTabButton[k].appendChild(codeTabButtonInner[k]);
+
+                        }
+
+                        document.getElementById("populateCodeIframe").src = "ProjectsArchive/0005_MyFifthWebsite/PreviewDocs/index_html.pdf"  // AMEND
+
+                        codeTabButtonInner[0].textContent = "Index.html";
+
+                        codeTabButtonInner[0].onclick = () => {
+                            document.getElementById("populateCodeIframe").src="ProjectsArchive/0005_MyFifthWebsite/PreviewDocs/index_html.pdf"
+
+                        }
+
+
+                        codeTabButtonInner[1].textContent = "Dublin.html";
+
+                        codeTabButtonInner[1].onclick = () => {
+                            document.getElementById("populateCodeIframe").src="ProjectsArchive/0005_MyFifthWebsite/PreviewDocs/Dublin_html.pdf"
+
+                        }
+
+
+                        codeTabButtonInner[2].textContent = "Cork.html";
+
+                        codeTabButtonInner[2].onclick = () => {
+                            document.getElementById("populateCodeIframe").src="ProjectsArchive/0005_MyFifthWebsite/PreviewDocs/Cork_html.pdf"
+
+                        }
+
+
+                        codeTabButtonInner[3].textContent = "Limerick.html";
+
+                        codeTabButtonInner[3].onclick = () => {
+                            document.getElementById("populateCodeIframe").src="ProjectsArchive/0005_MyFifthWebsite/PreviewDocs/Limerick_html.pdf"
+
+                        }
+
+
+                        codeTabButtonInner[4].textContent = "Galway.html";
+
+                        codeTabButtonInner[4].onclick = () => {
+                            document.getElementById("populateCodeIframe").src="ProjectsArchive/0005_MyFifthWebsite/PreviewDocs/Galway_html.pdf"
+
+                        }
+
+                        codeTabButtonInner[5].textContent = "Waterford.html";
+
+                        codeTabButtonInner[5].onclick = () => {
+                            document.getElementById("populateCodeIframe").src="ProjectsArchive/0005_MyFifthWebsite/PreviewDocs/Waterford_html.pdf"
+
+                        }
+
+
+                        codeTabButtonInner[6].textContent = "Drogheda.html";
+
+                        codeTabButtonInner[6].onclick = () => {
+                            document.getElementById("populateCodeIframe").src="ProjectsArchive/0005_MyFifthWebsite/PreviewDocs/Drogheda_html.pdf"
+
+                        }
+
+
+                        codeTabButtonInner[7].textContent = "About.html";
+
+                        codeTabButtonInner[7].onclick = () => {
+                            document.getElementById("populateCodeIframe").src="ProjectsArchive/0005_MyFifthWebsite/PreviewDocs/About_html.pdf"
+
+                        }
+
+
+                        codeTabButtonInner[8].textContent = "Style.css";
+
+                        codeTabButtonInner[8].onclick = () => {
+                            document.getElementById("populateCodeIframe").src="ProjectsArchive/0005_MyFifthWebsite/PreviewDocs/Style.pdf"
+
+                        }
+
+
+                        codeTabButtonInner[9].textContent = "App.js";
+
+                        codeTabButtonInner[9].onclick = () => {
+                            document.getElementById("populateCodeIframe").src="ProjectsArchive/0005_MyFifthWebsite/PreviewDocs/app_js.pdf"
+
+                        }
+
+
+                    cardFlip(cardsClassArray[i]);
+                    break;
+
+                case "JavaLotteryGame":
+
+                        gitHubOverlayLink.href="https://github.com/RickyIE/Java-Lottery-Game"; // AMEND
+                        downloadCodeOverlayLink.href="Files/Java/AleksandarMladenovLotteryGame.zip"; // AMEND
+                        projectReference = "JavaLotteryGame"; // AMEND
+
+
+
+                        for (var j=0; j<2; j++) { // AMEND
+                            documentButton[j] = document.createElement('div');
+                            documentButton[j].setAttribute('class', 'DocumentButton');
+                            documentTabsSelector.appendChild(documentButton[j]);
+
+                            documentButtonInner[j] = document.createElement("div");
+                            documentButtonInner[j].setAttribute("class", "DocumentButtonInner");
+                            documentButtonInner[j].textContent = "Placeholder";
+                            documentButton[j].appendChild(documentButtonInner[j]);
+
+                        }
+
+                        document.getElementById("populateDocumentsIframe").src = "ProjectsArchive/0006_LotteryGame/Documents/introduction.pdf"  // AMEND
+
+                        documentButtonInner[0].textContent = "Introduction";
+
+                        documentButtonInner[0].onclick = () => {
+                            document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0006_LotteryGame/Documents/introduction.pdf";
+
+                        }
+                        documentButtonInner[1].textContent = "Requirements";
+
+                        documentButtonInner[1].onclick = () => {
+                            document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0006_LotteryGame/Documents/Assignment1.pdf";
+
+                        }
+
+
+
+                        for (var k=0; k<1; k++) {
+                            codeTabButton[k] = document.createElement('div');
+                            codeTabButton[k].setAttribute('class', 'CodeTabButton');
+                            codeTabsSelector.appendChild(codeTabButton[k]);
+
+                            codeTabButtonInner[k] = document.createElement("div");
+                            codeTabButtonInner[k].setAttribute("class", "CodeTabButtonInner");
+                            codeTabButtonInner[k].textContent = "Placeholder";
+                            codeTabButton[k].appendChild(codeTabButtonInner[k]);
+
+                        }
+
+                        document.getElementById("populateCodeIframe").src = "ProjectsArchive/0006_LotteryGame/Code/LotteryGameAlex2.pdf"  // AMEND
+
+                        codeTabButtonInner[0].textContent = "LotteryGameAlex2.java";
+
+                        codeTabButtonInner[0].onclick = () => {
+                            document.getElementById("populateCodeIframe").src="ProjectsArchive/0006_LotteryGame/Code/LotteryGameAlex2.pdf"
+
+                        }
+
+                    cardFlip(cardsClassArray[i]);
+                    break;
+
+                case "Java1024/2048Game":
+
+                    gitHubOverlayLink.href="https://github.com/RickyIE/Java-Game-2048"; // AMEND
+                    downloadCodeOverlayLink.href="Files/Java/AleksandarMladenov2048Game.zip"; // AMEND
+                    projectReference = "Java1024/2048Game"; // AMEND
+
+
+
+                    for (var j=0; j<2; j++) { // AMEND
+                        documentButton[j] = document.createElement('div');
+                        documentButton[j].setAttribute('class', 'DocumentButton');
+                        documentTabsSelector.appendChild(documentButton[j]);
+
+                        documentButtonInner[j] = document.createElement("div");
+                        documentButtonInner[j].setAttribute("class", "DocumentButtonInner");
+                        documentButtonInner[j].textContent = "Placeholder";
+                        documentButton[j].appendChild(documentButtonInner[j]);
+
+                    }
+
+                    document.getElementById("populateDocumentsIframe").src = "ProjectsArchive/0007_Game1024/Documents/introduction.pdf"  // AMEND
+
+                    documentButtonInner[0].textContent = "Introduction";
+
+                    documentButtonInner[0].onclick = () => {
+                        document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0007_Game1024/Documents/introduction.pdf";
+
+                    }
+                    documentButtonInner[1].textContent = "Requirements";
+
+                    documentButtonInner[1].onclick = () => {
+                        document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0007_Game1024/Documents/Assignment2.pdf";
+
+                    }
+
+
+
+                    for (var k=0; k<1; k++) {
+                        codeTabButton[k] = document.createElement('div');
+                        codeTabButton[k].setAttribute('class', 'CodeTabButton');
+                        codeTabsSelector.appendChild(codeTabButton[k]);
+
+                        codeTabButtonInner[k] = document.createElement("div");
+                        codeTabButtonInner[k].setAttribute("class", "CodeTabButtonInner");
+                        codeTabButtonInner[k].textContent = "Placeholder";
+                        codeTabButton[k].appendChild(codeTabButtonInner[k]);
+
+                    }
+
+                    document.getElementById("populateCodeIframe").src = "ProjectsArchive/0007_Game1024/Code/Game1024Alex.pdf"  // AMEND
+
+                    codeTabButtonInner[0].textContent = "Game1024Alex.java";
+
+                    codeTabButtonInner[0].onclick = () => {
+                        document.getElementById("populateCodeIframe").src="ProjectsArchive/0007_Game1024/Code/Game1024Alex.pdf"
+
+                    }
+
+                    cardFlip(cardsClassArray[i]);
+                    break;
+
+                case "JavaGameCeasersCipher":
+
+                    gitHubOverlayLink.href="https://github.com/RickyIE/Java-Cipher-Game"; // AMEND
+                    downloadCodeOverlayLink.href="Files/Java/AleksandarMladenovCipherGame.zip"; // AMEND
+                    projectReference = "JavaGameCeasersCipher"; // AMEND
+
+
+
+                    for (var j=0; j<2; j++) { // AMEND
+                        documentButton[j] = document.createElement('div');
+                        documentButton[j].setAttribute('class', 'DocumentButton');
+                        documentTabsSelector.appendChild(documentButton[j]);
+
+                        documentButtonInner[j] = document.createElement("div");
+                        documentButtonInner[j].setAttribute("class", "DocumentButtonInner");
+                        documentButtonInner[j].textContent = "Placeholder";
+                        documentButton[j].appendChild(documentButtonInner[j]);
+
+                    }
+
+                    document.getElementById("populateDocumentsIframe").src = "ProjectsArchive/0008_CeasersCipher/Documents/introduction.pdf"  // AMEND
+
+                    documentButtonInner[0].textContent = "Introduction";
+
+                    documentButtonInner[0].onclick = () => {
+                        document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0008_CeasersCipher/Documents/introduction.pdf";
+
+                    }
+                    documentButtonInner[1].textContent = "Requirements";
+
+                    documentButtonInner[1].onclick = () => {
+                        document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0008_CeasersCipher/Documents/Assignment3.pdf";
+
+                    }
+
+
+
+                    for (var k=0; k<1; k++) {
+                        codeTabButton[k] = document.createElement('div');
+                        codeTabButton[k].setAttribute('class', 'CodeTabButton');
+                        codeTabsSelector.appendChild(codeTabButton[k]);
+
+                        codeTabButtonInner[k] = document.createElement("div");
+                        codeTabButtonInner[k].setAttribute("class", "CodeTabButtonInner");
+                        codeTabButtonInner[k].textContent = "Placeholder";
+                        codeTabButton[k].appendChild(codeTabButtonInner[k]);
+
+                    }
+
+                    document.getElementById("populateCodeIframe").src = "ProjectsArchive/0008_CeasersCipher/Code/CipherGame5.pdf"  // AMEND
+
+                    codeTabButtonInner[0].textContent = "CipherGame5.java";
+
+                    codeTabButtonInner[0].onclick = () => {
+                        document.getElementById("populateCodeIframe").src="ProjectsArchive/0008_CeasersCipher/Code/CipherGame5.pdf"
+
+                    }
+
+                    cardFlip(cardsClassArray[i]);
+                    break;
+                case "BloodTransfusionManager":
+
+                    gitHubOverlayLink.href="https://github.com/RickyIE/Java-Blood-Transfusion-Manager"; // AMEND
+                    downloadCodeOverlayLink.href="Files/Java/AleksandarMladenovBloodTransfusionManager.zip"; // AMEND
+                    projectReference = "JavaGameCeasersCipher"; // AMEND
+
+
+
+                    for (var j=0; j<2; j++) { // AMEND
+                        documentButton[j] = document.createElement('div');
+                        documentButton[j].setAttribute('class', 'DocumentButton');
+                        documentTabsSelector.appendChild(documentButton[j]);
+
+                        documentButtonInner[j] = document.createElement("div");
+                        documentButtonInner[j].setAttribute("class", "DocumentButtonInner");
+                        documentButtonInner[j].textContent = "Placeholder";
+                        documentButton[j].appendChild(documentButtonInner[j]);
+
+                    }
+
+                    document.getElementById("populateDocumentsIframe").src = "ProjectsArchive/0009_BloodTransfusionManager/Documents/introduction.pdf"  // AMEND
+
+                    documentButtonInner[0].textContent = "Introduction";
+
+                    documentButtonInner[0].onclick = () => {
+                        document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0009_BloodTransfusionManager/Documents/introduction.pdf";
+
+                    }
+                    documentButtonInner[1].textContent = "Requirements";
+
+                    documentButtonInner[1].onclick = () => {
+                        document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0009_BloodTransfusionManager/Documents/Assignment4.pdf";
+
+                    }
+
+
+
+                    for (var k=0; k<1; k++) {
+                        codeTabButton[k] = document.createElement('div');
+                        codeTabButton[k].setAttribute('class', 'CodeTabButton');
+                        codeTabsSelector.appendChild(codeTabButton[k]);
+
+                        codeTabButtonInner[k] = document.createElement("div");
+                        codeTabButtonInner[k].setAttribute("class", "CodeTabButtonInner");
+                        codeTabButtonInner[k].textContent = "Placeholder";
+                        codeTabButton[k].appendChild(codeTabButtonInner[k]);
+
+                    }
+
+                    document.getElementById("populateCodeIframe").src = "ProjectsArchive/0009_BloodTransfusionManager/Code/BloodTransfusionManager.pdf"  // AMEND
+
+                    codeTabButtonInner[0].textContent = "BloodTransfusionManager.java";
+
+                    codeTabButtonInner[0].onclick = () => {
+                        document.getElementById("populateCodeIframe").src="ProjectsArchive/0009_BloodTransfusionManager/Code/BloodTransfusionManager.pdf"
+
+                    }
+
+                    cardFlip(cardsClassArray[i]);
+                    break;
+
+                case "ProjectMarkingAssistant":
+
+                    gitHubOverlayLink.href="https://github.com/RickyIE/Java-Project-Marking-Assistant"; // AMEND
+                    downloadCodeOverlayLink.href="Files/Java/AleksandarMladenovProjectMarkingAssistant.zip"; // AMEND
+                    projectReference = "ProjectMarkingAssistant"; // AMEND
+
+
+
+                    for (var j=0; j<2; j++) { // AMEND
+                        documentButton[j] = document.createElement('div');
+                        documentButton[j].setAttribute('class', 'DocumentButton');
+                        documentTabsSelector.appendChild(documentButton[j]);
+
+                        documentButtonInner[j] = document.createElement("div");
+                        documentButtonInner[j].setAttribute("class", "DocumentButtonInner");
+                        documentButtonInner[j].textContent = "Placeholder";
+                        documentButton[j].appendChild(documentButtonInner[j]);
+
+                    }
+
+                    document.getElementById("populateDocumentsIframe").src = "ProjectsArchive/0010_ProjectMarkingAssistant/Documents/introduction.pdf"  // AMEND
+
+                    documentButtonInner[0].textContent = "Introduction";
+
+                    documentButtonInner[0].onclick = () => {
+                        document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0010_ProjectMarkingAssistant/Documents/introduction.pdf";
+
+                    }
+                    documentButtonInner[1].textContent = "Requirements";
+
+                    documentButtonInner[1].onclick = () => {
+                        document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0010_ProjectMarkingAssistant/Documents/Assignment5.pdf";
+
+                    }
+
+
+
+                    for (var k=0; k<2; k++) {
+                        codeTabButton[k] = document.createElement('div');
+                        codeTabButton[k].setAttribute('class', 'CodeTabButton');
+                        codeTabsSelector.appendChild(codeTabButton[k]);
+
+                        codeTabButtonInner[k] = document.createElement("div");
+                        codeTabButtonInner[k].setAttribute("class", "CodeTabButtonInner");
+                        codeTabButtonInner[k].textContent = "Placeholder";
+                        codeTabButton[k].appendChild(codeTabButtonInner[k]);
+
+                    }
+
+                    document.getElementById("populateCodeIframe").src = "ProjectsArchive/0010_ProjectMarkingAssistant/Code/MainClass.pdf"  // AMEND
+
+                    codeTabButtonInner[0].textContent = "MainClass.java";
+
+                    codeTabButtonInner[0].onclick = () => {
+                        document.getElementById("populateCodeIframe").src="ProjectsArchive/0010_ProjectMarkingAssistant/Code/MainClass.pdf"
+
+                    }
+
+                    codeTabButtonInner[1].textContent = "Project.java";
+
+                    codeTabButtonInner[1].onclick = () => {
+                        document.getElementById("populateCodeIframe").src="ProjectsArchive/0010_ProjectMarkingAssistant/Code/Project.pdf"
+
+                    }
+
+                    cardFlip(cardsClassArray[i]);
+                    break;
+
+                case "RobocodeProjectCappucino":
+
+                    gitHubOverlayLink.href="https://github.com/RickyIE/Java-Robocode-Cappuccino"; // AMEND
+                    downloadCodeOverlayLink.href="Files/Java/JavaRobocodeCappuccino.zip"; // AMEND
+                    projectReference = "RobocodeProjectCappucino"; // AMEND
+
+
+
+                    for (var j=0; j<2; j++) { // AMEND
+                        documentButton[j] = document.createElement('div');
+                        documentButton[j].setAttribute('class', 'DocumentButton');
+                        documentTabsSelector.appendChild(documentButton[j]);
+
+                        documentButtonInner[j] = document.createElement("div");
+                        documentButtonInner[j].setAttribute("class", "DocumentButtonInner");
+                        documentButtonInner[j].textContent = "Placeholder";
+                        documentButton[j].appendChild(documentButtonInner[j]);
+
+                    }
+
+                    document.getElementById("populateDocumentsIframe").src = "ProjectsArchive/0011_RobocodeCappuccino/Documents/introduction.pdf"  // AMEND
+
+                    documentButtonInner[0].textContent = "Introduction";
+
+                    documentButtonInner[0].onclick = () => {
+                        document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0011_RobocodeCappuccino/Documents/introduction.pdf";
+
+                    }
+                    documentButtonInner[1].textContent = "Design Document";
+
+                    documentButtonInner[1].onclick = () => {
+                        document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0011_RobocodeCappuccino/Documents/DesignDocument.pdf";
+
+                    }
+
+
+
+                    for (var k=0; k<1; k++) {
+                        codeTabButton[k] = document.createElement('div');
+                        codeTabButton[k].setAttribute('class', 'CodeTabButton');
+                        codeTabsSelector.appendChild(codeTabButton[k]);
+
+                        codeTabButtonInner[k] = document.createElement("div");
+                        codeTabButtonInner[k].setAttribute("class", "CodeTabButtonInner");
+                        codeTabButtonInner[k].textContent = "Placeholder";
+                        codeTabButton[k].appendChild(codeTabButtonInner[k]);
+
+                    }
+
+                    document.getElementById("populateCodeIframe").src = "ProjectsArchive/0011_RobocodeCappuccino/Code/Cappuccino.pdf"  // AMEND
+
+                    codeTabButtonInner[0].textContent = "Cappuccino.java";
+
+                    codeTabButtonInner[0].onclick = () => {
+                        document.getElementById("populateCodeIframe").src="ProjectsArchive/0011_RobocodeCappuccino/Code/Cappuccino.pdf"
+
+                    }
+
 
                     cardFlip(cardsClassArray[i]);
                     break;
@@ -309,6 +1180,9 @@ function overlayBuilder (e) { // build overlay for each project depending on car
 
             break;
         }
+
+
+
     }
 
     function buttonRemoval () {
@@ -380,6 +1254,12 @@ function cardFlip(card){
             flipped = false;
         }
 }
+
+
+documentButtonInnerChecked = () => {
+
+}
+
 
 
 
