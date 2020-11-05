@@ -1623,7 +1623,8 @@ footer {
 
 .smileyFaceFront {
     position: absolute;
-    background: url("../Images/ComputerScienceIsAmazing/emoji-4584576_640.png")center no-repeat;
+    background: url("../Images/ComputerScienceIsAmazing/emoji-4584569_640.png")center no-repeat;
+    /* Credit - https://pixabay.com/bg/images/download/emoji-4584569_640.png */
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -1643,9 +1644,9 @@ footer {
     -webkit-backface-visibility: hidden;
     transform: rotateY(180deg);
     align-items: center;
-    /*justify-content: space-around;*/
     display: flex;
     background: url("../Images/ComputerScienceIsAmazing/emoji-4584579_640.png")center no-repeat;
+    /* Credit - https://pixabay.com/bg/illustrations/emoji-%D0%B5%D0%BC%D0%BE%D1%82%D0%B8%D0%BA%D0%BE%D0%BD-%D1%83%D1%81%D0%BC%D0%B8%D0%B2%D0%BA%D0%B0-%D0%BA%D0%B0%D1%80%D0%B8%D0%BA%D0%B0%D1%82%D1%83%D1%80%D0%B0-4584579/ */
     background-size: contain;
 }
 

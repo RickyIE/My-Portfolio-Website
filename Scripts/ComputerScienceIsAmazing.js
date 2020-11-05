@@ -14,11 +14,19 @@ var pageCounterNo=0;
 var heartCounter=100;
 var brokenHeartCounter =0;
 
+var backgroundSound = new Audio("Images/ComputerScienceIsAmazing/cheeky_monkey_fun_app_playful_cheeky.mp3");
+
+// credit - https://www.zapsplat.com/?s=game&post_type=music&sound-effect-category-id=
+
+backgroundSound.play();
+backgroundSound.volume = 0.250;
+backgroundSound.loop = true;
 
 const yesButton = document.getElementById("yesButton").onclick = () =>{
     var audio = new Audio("Images/ComputerScienceIsAmazing/Yes.mp3");
     // credit - https://www.zapsplat.com/page/2/?s=cheer&post_type=music&sound-effect-category-id
     audio.play();
+    backgroundSound.volume = 0.250;
 
     smileyFlip("Yes");
 
@@ -52,7 +60,7 @@ const yesButton = document.getElementById("yesButton").onclick = () =>{
 
     }else if (pageCounterYes === 2) {
 
-        textField.innerHTML = "My number is 089 4482 796 ... <br/> <br/>" +
+        textField.innerHTML = "My number is 089 448 2796 ... <br/> <br/>" +
             "Call me if you decide you want to go for a walk in the park <br/>" +
             "Or a walk to the garbage dump <br/>"+
             "Or maybe we can beg together on Conolly Station<br/>" +
@@ -68,7 +76,7 @@ const noButton = document.getElementById("noButton").onclick = () =>{
     var audio = new Audio("Images/ComputerScienceIsAmazing/No.mp3");
     // credit - https://www.zapsplat.com/?s=star&post_type=music&sound-effect-category-id=
     audio.play();
-
+    backgroundSound.volume = 0.250;
     smileyFlip("No");
 
     heartCounter = heartCounter - 20;
@@ -226,21 +234,25 @@ smileyFlip = (e) => {
     if (e === "Yes" && rotation === 0) {
 
         smileyFaceBack.style.backgroundImage = "url('Images/ComputerScienceIsAmazing/emoji-4584576_640.png')"
+        /* Credit - https://pixabay.com/bg/images/download/emoji-4584576_640.png */
         rotation = 180
 
     }else if (e === "Yes" && rotation === 180 ){
 
         smileyFaceFront.style.backgroundImage = "url('Images/ComputerScienceIsAmazing/emoji-4584576_640.png')"
+        /* Credit - https://pixabay.com/bg/images/download/emoji-4584576_640.png */
         rotation = 0
 
     }else if (e === "No" && rotation === 0) {
 
         smileyFaceBack.style.backgroundImage = "url('Images/ComputerScienceIsAmazing/emoji-4584579_640.png')"
+        /* Credit - https://pixabay.com/bg/illustrations/emoji-%D0%B5%D0%BC%D0%BE%D1%82%D0%B8%D0%BA%D0%BE%D0%BD-%D1%83%D1%81%D0%BC%D0%B8%D0%B2%D0%BA%D0%B0-%D0%BA%D0%B0%D1%80%D0%B8%D0%BA%D0%B0%D1%82%D1%83%D1%80%D0%B0-4584579/ */
         rotation = 180
 
     }else if (e === "No" && rotation === 180 ){
 
         smileyFaceFront.style.backgroundImage = "url('Images/ComputerScienceIsAmazing/emoji-4584579_640.png')"
+        /* Credit - https://pixabay.com/bg/illustrations/emoji-%D0%B5%D0%BC%D0%BE%D1%82%D0%B8%D0%BA%D0%BE%D0%BD-%D1%83%D1%81%D0%BC%D0%B8%D0%B2%D0%BA%D0%B0-%D0%BA%D0%B0%D1%80%D0%B8%D0%BA%D0%B0%D1%82%D1%83%D1%80%D0%B0-4584579/ */
         rotation = 0
 
     }
