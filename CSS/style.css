@@ -1559,6 +1559,7 @@ footer {
 .AlexQuestionnaire {
     width: 100%;
     height: 100vh;
+    min-height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1669,6 +1670,8 @@ footer {
     text-align: center;
     overflow: scroll;
     padding: 1rem;
+    box-shadow:
+            inset 0px 0px 10px -1px black;
     -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
     scrollbar-width:none;/* Hide scrollbar for Firefox */
 }

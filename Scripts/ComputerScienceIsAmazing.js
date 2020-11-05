@@ -16,7 +16,7 @@ var brokenHeartCounter =0;
 
 
 const yesButton = document.getElementById("yesButton").onclick = () =>{
-    var audio = new Audio("../MyPortfolio/Images/ComputerScienceIsAmazing/Yes.mp3");
+    var audio = new Audio("Images/ComputerScienceIsAmazing/Yes.mp3");
     // credit - https://www.zapsplat.com/page/2/?s=cheer&post_type=music&sound-effect-category-id
     audio.play();
 
@@ -65,7 +65,7 @@ const yesButton = document.getElementById("yesButton").onclick = () =>{
 
 };
 const noButton = document.getElementById("noButton").onclick = () =>{
-    var audio = new Audio("../MyPortfolio/Images/ComputerScienceIsAmazing/No.mp3");
+    var audio = new Audio("Images/ComputerScienceIsAmazing/No.mp3");
     // credit - https://www.zapsplat.com/?s=star&post_type=music&sound-effect-category-id=
     audio.play();
 
