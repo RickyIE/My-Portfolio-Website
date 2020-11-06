@@ -14,9 +14,9 @@ var pageCounterNo=0;
 var heartCounter=100;
 var brokenHeartCounter =0;
 
-var backgroundSound = new Audio("Images/ComputerScienceIsAmazing/cheeky_monkey_fun_app_playful_cheeky.mp3");
+var backgroundSound = new Audio("Images/ComputerScienceIsAmazing/BackgroundTheme.mp3");
 
-// credit - https://www.zapsplat.com/?s=game&post_type=music&sound-effect-category-id=
+// credit - https://www.zapsplat.com/
 
 backgroundSound.play();
 backgroundSound.volume = 0.250;
@@ -24,7 +24,7 @@ backgroundSound.loop = true;
 
 const yesButton = document.getElementById("yesButton").onclick = () =>{
     var audio = new Audio("Images/ComputerScienceIsAmazing/Yes.mp3");
-    // credit - https://www.zapsplat.com/page/2/?s=cheer&post_type=music&sound-effect-category-id
+    // credit - https://www.zapsplat.com/
     audio.play();
     backgroundSound.volume = 0.250;
 
@@ -74,7 +74,7 @@ const yesButton = document.getElementById("yesButton").onclick = () =>{
 };
 const noButton = document.getElementById("noButton").onclick = () =>{
     var audio = new Audio("Images/ComputerScienceIsAmazing/No.mp3");
-    // credit - https://www.zapsplat.com/?s=star&post_type=music&sound-effect-category-id=
+    // credit - https://www.zapsplat.com/
     audio.play();
     backgroundSound.volume = 0.250;
     smileyFlip("No");
