@@ -172,18 +172,18 @@ function overlayBuilder (e) { // build overlay for each project depending on car
                 //
                 //     }
                 //
-                //     document.getElementById("populateDocumentsIframe").src = "ProjectsArchive/0002_MySecondWebsite/index.html"  // AMEND
+                //     document.getElementById("populateDocumentsIframe").src = "ProjectsArchive/0002_MySecondWebsite/index.php"  // AMEND
                 //
                 //     documentButtonInner[0].textContent = "View Website";
                 //
                 //     documentButtonInner[0].onclick = () => {
-                //         document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0001_MyFirstWebsite/index.html";
+                //         document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0001_MyFirstWebsite/index.php";
                 //
                 //     }
                 //     documentButtonInner[1].textContent = "Open Website in a Separate Window";
                 //
                 //     documentButtonInner[1].onclick = () => {
-                //         window.open("ProjectsArchive/0001_MyFirstWebsite/index.html");
+                //         window.open("ProjectsArchive/0001_MyFirstWebsite/index.php");
                 //
                 //     }
                 //
@@ -203,7 +203,7 @@ function overlayBuilder (e) { // build overlay for each project depending on car
                 //
                 //     document.getElementById("populateCodeIframe").src = "ProjectsArchive/0002_MySecondWebsite/PreviewDocs/index.pdf"  // AMEND
                 //
-                //     codeTabButtonInner[0].textContent = "index.html";
+                //     codeTabButtonInner[0].textContent = "index.php";
                 //
                 //     codeTabButtonInner[0].onclick = () => {
                 //         document.getElementById("populateCodeIframe").src="ProjectsArchive/0002_MySecondWebsite/PreviewDocs/index.pdf"
@@ -233,19 +233,19 @@ function overlayBuilder (e) { // build overlay for each project depending on car
 
                     }
 
-                    document.getElementById("populateDocumentsIframe").src = "ProjectsArchive/0001_MyFirstWebsite/index.html"  // AMEND
+                    document.getElementById("populateDocumentsIframe").src = "ProjectsArchive/0001_MyFirstWebsite/index.php"  // AMEND
 
                     documentButtonInner[0].textContent = "Preview Website";
 
                     documentButtonInner[0].onclick = () => {
-                        document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0001_MyFirstWebsite/index.html";
+                        document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0001_MyFirstWebsite/index.php";
 
                     }
 
                     documentButtonInner[1].textContent = "Open Website in Separate Window";
 
                     documentButtonInner[1].onclick = () => {
-                        window.open("ProjectsArchive/0001_MyFirstWebsite/index.html")
+                        window.open("ProjectsArchive/0001_MyFirstWebsite/index.php")
 
                     }
 
@@ -278,7 +278,7 @@ function overlayBuilder (e) { // build overlay for each project depending on car
 
                     document.getElementById("populateCodeIframe").src="ProjectsArchive/0001_MyFirstWebsite/PreviewDocs/index.pdf";
 
-                    codeTabButtonInner[0].textContent = "index.html";
+                    codeTabButtonInner[0].textContent = "index.php";
 
                     codeTabButtonInner[0].onclick = () => {
                         document.getElementById("populateCodeIframe").src="ProjectsArchive/0001_MyFirstWebsite/PreviewDocs/index.pdf";
@@ -316,12 +316,12 @@ function overlayBuilder (e) { // build overlay for each project depending on car
 
                     }
 
-                    document.getElementById("populateDocumentsIframe").src = "ProjectsArchive/0002_MySecondWebsite/index.html"  // AMEND
+                    document.getElementById("populateDocumentsIframe").src = "ProjectsArchive/0002_MySecondWebsite/index.php"  // AMEND
 
                     documentButtonInner[0].textContent = "View Website";
 
                     documentButtonInner[0].onclick = () => {
-                        document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0002_MySecondWebsite/index.html";
+                        document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0002_MySecondWebsite/index.php";
 
                     }
 
@@ -329,7 +329,7 @@ function overlayBuilder (e) { // build overlay for each project depending on car
 
                     documentButtonInner[1].onclick = () => {
                         document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0002_MySecondWebsite/PreviewDocs/Introduction.pdf";
-                        window.open("ProjectsArchive/0002_MySecondWebsite/index.html")
+                        window.open("ProjectsArchive/0002_MySecondWebsite/index.php")
 
                     }
                     documentButtonInner[2].textContent = "Introduction";
@@ -360,14 +360,14 @@ function overlayBuilder (e) { // build overlay for each project depending on car
 
                     document.getElementById("populateCodeIframe").src = "ProjectsArchive/0002_MySecondWebsite/PreviewDocs/index.pdf"
 
-                    codeTabButtonInner[0].textContent = "index.html";
+                    codeTabButtonInner[0].textContent = "index.php";
 
                     codeTabButtonInner[0].onclick = () => {
                         document.getElementById("populateCodeIframe").src="ProjectsArchive/0002_MySecondWebsite/PreviewDocs/index.pdf"
 
                     }
 
-                    codeTabButtonInner[1].textContent = "about.html";
+                    codeTabButtonInner[1].textContent = "about.php";
 
                     codeTabButtonInner[1].onclick = () => {
                         document.getElementById("populateCodeIframe").src="ProjectsArchive/0002_MySecondWebsite/PreviewDocs/about.pdf"
@@ -426,18 +426,18 @@ function overlayBuilder (e) { // build overlay for each project depending on car
 
                     }
 
-                    document.getElementById("populateDocumentsIframe").src = "ProjectsArchive/0003_MyThirdWebsite/index.html"  // AMEND
+                    document.getElementById("populateDocumentsIframe").src = "ProjectsArchive/0003_MyThirdWebsite/index.php"  // AMEND
 
                         documentButtonInner[0].textContent = "View Website";
 
                         documentButtonInner[0].onclick = () => {
-                            document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0003_MyThirdWebsite/index.html";
+                            document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0003_MyThirdWebsite/index.php";
 
                         }
                         documentButtonInner[1].textContent = "Open Website in a Separate Window";
 
                         documentButtonInner[1].onclick = () => {
-                            window.open("ProjectsArchive/0003_MyThirdWebsite/index.html")
+                            window.open("ProjectsArchive/0003_MyThirdWebsite/index.php")
 
                         }
 
@@ -472,7 +472,7 @@ function overlayBuilder (e) { // build overlay for each project depending on car
 
                     document.getElementById("populateCodeIframe").src = "ProjectsArchive/0003_MyThirdWebsite/PreviewDocs/index.pdf"  // AMEND
 
-                    codeTabButtonInner[0].textContent = "index.html";
+                    codeTabButtonInner[0].textContent = "index.php";
 
                     codeTabButtonInner[0].onclick = () => {
                         document.getElementById("populateCodeIframe").src="ProjectsArchive/0003_MyThirdWebsite/PreviewDocs/index.pdf"
@@ -587,19 +587,19 @@ function overlayBuilder (e) { // build overlay for each project depending on car
 
                         }
 
-                        document.getElementById("populateDocumentsIframe").src = "ProjectsArchive/0004_MyForthWebsite/index.html"  // AMEND
+                        document.getElementById("populateDocumentsIframe").src = "ProjectsArchive/0004_MyForthWebsite/index.php"  // AMEND
 
                         documentButtonInner[0].textContent = "View Website";
 
                         documentButtonInner[0].onclick = () => {
-                            document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0004_MyForthWebsite/index.html";
+                            document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0004_MyForthWebsite/index.php";
 
                         }
 
                         documentButtonInner[1].textContent = "Open Website in a Separate Window";
 
                         documentButtonInner[1].onclick = () => {
-                            window.open("ProjectsArchive/0004_MyForthWebsite/index.html");
+                            window.open("ProjectsArchive/0004_MyForthWebsite/index.php");
 
                         }
 
@@ -633,7 +633,7 @@ function overlayBuilder (e) { // build overlay for each project depending on car
 
                         document.getElementById("populateCodeIframe").src = "ProjectsArchive/0004_MyForthWebsite/PreviewDocs/index.pdf"  // AMEND
 
-                        codeTabButtonInner[0].textContent = "index.html";
+                        codeTabButtonInner[0].textContent = "index.php";
 
                         codeTabButtonInner[0].onclick = () => {
                             document.getElementById("populateCodeIframe").src="ProjectsArchive/0004_MyForthWebsite/PreviewDocs/index.pdf"
@@ -677,18 +677,18 @@ function overlayBuilder (e) { // build overlay for each project depending on car
 
                         }
 
-                        document.getElementById("populateDocumentsIframe").src = "ProjectsArchive/0005_MyFifthWebsite/index.html"  // AMEND
+                        document.getElementById("populateDocumentsIframe").src = "ProjectsArchive/0005_MyFifthWebsite/index.php"  // AMEND
 
                         documentButtonInner[0].textContent = "View Website";
 
                         documentButtonInner[0].onclick = () => {
-                            document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0005_MyFifthWebsite/index.html";
+                            document.getElementById("populateDocumentsIframe").src="ProjectsArchive/0005_MyFifthWebsite/index.php";
 
                         }
                         documentButtonInner[1].textContent = "Open Website in a Separate Window";
 
                         documentButtonInner[1].onclick = () => {
-                            window.open("ProjectsArchive/0005_MyFifthWebsite/index.html");
+                            window.open("ProjectsArchive/0005_MyFifthWebsite/index.php");
 
                         }
 
