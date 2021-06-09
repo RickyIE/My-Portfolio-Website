@@ -177,13 +177,13 @@ function overlayBuilder (e) { // build overlay for each project depending on car
                 //     documentButtonInner[0].textContent = "View Website";
                 //
                 //     documentButtonInner[0].onclick = () => {
-                //         document.getElementById("populateDocumentsIframe").src="https://meetalex.org/0001-My-First-Website/index.php";
+                //         document.getElementById("populateDocumentsIframe").src="https://meetalex.org/0001-My-First-Website/index.html";
                 //
                 //     }
                 //     documentButtonInner[1].textContent = "Open Website in a Separate Window";
                 //
                 //     documentButtonInner[1].onclick = () => {
-                //         window.open("https://meetalex.org/0001-My-First-Website/index.php");
+                //         window.open("https://meetalex.org/0001-My-First-Website/index.html");
                 //
                 //     }
                 //
@@ -233,19 +233,19 @@ function overlayBuilder (e) { // build overlay for each project depending on car
 
                     }
 
-                    document.getElementById("populateDocumentsIframe").src = "https://meetalex.org/0001-My-First-Website/index.php"  // AMEND
+                    document.getElementById("populateDocumentsIframe").src = "https://meetalex.org/0001-My-First-Website/index.html"  // AMEND
 
                     documentButtonInner[0].textContent = "Preview Website";
 
                     documentButtonInner[0].onclick = () => {
-                        document.getElementById("populateDocumentsIframe").src="https://meetalex.org/0001-My-First-Website/index.php";
+                        document.getElementById("populateDocumentsIframe").src="https://meetalex.org/0001-My-First-Website/index.html";
 
                     }
 
                     documentButtonInner[1].textContent = "Open Website in Separate Window";
 
                     documentButtonInner[1].onclick = () => {
-                        window.open("https://meetalex.org/0001-My-First-Website/index.php")
+                        window.open("https://meetalex.org/0001-My-First-Website/index.html")
 
                     }
 
