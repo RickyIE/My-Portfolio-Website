@@ -14,9 +14,9 @@
     <section class="NavBar">
         <div class="NavBarTop"></div>
         <ul class="MenuList">
-            <a href="index.html"><li>Main</li></a>
-            <a href="projects.html"><li>Portfolio Projects</li></a>
-            <a href="about.html"><li>About Me (CV)</li></a>
+            <a href="index.php"><li>Main</li></a>
+            <a href="projects.php"><li>Portfolio Projects</li></a>
+            <a href="about.php"><li>About Me (CV)</li></a>
             <div class="MenuListBackground"></div>
             <div class="MenuListBackgroundColor"></div>
         </ul>
@@ -324,26 +324,7 @@
         </div>
 
     </section>
-    <footer>
-        <div class="FooterSection1"></div>
-        <div class="FooterSection2">
-            <div class="Contact"><p>Contact</p></div>
-            <div class="SocialContentLoadBarTop"></div>
-            <div class="SocialContent">
-                <a href="https://github.com/RickyIE?tab=repositories" target="_blank"><span title="Check my projects on GitHub"><i class="fab fa-github-square"></i></span></a>
-                <a href="https://www.facebook.com/Alex.Mladenov" target="_blank"><span title="Find me on Facebook."><i class="fab fa-facebook"></i></span></a>
-                <a href=mailto:"alex.t.mlad@gmail.com" target="_blank"><span title="Drop me an Email."><i class="fas fa-envelope"></i></span></a>
-                <a href="https://www.linkedin.com/in/aleksandar-mladenov-59b15385" target="_blank"><span title="Connect on LinkedIn."><i class="fab fa-linkedin"></i></span></a>
-                <a href="http://gitlab.griffith.ie/Mladenov"><span title="Check out my projects on GitLab."><i class="fab fa-gitlab"></i></span></a>
-                <a href="https://1drv.ms/w/s!AlGKUxmHEJmUhKBDxcnu4b-zADalfg?e=yYQdNm" target="_blank"><span title="View my CV (Resume)."><i class="fas fa-file-pdf"></i></span></a>
-            </div>
-            <div class="SocialContentLoadBarBottom"></div>
-        </div>
-        <div class="FooterSection3"></div>
-        <div class="Disclaimer"><p>* This site is made with my own code, without any libraries and code generators.
-            I use it not only to showcase my code but also to experiment and practice. That is why it is always work in progress and may be
-            at times slow or buggy.I always take feedback so please feel free to get in touch with any advice.</p></div>
-    </footer>
+    <?php include 'footer.html' ?>
 </div>
 <section class="OverLay">
     <div class="HaloIconSection">
