@@ -172,7 +172,7 @@ function overlayBuilder (e) { // build overlay for each project depending on car
                 //
                 //     }
                 //
-                //     document.getElementById("populateDocumentsIframe").src = "ProjectsData/0002_MySecondWebsite/index.php"  // AMEND
+                //     document.getElementById("populateDocumentsIframe").src = "https://www.meetalex.org/0002-My-Second-Website/index.html"  // AMEND
                 //
                 //     documentButtonInner[0].textContent = "View Website";
                 //
@@ -215,7 +215,7 @@ function overlayBuilder (e) { // build overlay for each project depending on car
 
                 case "MyFirstWebsite":
 
-                    gitHubOverlayLink.href="https://github.com/RickyIE/Website-Project-2"; // AMEND
+                    gitHubOverlayLink.href="https://github.com/RickyIE/Website-Project-1"; // AMEND
                     downloadCodeOverlayLink.href="Files/HTML_CSS_JS/AleksandarMladenovMyFirstWebsite.zip"; // AMEND
                     projectReference = "MyFirstWebsite"; // AMEND
 
@@ -252,14 +252,14 @@ function overlayBuilder (e) { // build overlay for each project depending on car
                     documentButtonInner[2].textContent = "Introduction";
 
                     documentButtonInner[2].onclick = () => {
-                        document.getElementById("populateDocumentsIframe").src="https://meetalex.org/0001-My-First-Website/PreviewDocs/Introduction.pdf";
+                        document.getElementById("populateDocumentsIframe").src="ProjectsData/0001_MyFirstWebsite/PreviewDocs/Introduction.pdf";
 
                     }
 
                     documentButtonInner[3].textContent = "Document Requirements";
 
                     documentButtonInner[3].onclick = () => {
-                        document.getElementById("populateDocumentsIframe").src="https://meetalex.org/0001-My-First-Website/PreviewDocs/Requirements.pdf";
+                        document.getElementById("populateDocumentsIframe").src="ProjectsData/0001_MyFirstWebsite/PreviewDocs/Requirements.pdf";
 
                     }
 
@@ -276,19 +276,19 @@ function overlayBuilder (e) { // build overlay for each project depending on car
 
                     }
 
-                    document.getElementById("populateCodeIframe").src="https://meetalex.org/0001-My-First-Website/PreviewDocs/index.pdf";
+                    document.getElementById("populateCodeIframe").src="ProjectsData/0001_MyFirstWebsite/PreviewDocs/index.pdf";
 
                     codeTabButtonInner[0].textContent = "index.php";
 
                     codeTabButtonInner[0].onclick = () => {
-                        document.getElementById("populateCodeIframe").src="https://meetalex.org/0001-My-First-Website/PreviewDocs/index.pdf";
+                        document.getElementById("populateCodeIframe").src="ProjectsData/0001_MyFirstWebsite/PreviewDocs/index.pdf";
 
                     }
 
                     codeTabButtonInner[1].textContent = "facts.html";
 
                     codeTabButtonInner[1].onclick = () => {
-                        document.getElementById("populateCodeIframe").src="https://meetalex.org/0001-My-First-Website/PreviewDocs/facts.pdf";
+                        document.getElementById("populateCodeIframe").src="ProjectsData/0001_MyFirstWebsite/PreviewDocs/facts.pdf";
 
                     }
 
@@ -316,12 +316,12 @@ function overlayBuilder (e) { // build overlay for each project depending on car
 
                     }
 
-                    document.getElementById("populateDocumentsIframe").src = "ProjectsData/0002_MySecondWebsite/index.php"  // AMEND
+                    document.getElementById("populateDocumentsIframe").src = "https://www.meetalex.org/0002-My-Second-Website/index.html"  // AMEND
 
                     documentButtonInner[0].textContent = "View Website";
 
                     documentButtonInner[0].onclick = () => {
-                        document.getElementById("populateDocumentsIframe").src="ProjectsData/0002_MySecondWebsite/index.php";
+                        document.getElementById("populateDocumentsIframe").src="https://www.meetalex.org/0002-My-Second-Website/index.html";
 
                     }
 
@@ -329,7 +329,7 @@ function overlayBuilder (e) { // build overlay for each project depending on car
 
                     documentButtonInner[1].onclick = () => {
                         document.getElementById("populateDocumentsIframe").src="ProjectsData/0002_MySecondWebsite/PreviewDocs/Introduction.pdf";
-                        window.open("ProjectsData/0002_MySecondWebsite/index.php")
+                        window.open("https://www.meetalex.org/0002-My-Second-Website/index.html")
 
                     }
                     documentButtonInner[2].textContent = "Introduction";
@@ -426,18 +426,18 @@ function overlayBuilder (e) { // build overlay for each project depending on car
 
                     }
 
-                    document.getElementById("populateDocumentsIframe").src = "ProjectsData/0003_MyThirdWebsite/index.php"  // AMEND
+                    document.getElementById("populateDocumentsIframe").src = "https://www.meetalex.org/0003-My-Third-Website/Index.html"  // AMEND
 
                         documentButtonInner[0].textContent = "View Website";
 
                         documentButtonInner[0].onclick = () => {
-                            document.getElementById("populateDocumentsIframe").src="ProjectsData/0003_MyThirdWebsite/index.php";
+                            document.getElementById("populateDocumentsIframe").src="https://www.meetalex.org/0003-My-Third-Website/Index.html";
 
                         }
                         documentButtonInner[1].textContent = "Open Website in a Separate Window";
 
                         documentButtonInner[1].onclick = () => {
-                            window.open("ProjectsData/0003_MyThirdWebsite/index.php")
+                            window.open("https://www.meetalex.org/0003-My-Third-Website/Index.html")
 
                         }
 
@@ -587,19 +587,19 @@ function overlayBuilder (e) { // build overlay for each project depending on car
 
                         }
 
-                        document.getElementById("populateDocumentsIframe").src = "ProjectsData/0004_MyForthWebsite/index.php"  // AMEND
+                        document.getElementById("populateDocumentsIframe").src = "https://www.meetalex.org/0004-My-Fourth-Website/index.html"  // AMEND
 
                         documentButtonInner[0].textContent = "View Website";
 
                         documentButtonInner[0].onclick = () => {
-                            document.getElementById("populateDocumentsIframe").src="ProjectsData/0004_MyForthWebsite/index.php";
+                            document.getElementById("populateDocumentsIframe").src="https://www.meetalex.org/0004-My-Fourth-Website/index.html";
 
                         }
 
                         documentButtonInner[1].textContent = "Open Website in a Separate Window";
 
                         documentButtonInner[1].onclick = () => {
-                            window.open("ProjectsData/0004_MyForthWebsite/index.php");
+                            window.open("https://www.meetalex.org/0004-My-Fourth-Website/index.html");
 
                         }
 
@@ -677,18 +677,18 @@ function overlayBuilder (e) { // build overlay for each project depending on car
 
                         }
 
-                        document.getElementById("populateDocumentsIframe").src = "ProjectsData/0005_MyFifthWebsite/index.php"  // AMEND
+                        document.getElementById("populateDocumentsIframe").src = "https://www.meetalex.org/0005-My-Fifth-Website/index.html"  // AMEND
 
                         documentButtonInner[0].textContent = "View Website";
 
                         documentButtonInner[0].onclick = () => {
-                            document.getElementById("populateDocumentsIframe").src="ProjectsData/0005_MyFifthWebsite/index.php";
+                            document.getElementById("populateDocumentsIframe").src="https://www.meetalex.org/0005-My-Fifth-Website/index.html";
 
                         }
                         documentButtonInner[1].textContent = "Open Website in a Separate Window";
 
                         documentButtonInner[1].onclick = () => {
-                            window.open("ProjectsData/0005_MyFifthWebsite/index.php");
+                            window.open("https://www.meetalex.org/0005-My-Fifth-Website/index.html");
 
                         }
 
