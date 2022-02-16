@@ -73,8 +73,8 @@
     </section>
     <?php include 'footer.html' ?>
 </div>
-<script src="Scripts/app.js"></script> <!-- Script file  -->
-<script src="Scripts/MenuFunctions.js"></script>
-<script src="Scripts/Carousel.js"></script>
+<script src="js/app.js"></script> <!-- Script file  -->
+<script src="js/MenuFunctions.js"></script>
+<script src="js/Carousel.js"></script>
 </body>
 </html>

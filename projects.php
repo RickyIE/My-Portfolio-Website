@@ -1,3 +1,39 @@
+<?php
+    require "scripts/ConnectToMainDatabase.php";
+
+$query = 'SELECT * FROM cardInfo;';
+
+$result = mysqli_query($db_connection, $query);
+
+$dataArray = array();
+
+
+if (mysqli_num_rows($result) > 0) {
+    // output data of each row
+    while ($row = mysqli_fetch_assoc($result)) {
+        $dataArray[] = (array(
+            'projectName' => $row['projectName'],
+            'cardPlaque' =>$row['cardPlaque'],
+            'cardTextMiddle' => $row['cardTextMiddle'],
+            'projectDownloadLink' =>$row['projectDownloadLink'],
+            'cardPicturePath' => $row['cardPicturePath'],
+            'showProject' =>$row['showProject']
+        ));
+    }
+
+} else {
+    echo "0 results";
+}
+for ($i = 0 ; $i<count($dataArray); $i++){
+
+    //echo '<h1 style="color: white;background-color: chartreuse;font-size: 3rem">'.$dataArray[$i]['cardPicturePath'].'</h1>';
+    //'.str_replace(' ' , '-', $dataArray[$i]['projectName']).'
+
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,6 +62,73 @@
     <section class="ProgramingLanguagesPanel" id="Anchor1">
 
         <div class="LanguageName"><p>HTML/CSS/JS - all requirement documents uploaded along with code</p></div>
+
+
+        <?php
+
+        for ($i = 0 ; $i<count($dataArray); $i++) {
+
+            $counter = $i+1;
+            $cardTextID = "card-text-id-";
+            $testTest = 'Hello World';
+
+            echo '
+            
+        <div class="Card" id='.str_replace(' ' , '-', $dataArray[$i]['projectName']).'>
+            <div class="CardImage" id="card-image-id-'.$counter.'">
+            
+            <style>
+            
+            #card-image-id-'.$counter.' {
+            background: url('.$dataArray[$i]['cardPicturePath'].') left, center no-repeat;
+            background-size: cover;
+            }
+            
+            </style>          
+                <div class="CardPlaque">'.$dataArray[$i]['cardPlaque'].'</div>
+                <div class="CardPlaqueMasque"></div>
+            </div>
+            <div class="CardText" id="'.$cardTextID.$counter.'">
+                <div class="CardTextTop"></div>
+                <div class="CardTextMiddle">'.$dataArray[$i]['cardTextMiddle'].'</div>
+                <div class="CardTextBottom"></div>
+            </div>
+            <div class="CardBase" id="card-base-id-'.$counter.'">
+                <div class="CardLeftButton" id="plaque-id-1" onclick="function foo(){
+                    
+                     var test = '.json_encode($testTest).';
+                    console.log(test);
+                    
+                };changeCardPlaque1()">
+                    <p>Statistics</p>
+                </div>
+                <div class="CardButtonOpenCode">
+                    <p>VIEW CODE</p>
+                </div>
+                <a href="Files/HTML_CSS_JS/AleksandarMladenovMyFirstWebsite.zip">
+                    <div class="CardRightButton">
+                    <p>Download</p>
+                </div></a>
+            </div>
+        </div>
+        
+        <script type="text/javascript">
+        
+        function changeCardPlaque(){
+        //const cardList = document.getElementById(e); // card class
+        
+        var hello = '.json_encode($cardTextID.$counter).';
+        
+        console.log(hello);
+        
+        }
+</script>
+            
+            ';
+
+        }
+
+        ?>
 
         <div class="Card" id="MyFirstWebsite">
             <div class="CardImage" id="Panel1CardImage1">
@@ -359,10 +462,10 @@
         </div>
     </div>
 </section>
-<script src="Scripts/app.js"></script> <!-- Script file  -->
-<script src="Scripts/cardFlip.js"></script>
-<script src="Scripts/MenuFunctions.js"></script>
-<script src="Scripts/TestJava.js"></script>
-<script src="Scripts/CardPlaque.js"></script>
+<script src="js/app.js"></script> <!-- Script file  -->
+<script src="js/cardFlip.js"></script>
+<script src="js/MenuFunctions.js"></script>
+<script src="js/TestJava.js"></script>
+<script src="js/CardPlaque.js"></script>
 </body>
 </html>

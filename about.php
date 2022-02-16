@@ -62,37 +62,66 @@
                 <button class="AcademicPanelButton"><p>OPEN</p></button>
             </div>
         </div>
-<!--        <div class="EducationBanner"><p>Second Academic Year</p></div>-->
-<!--        <div class="AcademicYear">-->
-<!--            <div class="LeftPanelAcademicYear"></div>-->
-<!--            <div class="MiddlePanelAcademicYear">-->
-<!--                <div class="MiddlePanelAcademicYearTopRay"></div>-->
-<!--                <div class="MiddlePanelAcademicYearMiddlePanel">-->
-<!--                    <p>First Semester</p>-->
-<!--                    <ul>-->
-<!--                        <li>Module 1</li>-->
-<!--                        <li>Module 2</li>-->
-<!--                        <li>Module 3</li>-->
-<!--                        <li>module 4</li>-->
-<!--                    </ul>-->
-<!--                    <p>First Semester</p>-->
-<!--                    <ul>-->
-<!--                        <li>Module 1</li>-->
-<!--                        <li>Module 2</li>-->
-<!--                        <li>Module 3</li>-->
-<!--                        <li>module 4</li>-->
-<!--                    </ul>-->
-<!--                </div>-->
-<!--                <div class="MiddlePanelAcademicYearBottomRay"></div>-->
-<!--            </div>-->
-<!--            <div class="RightPanelAcademicYear"></div>-->
-<!--        </div>-->
+
+        <div class="EducationBanner"><p>Second Academic Year ( PPA 77 First Class Honours )</p></div>
+        <div class="AcademicYear">
+            <div class="LeftPanelAcademicYear"></div>
+            <div class="MiddlePanelAcademicYear">
+                <div class="MiddlePanelAcademicYearTopRay"></div>
+                <div class="MiddlePanelAcademicYearMiddlePanel">
+                    <p class="AcademicYearText" >First Semester</p>
+                    <ul>
+                        <li>Effective Learning and Development</li>
+                        <li>Systems Analysis and Design 1</li>
+                        <li>Client Side Web Development</li>
+                    </ul>
+                    <p>Second Semester</p>
+                    <ul>
+                        <li>Foundations of Computing - span 2 semesters</li>
+                        <li>Computer Hardware - span 2 semesters</li>
+                        <li>Computer Programming - span 2 semesters</li>
+                        <li>Software Development 1</li>
+                        <li>Operating System Design</li>
+                    </ul>
+                </div>
+                <div class="MiddlePanelAcademicYearBottomRay"></div>
+            </div>
+            <div class="RightPanelAcademicYear">
+                <button class="AcademicPanelButton"><p>OPEN</p></button>
+            </div>
+        </div>
+
+        <!--        <div class="EducationBanner"><p>Second Academic Year</p></div>-->
+        <!--        <div class="AcademicYear">-->
+        <!--            <div class="LeftPanelAcademicYear"></div>-->
+        <!--            <div class="MiddlePanelAcademicYear">-->
+        <!--                <div class="MiddlePanelAcademicYearTopRay"></div>-->
+        <!--                <div class="MiddlePanelAcademicYearMiddlePanel">-->
+        <!--                    <p>First Semester</p>-->
+        <!--                    <ul>-->
+        <!--                        <li>Module 1</li>-->
+        <!--                        <li>Module 2</li>-->
+        <!--                        <li>Module 3</li>-->
+        <!--                        <li>module 4</li>-->
+        <!--                    </ul>-->
+        <!--                    <p>First Semester</p>-->
+        <!--                    <ul>-->
+        <!--                        <li>Module 1</li>-->
+        <!--                        <li>Module 2</li>-->
+        <!--                        <li>Module 3</li>-->
+        <!--                        <li>module 4</li>-->
+        <!--                    </ul>-->
+        <!--                </div>-->
+        <!--                <div class="MiddlePanelAcademicYearBottomRay"></div>-->
+        <!--            </div>-->
+        <!--            <div class="RightPanelAcademicYear"></div>-->
+        <!--        </div>-->
     </section>
     <?php include 'footer.html' ?>
 </div>
-<script src="Scripts/app.js"></script> <!-- Script file  -->
-<script src="Scripts/cardFlip.js"></script>
-<script src="Scripts/MenuFunctions.js"></script>
-<script src="Scripts/AcademicPanels.js"></script>
+<script src="js/app.js"></script> <!-- Script file  -->
+<script src="js/cardFlip.js"></script>
+<script src="js/MenuFunctions.js"></script>
+<script src="js/AcademicPanels.js"></script>
 </body>
 </html>

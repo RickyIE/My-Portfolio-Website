@@ -956,25 +956,29 @@ footer {
     transition-duration: 0.1s;
 }
 
+
+/*------------------- REMOVE LATER ----------------------*/
+
+
 #Panel1CardImage1 {
-    background: url("../Images/ProjectsGaleryThumbnails/Website1.jpg") left, center no-repeat;
+    background: url("../Images/ProjectsGalleryThumbnails/Website1.jpg") left, center no-repeat;
     background-size: cover;
 }
 
 #Panel1CardImage2 {
-    background: url("../Images/ProjectsGaleryThumbnails/Website2.jpg") left, center no-repeat;
+    background: url("../Images/ProjectsGalleryThumbnails/Website2.jpg") left, center no-repeat;
     background-size: cover;
 }
 #Panel1CardImage3 {
-    background: url("../Images/ProjectsGaleryThumbnails/Website3.jpg") center, center no-repeat;
+    background: url("../Images/ProjectsGalleryThumbnails/Website3.jpg") center, center no-repeat;
     background-size: cover;
 }
 #Panel1CardImage4 {
-    background: url("../Images/ProjectsGaleryThumbnails/Website4.jpg") center, center no-repeat;
+    background: url("../Images/ProjectsGalleryThumbnails/Website4.jpg") center, center no-repeat;
     background-size: cover;
 }
 #Panel1CardImage5 {
-    background: url("../Images/ProjectsGaleryThumbnails/Website5.jpg") left, center no-repeat;
+    background: url("../Images/ProjectsGalleryThumbnails/Website5.jpg") left, center no-repeat;
     background-size: cover;
 }
 
@@ -1010,6 +1014,9 @@ footer {
     background-size: cover;
     /* Credit  - me*/
 }
+
+
+/*------------------- REMOVE LATER ----------------------*/
 
 
 
@@ -1548,12 +1555,6 @@ footer {
 /*  ---------------------------------------- About Grid---------------------------------------- */
 
 /*  ---------------------------------------- Computer Science Is Amazing Grid ---------------------------------------- */
-
-/*.AlexQuestionnaire * {*/
-
-/*    border: 1px red solid;*/
-
-/*}*/
 
 .AlexQuestionnaire {
     width: 100%;
