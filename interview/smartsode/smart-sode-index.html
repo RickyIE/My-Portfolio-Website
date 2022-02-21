@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Smartsode</title> <!-- Page title  -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial - scale=1.0">
+    <!-- Meta tag to scale for mobile devices setting the scale to 1 to avoid elements appearing to small   -->
+    <link href="../../CSS/all.css" rel="stylesheet"> <!-- CSS reference for font awesome  -->
+
+    <style>
+
+        :root {
+            font-size: 16px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        body {
+            background: url("abstract-background-1061100_1920.jpg") fixed no-repeat;
+            /*Credits - https://pixabay.com/bg/illustrations/%D0%B0%D0%B1%D1%81%D1%82%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D0%BD-%D1%84%D0%BE%D0%BD-%D0%B0%D0%B1%D1%81%D1%82%D1%80%D0%B0%D0%BA%D1%82%D0%BD%D0%BE-%D0%BC%D0%B8%D0%BD%D0%B8%D0%BC%D0%B0%D0%BB%D0%BD%D0%BE-1061100/*/
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            height: auto;
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /*  ---------------------------------------- Projects Grid---------------------------------------- */
+
+
+        #questions-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 1fr);
+            grid-auto-rows: auto;
+
+        }
+
+
+        .panel {
+            grid-column: 2/-2;
+            grid-row: 1/-1;
+            width: 100%;
+            min-height: 100vh;
+            min-height: 500px;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.50);
+            margin-top: 5rem;
+            display: block;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            grid-auto-rows: auto minmax(450px, 450px);
+            grid-gap: 2rem;
+        }
+
+
+        .text-panel {
+            grid-column-start: 1;
+            grid-column-end: -1;
+            background-color: #3c4043;
+            display: flex;
+            justify-content: center;
+            box-shadow: 20px 20px 50px -20px black;
+            text-align: left;
+            color: gold;
+            font-size: 1.5rem;
+            min-height: 5rem;
+            border: 1px solid goldenrod;
+            padding: 1rem;
+
+        }
+
+        .panel-2 {
+            grid-column: 2/-2;
+            grid-row: 2/0;
+            width: 100%;
+            min-height: 35rem;
+            background-color: rgba(255, 255, 255, 0.50);
+            margin-top: 5rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            grid-auto-rows: auto minmax(450px, 450px);
+            grid-gap: 2rem;
+        }
+
+
+        #text-panel p {
+            padding: 1rem;
+        }
+
+
+        .OverLay ::-webkit-scrollbar {
+            display: none;
+        }
+
+
+        /*  ---------------------------------------- Projects Grid ---------------------------------------- */
+
+        /*  ---------------------------------------- Task 1 ---------------------------------------- */
+
+        .question-wrapper-outer {
+            width: 100%;
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+        .question-wrapper-inner {
+            background-size: cover;
+            display: grid;
+            background-color: #3c4043;
+            border: 1px solid #3c4043;
+            grid-template-rows: 3fr 5fr 2fr;
+            grid-template-columns: 1fr;
+            border-radius: 1rem;
+            margin-top: 5rem;
+            width: 80%;
+            height: 80%;
+
+        }
+
+        .question-wrapper-inner-words {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 5px;
+
+        }
+
+        .question-wrapper-inner-words-one {
+            width: 33%;
+            height: 100%;
+            background-color: gray;
+            border-radius: 10px;
+        }
+
+        .question-wrapper-inner-words-two {
+            width: 33%;
+            height: 100%;
+            max-height: 25vh;
+            background-color: whitesmoke;
+            border-radius: 10px;
+            display: inline-block;
+            justify-content: center;
+            overflow: scroll;
+            box-shadow: inset 0 0 10px -1px black;
+            -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+            scrollbar-width: none; /* Hide scrollbar for Firefox */
+            overflow-x: hidden;
+        }
+
+        .question-wrapper-inner-words-two ::-webkit-scrollbar {
+            display: none;
+        }
+
+        .result {
+            width: 80%;
+            height: 5vh;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0.5rem;
+            background-color: goldenrod;
+            border: 2px black solid;
+            margin: 3px;
+
+        }
+
+        .question-wrapper-inner-words-three {
+            width: 33%;
+            height: 100%;
+            background-color: gray;
+            border-radius: 10px;
+        }
+
+
+        .question-wrapper-inner-text {
+
+            border-radius: 10px;
+            text-align: center;
+            overflow: scroll;
+            padding: 1rem;
+            background-color: whitesmoke;
+            box-shadow: inset 0 0 10px -1px black;
+            -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+            scrollbar-width: none; /* Hide scrollbar for Firefox */
+        }
+
+
+        .question-wrapper-inner-text::-webkit-scrollbar {
+            display: none;
+        }
+
+        .AlexQuestionnaireWrapperSection3 {
+
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: space-around;
+            transition-duration: 10s;
+            animation-duration: 10s;
+
+        }
+
+        .faithButton {
+            display: flex;
+            width: 100px;
+            height: 40px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0.5rem;
+            background-color: goldenrod;
+            border: 2px whitesmoke solid;
+        }
+
+        .faithButton:hover {
+            background-color: goldenrod;
+            transform: scale(1.1);
+            transition-duration: 0.5s;
+            cursor: pointer;
+            border: 2px black solid;
+        }
+
+        .faithButton:active {
+            transform: scale(1.0);
+            transition-duration: 0s;
+        }
+
+        #text-count-id {
+            background: none;
+            border: none;
+            outline: none;
+            width: 100%;
+            height: 100%;
+            resize: none;
+        }
+
+
+        /*  ---------------------------------------- Task 1---------------------------------------- */
+
+
+        /*  ---------------------------------------- Footer ---------------------------------------- */
+
+        footer {
+            width: 100%;
+            height: 100%;
+            background-color: #3c4043;
+            grid-row: 5/6;
+            grid-column: 2/-2;
+            min-height: 20rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 5fr 2fr;
+        }
+
+        .footer-section-2 {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact {
+            width: 100%;
+            color: white;
+
+        }
+
+        .contact p {
+            padding-left: 2rem;
+            font-family: "Malgun Gothic", Arial, Helvetica, sans-serif;
+
+
+        }
+
+        .social-content-load-bar-top {
+            height: 0.2rem;
+            width: 0;
+            background-color: white;
+            align-self: flex-start;
+            border-radius: 2px;
+            margin: 0.1rem;
+            transition-duration: 1s;
+
+        }
+
+
+        .fab {
+            color: limegreen;
+            font-size: 2rem;
+        }
+
+        .fas {
+            font-size: 2rem;
+            color: limegreen;
+        }
+
+        .fab:hover, .fas:hover {
+            transform: scale(1.3);
+            color: orange;
+            cursor: pointer;
+
+        }
+
+        .fab:active, .fas:active {
+            transform: scale(0.980);
+
+        }
+
+
+        .social-content {
+            display: flex;
+            justify-content: space-between;
+            padding: 2rem;
+        }
+
+        .social-content * {
+            margin: 5px;
+
+        }
+
+        .social-content-load-bar-bottom {
+            height: 0.2rem;
+            width: 0;
+            background-color: white;
+            align-self: flex-end;
+            border-radius: 2px;
+            margin: 0.1rem;
+            transition-duration: 1s;
+        }
+
+
+        .disclaimer {
+            grid-column: 1/-1;
+            padding: 0.3rem;
+            background-color: forestgreen;
+            color: white;
+            font-size: 0.8rem;
+            font-family: "Malgun Gothic", Arial, Helvetica, sans-serif;
+        }
+
+
+        footer {
+            grid-template-columns: auto;
+            grid-template-rows: auto;
+        }
+
+        .footer-section-2 {
+            max-width: 100vw;
+
+
+        }
+
+        .social-content {
+            justify-content: center;
+            padding: 1rem;
+            transform: none;
+        }
+
+        .social-content * {
+            margin: 0.2rem;
+        }
+
+        .contact {
+            align-self: center;
+            text-align: center;
+        }
+
+        .disclaimer {
+            font-size: 0.8rem;
+        }
+
+        .disclaimer {
+            font-size: 0.6rem;
+        }
+
+
+        /*  ---------------------------------------- Footer ---------------------------------------- */
+
+
+        /* --------------------------------- Styling for mobil devices ipad and smaller ---------------------------------   */
+
+        @media screen and (max-width: 768px) {
+
+            .wrapper {
+                width: 100vw;
+                border-radius: 0;
+            }
+
+
+            .Slide1Div2 p {
+                font-size: 6px;
+                padding: 0.2rem;
+
+
+            }
+
+
+            /*  ---------------------------------------- Task 1 ---------------------------------------- */
+            .question-wrapper-inner-words-one {
+                width: 0%;
+            }
+
+            .question-wrapper-inner-words-two {
+                width: 100%;
+            }
+
+
+            .question-wrapper-inner-words-three {
+                width: 0%;
+            }
+
+
+            /*  ---------------------------------------- Qestion 1---------------------------------------- */
+            /*  ---------------------------------------- Footer ---------------------------------------- */
+            footer {
+                grid-template-columns: auto;
+                grid-template-rows: auto;
+            }
+
+            .footer-section-2 {
+                max-width: 100vw;
+
+
+            }
+
+            .social-content {
+                justify-content: center;
+                padding: 1rem;
+                transform: none;
+            }
+
+            .social-content * {
+                margin: 0.2rem;
+            }
+
+            .contact {
+                align-self: center;
+                text-align: center;
+            }
+
+            .disclaimer {
+                font-size: 0.8rem;
+            }
+
+            /*  ---------------------------------------- Footer ---------------------------------------- */
+            /*  ---------------------------------------- Projects ---------------------------------------- */
+            .panel {
+                justify-items: center;
+                grid-template-columns: 1fr;
+
+            }
+
+            .panel-2 {
+                justify-items: center;
+                grid-template-columns: 1fr;
+
+            }
+
+            .text-panel {
+                font-size: 1rem;
+            }
+
+
+        }
+
+        @media screen and (max-width: 475px) {
+
+
+            /*  ---------------------------------------- Footer ---------------------------------------- */
+            .disclaimer {
+                font-size: 0.6rem;
+            }
+        }
+
+        /*  ---------------------------------------- Footer ---------------------------------------- */
+
+
+    </style>
+
+</head>
+<body>
+<div id="questions-wrapper" class="wrapper">
+    <section class="panel" id="anchor-1">
+
+        <div class="text-panel"><p>Hello, while typically i separate language types into different files and
+                file/structures.
+                <br>For the purpose of ease of reading I combined everything in to one large file.
+                <br>As the project is small enough and feasible to have everything in the same place for ease of
+                reading.
+                <br>The page is fully responsive and available online to view on all devices click on below link,
+                <br>if they are any issues viewing locally.
+                <br>
+                <br><a href="https://meetalex.org/interview/smartsode/smart-sode-index.html" target="_blank"><span
+                            style="color:whitesmoke">
+                https://meetalex.org/interview/smartsode/smart-sode-index.html</span></a>
+                <br>(it's not a virus I promise this is a good, honest, hard-working link )
+            </p></div>
+        <div class="text-panel"><p>Task 1 </p></div>
+
+        <section class="question-wrapper-outer">
+            <div class="question-wrapper-inner">
+                <div class="question-wrapper-inner-words">
+                    <div class="question-wrapper-inner-words-one"></div>
+                    <div class="question-wrapper-inner-words-two">
+                        <!--                        <div class="result">some of us here are you</div>-->
+                    </div>
+                    <div class="question-wrapper-inner-words-three"></div>
+                </div>
+                <form class="question-wrapper-inner-text">
+                    <label for="text-count-id"></label>
+                    <textarea type="text" id="text-count-id" name="text-count-name"></textarea>
+
+                </form>
+                <div class="AlexQuestionnaireWrapperSection3">
+                    <div class="faithButton" id="count-words" onclick="countTopTen()">Count top 10</div>
+                    <div class="faithButton" id="clear-words" onclick="clearText()">Clear Text</div>
+                </div>
+            </div>
+        </section>
+
+
+    </section>
+
+</div>
+
+<footer>
+    <div class="footer-section-1"></div>
+    <div class="footer-section-2">
+        <div class="contact"><p>Contact</p></div>
+        <div class="social-content-load-bar-top"></div>
+        <div class="social-content">
+            <a href="https://github.com/RickyIE?tab=repositories" target="_blank"><span
+                        title="Check my projects on GitHub"><i class="fab fa-github-square"></i></span></a>
+            <a href="https://www.facebook.com/Alex.Mladenov" target="_blank"><span title="Find me on Facebook."><i
+                            class="fab fa-facebook"></i></span></a>
+            <a href=mailto:"alex.t.mlad@gmail.com" target="_blank"><span title="Drop me an Email."><i
+                            class="fas fa-envelope"></i></span></a>
+            <a href="https://www.linkedin.com/in/aleksandar-mladenov-59b15385" target="_blank"><span
+                        title="Connect on LinkedIn."><i class="fab fa-linkedin"></i></span></a>
+            <a href="https://gitlab.griffith.ie/Mladenov" target="_blank"><span
+                        title="Check out my projects on GitLab."><i class="fab fa-gitlab"></i></span></a>
+            <a href="https://1drv.ms/w/s!AlGKUxmHEJmUhKBDxcnu4b-zADalfg?e=yYQdNm" target="_blank"><span
+                        title="View my CV (Resume)."><i class="fas fa-file-pdf"></i></span></a>
+        </div>
+        <div class="social-content-load-bar-bottom"></div>
+    </div>
+    <div class="footer-section-3"></div>
+    <div class="disclaimer"><p>* Made with love and i little bit of code :)</p></div>
+</footer>
+</body>
+</html>
+
+<script>
+
+    const footerSection2ON = document.querySelector(".footer-section-2");
+    footerSection2ON.addEventListener('mouseover', footerSection2AnimationON);
+    const footerSection2OFF = document.querySelector(".footer-section-2");
+    footerSection2OFF.addEventListener('mouseout', footerSection2AnimationOff);
+
+
+    let pageTracker = 1;
+    let currentPage = document.getElementById("Slide");
+
+
+    function footerSection2AnimationON() {
+
+        document.querySelector(".social-content-load-bar-top").style.width = "100%";
+        document.querySelector(".social-content-load-bar-bottom").style.width = "100%";
+        document.querySelector(".social-content-load-bar-top").style.boxShadow = "0px 0px 5px 2px dodgerblue";
+        document.querySelector(".social-content-load-bar-bottom").style.boxShadow = "0px 0px 5px 2px dodgerblue";
+        document.querySelector(".FooterSection1").style.filter = "blur(2px)";
+        document.querySelector(".FooterSection3").style.filter = "blur(2px)";
+
+        if (screen.width > 768) {
+            document.querySelector(".footer-section-2").style.transform = "Scale(1.200)";
+        }
+
+    }
+
+
+    function footerSection2AnimationOff() {
+
+        document.querySelector(".social-content-load-bar-top").style.width = "0%";
+        document.querySelector(".social-content-load-bar-bottom").style.width = "0%";
+        document.querySelector(".social-content-load-bar-top").style.boxShadow = "0px 0px 0px 0px dodgerblue";
+        document.querySelector(".social-content-load-bar-bottom").style.boxShadow = "0px 0px 0px 0px dodgerblue";
+        document.querySelector(".FooterSection1").style.filter = "none";
+        document.querySelector(".FooterSection3").style.filter = "none";
+        document.querySelector(".footer-section-2").style.transform = "Scale(1.000)";
+        alert("Hello")
+    }
+
+    function clearText() {
+
+        document.getElementById("text-count-id").value = "";
+        var parentObj = document.querySelector(".question-wrapper-inner-words-two");
+
+        while (parentObj.firstChild) {
+            parentObj.removeChild(parentObj.firstChild)
+        }
+
+
+    }
+
+
+    function countTopTen() {
+
+        var parentObj = document.querySelector(".question-wrapper-inner-words-two");
+
+        while (parentObj.firstChild) {
+            parentObj.removeChild(parentObj.firstChild)
+        }
+
+
+        if (document.getElementById("text-count-id").innerText !== null) {
+
+            const text = document.getElementById("text-count-id");
+            const wordsArray = text.value.replace(/[\W_]+/g, " ").split(" ");
+            const wordsArrayMap = new Map();
+
+            for (var i = 0; i < wordsArray.length; i++) {
+
+                if (wordsArrayMap.has(wordsArray[i]) === false) {
+                    wordsArrayMap.set(wordsArray[i], 1)
+                } else {
+                    var newKeyValue = wordsArrayMap.get(wordsArray[i]) + 1
+                    wordsArrayMap.set(wordsArray[i], newKeyValue)
+                }
+            }
+
+            const unsortedArr = [...wordsArrayMap];
+
+            const sortedArr = unsortedArr.sort((a, b) => b[1] - a[1])
+
+            for (var i = 0; i < 10; i++) {
+
+                let divElm = document.createElement('div');
+                divElm.className = 'result';
+                let q1 = "\""
+                let q2 = "\""
+                let word = String(sortedArr[i][0]);
+                let occurrence = String(sortedArr[i][1]);
+                divElm.innerHTML = q1.concat(word, q2, " found (", occurrence, ") times");
+                const divWrap = document.querySelector(".question-wrapper-inner-words-two")
+                divWrap.appendChild(divElm);
+
+            }
+        }
+
+    }
+</script>

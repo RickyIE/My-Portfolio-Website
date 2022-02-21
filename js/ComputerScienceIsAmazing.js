@@ -1,7 +1,7 @@
 
 const heartCounterClass = document.querySelector(".heartCounter");
 const brokenHeartCounterClass = document.querySelector(".brokenHeartCounter");
-const textField = document.querySelector(".AlexQuestionnaireWrapperSection2");
+const textField = document.querySelector(".question-wrapper-inner-text");
 const smileyFace = document.querySelector(".smileyFace");
 const smileyFaceFront = document.querySelector(".smileyFaceFront");
 const smileyFaceBack = document.querySelector(".smileyFaceBack");
