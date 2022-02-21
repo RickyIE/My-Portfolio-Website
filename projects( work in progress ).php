@@ -1,3 +1,39 @@
+<?php
+    require "scripts/ConnectToMainDatabase.php";
+
+$query = 'SELECT * FROM cardInfo;';
+
+$result = mysqli_query($db_connection, $query);
+
+$dataArray = array();
+
+
+if (mysqli_num_rows($result) > 0) {
+    // output data of each row
+    while ($row = mysqli_fetch_assoc($result)) {
+        $dataArray[] = (array(
+            'projectName' => $row['projectName'],
+            'cardPlaque' =>$row['cardPlaque'],
+            'cardTextMiddle' => $row['cardTextMiddle'],
+            'projectDownloadLink' =>$row['projectDownloadLink'],
+            'cardPicturePath' => $row['cardPicturePath'],
+            'showProject' =>$row['showProject']
+        ));
+    }
+
+} else {
+    echo "0 results";
+}
+for ($i = 0 ; $i<count($dataArray); $i++){
+
+    //echo '<h1 style="color: white;background-color: chartreuse;font-size: 3rem">'.$dataArray[$i]['cardPicturePath'].'</h1>';
+    //'.str_replace(' ' , '-', $dataArray[$i]['projectName']).'
+
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,6 +63,73 @@
 
         <div class="LanguageName"><p>HTML/CSS/JS - all requirement documents uploaded along with code</p></div>
 
+
+        <?php
+
+        for ($i = 0 ; $i<count($dataArray); $i++) {
+
+            $counter = $i+1;
+            $cardTextID = "card-text-id-";
+            $testTest = 'Hello World';
+
+            echo '
+            
+        <div class="Card" id='.str_replace(' ' , '-', $dataArray[$i]['projectName']).'>
+            <div class="CardImage" id="card-image-id-'.$counter.'">
+            
+            <style>
+            
+            #card-image-id-'.$counter.' {
+            background: url('.$dataArray[$i]['cardPicturePath'].') left, center no-repeat;
+            background-size: cover;
+            }
+            
+            </style>          
+                <div class="CardPlaque">'.$dataArray[$i]['cardPlaque'].'</div>
+                <div class="CardPlaqueMasque"></div>
+            </div>
+            <div class="CardText" id="'.$cardTextID.$counter.'">
+                <div class="CardTextTop"></div>
+                <div class="CardTextMiddle">'.$dataArray[$i]['cardTextMiddle'].'</div>
+                <div class="CardTextBottom"></div>
+            </div>
+            <div class="CardBase" id="card-base-id-'.$counter.'">
+                <div class="CardLeftButton" id="plaque-id-1" onclick="function foo(){
+                    
+                     var test = '.json_encode($testTest).';
+                    console.log(test);
+                    
+                };changeCardPlaque1()">
+                    <p>Statistics</p>
+                </div>
+                <div class="CardButtonOpenCode">
+                    <p>VIEW CODE</p>
+                </div>
+                <a href="Files/HTML_CSS_JS/AleksandarMladenovMyFirstWebsite.zip">
+                    <div class="CardRightButton">
+                    <p>Download</p>
+                </div></a>
+            </div>
+        </div>
+        
+        <script type="text/javascript">
+        
+        function changeCardPlaque(){
+        //const cardList = document.getElementById(e); // card class
+        
+        var hello = '.json_encode($cardTextID.$counter).';
+        
+        console.log(hello);
+        
+        }
+</script>
+            
+            ';
+
+        }
+
+        ?>
+
         <div class="Card" id="MyFirstWebsite">
             <div class="CardImage" id="Panel1CardImage1">
                 <div class="CardPlaque">Personal profile page</div>
@@ -46,8 +149,8 @@
                 </div>
                 <a href="Files/HTML_CSS_JS/AleksandarMladenovMyFirstWebsite.zip">
                     <div class="CardRightButton">
-                        <p>Download</p>
-                    </div></a>
+                    <p>Download</p>
+                </div></a>
             </div>
         </div>
 
@@ -85,7 +188,7 @@
                 <div class="CardTextMiddle">My Third Website was inspired by a historic figure. It gave me a chance to go deeper into CSS. Its not responsive and it maybe a little buggy but I became a card expert! Big Change for a few months time as this site was wrapping up 2019</div>
                 <div class="CardTextBottom"></div>
             </div>
-            <div class="CardBase" id="Panel1CardButton3">
+        <div class="CardBase" id="Panel1CardButton3">
                 <div class="CardLeftButton" id="Plaque2">
                     <p>Statistics</p>
                 </div>
@@ -104,7 +207,7 @@
                 <div class="CardPlaque">Quiz</div>
                 <div class="CardPlaqueMasque"></div>
             </div>
-            <div class="CardText" id="Panel1CardText4">
+        <div class="CardText" id="Panel1CardText4">
                 <div class="CardTextTop"></div>
                 <div class="CardTextMiddle"> The forth website that I build was an introduction to JavaScript. When I first heard of Java and JavaScript, I did not even know what the difference is. I am not sure I do now but hey with every build it becomes clearer. This introduced JavaScript into the equation. The Idea was to build a quiz which could be as simple or complicated as possible.</div>
                 <div class="CardTextBottom"></div>
@@ -147,29 +250,29 @@
             </div>
         </div>
 
-        <!--        <div class="Card" id="PortfolioWebsiteProffesional">-->
-        <!--            <div class="CardImage" id="Panel1CardImage6">-->
-        <!--                <div class="CardPlaque">Portfolio Website V.1</div>-->
-        <!--                <div class="CardPlaqueMasque"></div>-->
-        <!--            </div>-->
-        <!--            <div class="CardText" id="Panel1CardText6">-->
-        <!--                <div class="CardTextTop"></div>-->
-        <!--                <div class="CardTextMiddle">The final work in progress version of my portfolio website. This version is concentrated on mobile friendly design and speedy web browsing. In the future i hope to implement a 2D and 3D game mode version of the website </div>-->
-        <!--                <div class="CardTextBottom"></div>-->
-        <!--            </div>-->
-        <!--            <div class="CardBase" id="Panel1CardButton6">-->
-        <!--                <div class="CardLeftButton" id="Plaque10">-->
-        <!--                    <p>Statistics</p>-->
-        <!--                </div>-->
-        <!--                <div class="CardButtonOpenCode">-->
-        <!--                    <p>VIEW CODE</p>-->
-        <!--                </div>-->
-        <!--                <a href="Files/HTML_CSS_JS/AleksandarMladenovMyFifthWebsite.zip">-->
-        <!--                    <div class="CardRightButton">-->
-        <!--                        <p>Download</p>-->
-        <!--                    </div></a>-->
-        <!--            </div>-->
-        <!--        </div>-->
+<!--        <div class="Card" id="PortfolioWebsiteProffesional">-->
+<!--            <div class="CardImage" id="Panel1CardImage6">-->
+<!--                <div class="CardPlaque">Portfolio Website V.1</div>-->
+<!--                <div class="CardPlaqueMasque"></div>-->
+<!--            </div>-->
+<!--            <div class="CardText" id="Panel1CardText6">-->
+<!--                <div class="CardTextTop"></div>-->
+<!--                <div class="CardTextMiddle">The final work in progress version of my portfolio website. This version is concentrated on mobile friendly design and speedy web browsing. In the future i hope to implement a 2D and 3D game mode version of the website </div>-->
+<!--                <div class="CardTextBottom"></div>-->
+<!--            </div>-->
+<!--            <div class="CardBase" id="Panel1CardButton6">-->
+<!--                <div class="CardLeftButton" id="Plaque10">-->
+<!--                    <p>Statistics</p>-->
+<!--                </div>-->
+<!--                <div class="CardButtonOpenCode">-->
+<!--                    <p>VIEW CODE</p>-->
+<!--                </div>-->
+<!--                <a href="Files/HTML_CSS_JS/AleksandarMladenovMyFifthWebsite.zip">-->
+<!--                    <div class="CardRightButton">-->
+<!--                        <p>Download</p>-->
+<!--                    </div></a>-->
+<!--            </div>-->
+<!--        </div>-->
 
 
     </section>
@@ -341,9 +444,9 @@
         <div class="BodyWrapper">
             <div class="RequirementsSection">
                 <div class="DocumentTabs">
-                    <!--                    <div class="DocumentButton">-->
-                    <!--                        <div class="DocumentButtonInner">Lorem ipsum dolor sit amet</div>-->
-                    <!--                    </div>-->
+<!--                    <div class="DocumentButton">-->
+<!--                        <div class="DocumentButtonInner">Lorem ipsum dolor sit amet</div>-->
+<!--                    </div>-->
                 </div>
                 <div class="DocumentOutputWindow">
                     <iframe class="outputDocuments" id="populateDocumentsIframe" src=""></iframe>

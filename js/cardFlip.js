@@ -1,5 +1,3 @@
-
-
 let cardsClassArray= document.getElementsByClassName('Card'); // every element in the cards class inside this arrary
 const overlay = document.querySelector(".OverLay");
 const projectsWrapper = document.getElementById("ProjectsWrapper");
@@ -31,31 +29,31 @@ var projectReference;
 
 
 for (var i=0; i<cardsClassArray.length; i++) {
-        cardsClassArray[i].addEventListener("click", function (e){
+    cardsClassArray[i].addEventListener("click", function (e){
 
-            let clickedElement = e.target;
+        let clickedElement = e.target;
 
-            // console.log("cardsClassArray[i]")
-            //
-            // console.log(cardsClassArray[i])
-            //
-            // console.log(e.target)
+        // console.log("cardsClassArray[i]")
+        //
+        // console.log(cardsClassArray[i])
+        //
+        // console.log(e.target)
 
 
 
-            for (i=0; i<cardsClassArray.length; i++) {
+        for (i=0; i<cardsClassArray.length; i++) {
 
-                if (clickedElement === cardsClassArray[i] ||
-                    clickedElement.parentElement === cardsClassArray[i] ||
-                    clickedElement === cardsClassArray[i].childNodes[5].childNodes[3] ||
-                    clickedElement === cardsClassArray[i].childNodes[5].childNodes[3].childNodes[1]){
+            if (clickedElement === cardsClassArray[i] ||
+                clickedElement.parentElement === cardsClassArray[i] ||
+                clickedElement === cardsClassArray[i].childNodes[5].childNodes[3] ||
+                clickedElement === cardsClassArray[i].childNodes[5].childNodes[3].childNodes[1]){
 
-                    overlayBuilder(cardsClassArray[i]);
-                    break;
-                }
+                overlayBuilder(cardsClassArray[i]);
+                break;
             }
+        }
 
-            // cardsClassArray[i].childNodes[5].childNodes[3]
+        // cardsClassArray[i].childNodes[5].childNodes[3]
 
     })
 }
@@ -428,32 +426,32 @@ function overlayBuilder (e) { // build overlay for each project depending on car
 
                     document.getElementById("populateDocumentsIframe").src = "https://www.meetalex.org/0003-My-Third-Website/Index.html"  // AMEND
 
-                        documentButtonInner[0].textContent = "View Website";
+                    documentButtonInner[0].textContent = "View Website";
 
-                        documentButtonInner[0].onclick = () => {
-                            document.getElementById("populateDocumentsIframe").src="https://www.meetalex.org/0003-My-Third-Website/Index.html";
+                    documentButtonInner[0].onclick = () => {
+                        document.getElementById("populateDocumentsIframe").src="https://www.meetalex.org/0003-My-Third-Website/Index.html";
 
-                        }
-                        documentButtonInner[1].textContent = "Open Website in a Separate Window";
+                    }
+                    documentButtonInner[1].textContent = "Open Website in a Separate Window";
 
-                        documentButtonInner[1].onclick = () => {
-                            window.open("https://www.meetalex.org/0003-My-Third-Website/Index.html")
+                    documentButtonInner[1].onclick = () => {
+                        window.open("https://www.meetalex.org/0003-My-Third-Website/Index.html")
 
-                        }
+                    }
 
-                        documentButtonInner[2].textContent = "Introduction";
+                    documentButtonInner[2].textContent = "Introduction";
 
-                        documentButtonInner[2].onclick = () => {
-                            document.getElementById("populateDocumentsIframe").src="ProjectsData/0003_MyThirdWebsite/PreviewDocs/introduction.pdf";
+                    documentButtonInner[2].onclick = () => {
+                        document.getElementById("populateDocumentsIframe").src="ProjectsData/0003_MyThirdWebsite/PreviewDocs/introduction.pdf";
 
-                        }
+                    }
 
-                        documentButtonInner[3].textContent = "Document Requirements";
+                    documentButtonInner[3].textContent = "Document Requirements";
 
-                        documentButtonInner[3].onclick = () => {
-                            document.getElementById("populateDocumentsIframe").src="ProjectsData/0003_MyThirdWebsite/PreviewDocs/Requiremetns.pdf";
+                    documentButtonInner[3].onclick = () => {
+                        document.getElementById("populateDocumentsIframe").src="ProjectsData/0003_MyThirdWebsite/PreviewDocs/Requiremetns.pdf";
 
-                        }
+                    }
 
 
 
@@ -569,90 +567,90 @@ function overlayBuilder (e) { // build overlay for each project depending on car
 
                 case "MyForthWebsite":
 
-                        gitHubOverlayLink.href="https://github.com/RickyIE/Website-Project-4"; // AMEND
-                        downloadCodeOverlayLink.href="Files/HTML_CSS_JS/AleksandarMladenovMyForthWebsite.zip"; // AMEND
-                        projectReference = "MyForthWebsite"; // AMEND
+                    gitHubOverlayLink.href="https://github.com/RickyIE/Website-Project-4"; // AMEND
+                    downloadCodeOverlayLink.href="Files/HTML_CSS_JS/AleksandarMladenovMyForthWebsite.zip"; // AMEND
+                    projectReference = "MyForthWebsite"; // AMEND
 
 
 
-                        for (var j=0; j<4; j++) { // AMEND
-                            documentButton[j] = document.createElement('div');
-                            documentButton[j].setAttribute('class', 'DocumentButton');
-                            documentTabsSelector.appendChild(documentButton[j]);
+                    for (var j=0; j<4; j++) { // AMEND
+                        documentButton[j] = document.createElement('div');
+                        documentButton[j].setAttribute('class', 'DocumentButton');
+                        documentTabsSelector.appendChild(documentButton[j]);
 
-                            documentButtonInner[j] = document.createElement("div");
-                            documentButtonInner[j].setAttribute("class", "DocumentButtonInner");
-                            documentButtonInner[j].textContent = "Placeholder";
-                            documentButton[j].appendChild(documentButtonInner[j]);
+                        documentButtonInner[j] = document.createElement("div");
+                        documentButtonInner[j].setAttribute("class", "DocumentButtonInner");
+                        documentButtonInner[j].textContent = "Placeholder";
+                        documentButton[j].appendChild(documentButtonInner[j]);
 
-                        }
+                    }
 
-                        document.getElementById("populateDocumentsIframe").src = "https://www.meetalex.org/0004-My-Fourth-Website/index.html"  // AMEND
+                    document.getElementById("populateDocumentsIframe").src = "https://www.meetalex.org/0004-My-Fourth-Website/index.html"  // AMEND
 
-                        documentButtonInner[0].textContent = "View Website";
+                    documentButtonInner[0].textContent = "View Website";
 
-                        documentButtonInner[0].onclick = () => {
-                            document.getElementById("populateDocumentsIframe").src="https://www.meetalex.org/0004-My-Fourth-Website/index.html";
+                    documentButtonInner[0].onclick = () => {
+                        document.getElementById("populateDocumentsIframe").src="https://www.meetalex.org/0004-My-Fourth-Website/index.html";
 
-                        }
+                    }
 
-                        documentButtonInner[1].textContent = "Open Website in a Separate Window";
+                    documentButtonInner[1].textContent = "Open Website in a Separate Window";
 
-                        documentButtonInner[1].onclick = () => {
-                            window.open("https://www.meetalex.org/0004-My-Fourth-Website/index.html");
+                    documentButtonInner[1].onclick = () => {
+                        window.open("https://www.meetalex.org/0004-My-Fourth-Website/index.html");
 
-                        }
+                    }
 
-                        documentButtonInner[2].textContent = "Introduction";
+                    documentButtonInner[2].textContent = "Introduction";
 
-                        documentButtonInner[2].onclick = () => {
-                            document.getElementById("populateDocumentsIframe").src="ProjectsData/0004_MyForthWebsite/PreviewDocs/Introduction.pdf";
+                    documentButtonInner[2].onclick = () => {
+                        document.getElementById("populateDocumentsIframe").src="ProjectsData/0004_MyForthWebsite/PreviewDocs/Introduction.pdf";
 
-                        }
+                    }
 
-                        documentButtonInner[3].textContent = "Requirements";
+                    documentButtonInner[3].textContent = "Requirements";
 
-                        documentButtonInner[3].onclick = () => {
-                            document.getElementById("populateDocumentsIframe").src="ProjectsData/0004_MyForthWebsite/PreviewDocs/Requiremetns.pdf";
+                    documentButtonInner[3].onclick = () => {
+                        document.getElementById("populateDocumentsIframe").src="ProjectsData/0004_MyForthWebsite/PreviewDocs/Requiremetns.pdf";
 
-                        }
+                    }
 
 
 
-                        for (var k=0; k<3; k++) {
-                            codeTabButton[k] = document.createElement('div');
-                            codeTabButton[k].setAttribute('class', 'CodeTabButton');
-                            codeTabsSelector.appendChild(codeTabButton[k]);
+                    for (var k=0; k<3; k++) {
+                        codeTabButton[k] = document.createElement('div');
+                        codeTabButton[k].setAttribute('class', 'CodeTabButton');
+                        codeTabsSelector.appendChild(codeTabButton[k]);
 
-                            codeTabButtonInner[k] = document.createElement("div");
-                            codeTabButtonInner[k].setAttribute("class", "CodeTabButtonInner");
-                            codeTabButtonInner[k].textContent = "Placeholder";
-                            codeTabButton[k].appendChild(codeTabButtonInner[k]);
+                        codeTabButtonInner[k] = document.createElement("div");
+                        codeTabButtonInner[k].setAttribute("class", "CodeTabButtonInner");
+                        codeTabButtonInner[k].textContent = "Placeholder";
+                        codeTabButton[k].appendChild(codeTabButtonInner[k]);
 
-                        }
+                    }
 
-                        document.getElementById("populateCodeIframe").src = "ProjectsData/0004_MyForthWebsite/PreviewDocs/index.pdf"  // AMEND
+                    document.getElementById("populateCodeIframe").src = "ProjectsData/0004_MyForthWebsite/PreviewDocs/index.pdf"  // AMEND
 
-                        codeTabButtonInner[0].textContent = "index.php";
+                    codeTabButtonInner[0].textContent = "index.php";
 
-                        codeTabButtonInner[0].onclick = () => {
-                            document.getElementById("populateCodeIframe").src="ProjectsData/0004_MyForthWebsite/PreviewDocs/index.pdf"
+                    codeTabButtonInner[0].onclick = () => {
+                        document.getElementById("populateCodeIframe").src="ProjectsData/0004_MyForthWebsite/PreviewDocs/index.pdf"
 
-                        }
+                    }
 
-                        codeTabButtonInner[1].textContent = "style.css";
+                    codeTabButtonInner[1].textContent = "style.css";
 
-                        codeTabButtonInner[1].onclick = () => {
-                            document.getElementById("populateCodeIframe").src="ProjectsData/0004_MyForthWebsite/PreviewDocs/style_css.pdf"
+                    codeTabButtonInner[1].onclick = () => {
+                        document.getElementById("populateCodeIframe").src="ProjectsData/0004_MyForthWebsite/PreviewDocs/style_css.pdf"
 
-                        }
+                    }
 
-                        codeTabButtonInner[2].textContent = "app.js";
+                    codeTabButtonInner[2].textContent = "app.js";
 
-                        codeTabButtonInner[2].onclick = () => {
-                            document.getElementById("populateCodeIframe").src="ProjectsData/0004_MyForthWebsite/PreviewDocs/app_js.pdf"
+                    codeTabButtonInner[2].onclick = () => {
+                        document.getElementById("populateCodeIframe").src="ProjectsData/0004_MyForthWebsite/PreviewDocs/app_js.pdf"
 
-                        }
+                    }
 
                     cardFlip(cardsClassArray[i]);
                     break;
@@ -660,143 +658,143 @@ function overlayBuilder (e) { // build overlay for each project depending on car
                 case "MyFifthWebsite":
 
                     gitHubOverlayLink.href="https://github.com/RickyIE/Website-Project-5"; // AMEND
-                        downloadCodeOverlayLink.href="Files/HTML_CSS_JS/AleksandarMladenovMyFifthWebsite.zip"; // AMEND
-                        projectReference = "MyFifthWebsite"; // AMEND
+                    downloadCodeOverlayLink.href="Files/HTML_CSS_JS/AleksandarMladenovMyFifthWebsite.zip"; // AMEND
+                    projectReference = "MyFifthWebsite"; // AMEND
 
 
 
-                        for (var j=0; j<4; j++) { // AMEND
-                            documentButton[j] = document.createElement('div');
-                            documentButton[j].setAttribute('class', 'DocumentButton');
-                            documentTabsSelector.appendChild(documentButton[j]);
+                    for (var j=0; j<4; j++) { // AMEND
+                        documentButton[j] = document.createElement('div');
+                        documentButton[j].setAttribute('class', 'DocumentButton');
+                        documentTabsSelector.appendChild(documentButton[j]);
 
-                            documentButtonInner[j] = document.createElement("div");
-                            documentButtonInner[j].setAttribute("class", "DocumentButtonInner");
-                            documentButtonInner[j].textContent = "Placeholder";
-                            documentButton[j].appendChild(documentButtonInner[j]);
+                        documentButtonInner[j] = document.createElement("div");
+                        documentButtonInner[j].setAttribute("class", "DocumentButtonInner");
+                        documentButtonInner[j].textContent = "Placeholder";
+                        documentButton[j].appendChild(documentButtonInner[j]);
 
-                        }
+                    }
 
-                        document.getElementById("populateDocumentsIframe").src = "https://www.meetalex.org/0005-My-Fifth-Website/index.html"  // AMEND
+                    document.getElementById("populateDocumentsIframe").src = "https://www.meetalex.org/0005-My-Fifth-Website/index.html"  // AMEND
 
-                        documentButtonInner[0].textContent = "View Website";
+                    documentButtonInner[0].textContent = "View Website";
 
-                        documentButtonInner[0].onclick = () => {
-                            document.getElementById("populateDocumentsIframe").src="https://www.meetalex.org/0005-My-Fifth-Website/index.html";
+                    documentButtonInner[0].onclick = () => {
+                        document.getElementById("populateDocumentsIframe").src="https://www.meetalex.org/0005-My-Fifth-Website/index.html";
 
-                        }
-                        documentButtonInner[1].textContent = "Open Website in a Separate Window";
+                    }
+                    documentButtonInner[1].textContent = "Open Website in a Separate Window";
 
-                        documentButtonInner[1].onclick = () => {
-                            window.open("https://www.meetalex.org/0005-My-Fifth-Website/index.html");
+                    documentButtonInner[1].onclick = () => {
+                        window.open("https://www.meetalex.org/0005-My-Fifth-Website/index.html");
 
-                        }
+                    }
 
-                        documentButtonInner[2].textContent = "Introduction";
-                        documentButtonInner[2].onclick = () => {
-                            document.getElementById("populateDocumentsIframe").src="ProjectsData/0005_MyFifthWebsite/PreviewDocs/Introduction.pdf";
+                    documentButtonInner[2].textContent = "Introduction";
+                    documentButtonInner[2].onclick = () => {
+                        document.getElementById("populateDocumentsIframe").src="ProjectsData/0005_MyFifthWebsite/PreviewDocs/Introduction.pdf";
 
-                        }
+                    }
 
-                        documentButtonInner[3].textContent = "Requirements";
-                        documentButtonInner[3].onclick = () => {
-                            document.getElementById("populateDocumentsIframe").src="ProjectsData/0005_MyFifthWebsite/PreviewDocs/Requirements.pdf";
+                    documentButtonInner[3].textContent = "Requirements";
+                    documentButtonInner[3].onclick = () => {
+                        document.getElementById("populateDocumentsIframe").src="ProjectsData/0005_MyFifthWebsite/PreviewDocs/Requirements.pdf";
 
-                        }
-
-
-
-                        for (var k=0; k<10; k++) {
-                            codeTabButton[k] = document.createElement('div');
-                            codeTabButton[k].setAttribute('class', 'CodeTabButton');
-                            codeTabsSelector.appendChild(codeTabButton[k]);
-
-                            codeTabButtonInner[k] = document.createElement("div");
-                            codeTabButtonInner[k].setAttribute("class", "CodeTabButtonInner");
-                            codeTabButtonInner[k].textContent = "Placeholder";
-                            codeTabButton[k].appendChild(codeTabButtonInner[k]);
-
-                        }
-
-                        document.getElementById("populateCodeIframe").src = "ProjectsData/0005_MyFifthWebsite/PreviewDocs/index_html.pdf"  // AMEND
-
-                        codeTabButtonInner[0].textContent = "Index.html";
-
-                        codeTabButtonInner[0].onclick = () => {
-                            document.getElementById("populateCodeIframe").src="ProjectsData/0005_MyFifthWebsite/PreviewDocs/index_html.pdf"
-
-                        }
+                    }
 
 
-                        codeTabButtonInner[1].textContent = "Dublin.html";
 
-                        codeTabButtonInner[1].onclick = () => {
-                            document.getElementById("populateCodeIframe").src="ProjectsData/0005_MyFifthWebsite/PreviewDocs/Dublin_html.pdf"
+                    for (var k=0; k<10; k++) {
+                        codeTabButton[k] = document.createElement('div');
+                        codeTabButton[k].setAttribute('class', 'CodeTabButton');
+                        codeTabsSelector.appendChild(codeTabButton[k]);
 
-                        }
+                        codeTabButtonInner[k] = document.createElement("div");
+                        codeTabButtonInner[k].setAttribute("class", "CodeTabButtonInner");
+                        codeTabButtonInner[k].textContent = "Placeholder";
+                        codeTabButton[k].appendChild(codeTabButtonInner[k]);
 
+                    }
 
-                        codeTabButtonInner[2].textContent = "Cork.html";
+                    document.getElementById("populateCodeIframe").src = "ProjectsData/0005_MyFifthWebsite/PreviewDocs/index_html.pdf"  // AMEND
 
-                        codeTabButtonInner[2].onclick = () => {
-                            document.getElementById("populateCodeIframe").src="ProjectsData/0005_MyFifthWebsite/PreviewDocs/Cork_html.pdf"
+                    codeTabButtonInner[0].textContent = "Index.html";
 
-                        }
+                    codeTabButtonInner[0].onclick = () => {
+                        document.getElementById("populateCodeIframe").src="ProjectsData/0005_MyFifthWebsite/PreviewDocs/index_html.pdf"
 
-
-                        codeTabButtonInner[3].textContent = "Limerick.html";
-
-                        codeTabButtonInner[3].onclick = () => {
-                            document.getElementById("populateCodeIframe").src="ProjectsData/0005_MyFifthWebsite/PreviewDocs/Limerick_html.pdf"
-
-                        }
-
-
-                        codeTabButtonInner[4].textContent = "Galway.html";
-
-                        codeTabButtonInner[4].onclick = () => {
-                            document.getElementById("populateCodeIframe").src="ProjectsData/0005_MyFifthWebsite/PreviewDocs/Galway_html.pdf"
-
-                        }
-
-                        codeTabButtonInner[5].textContent = "Waterford.html";
-
-                        codeTabButtonInner[5].onclick = () => {
-                            document.getElementById("populateCodeIframe").src="ProjectsData/0005_MyFifthWebsite/PreviewDocs/Waterford_html.pdf"
-
-                        }
+                    }
 
 
-                        codeTabButtonInner[6].textContent = "Drogheda.html";
+                    codeTabButtonInner[1].textContent = "Dublin.html";
 
-                        codeTabButtonInner[6].onclick = () => {
-                            document.getElementById("populateCodeIframe").src="ProjectsData/0005_MyFifthWebsite/PreviewDocs/Drogheda_html.pdf"
+                    codeTabButtonInner[1].onclick = () => {
+                        document.getElementById("populateCodeIframe").src="ProjectsData/0005_MyFifthWebsite/PreviewDocs/Dublin_html.pdf"
 
-                        }
-
-
-                        codeTabButtonInner[7].textContent = "About.html";
-
-                        codeTabButtonInner[7].onclick = () => {
-                            document.getElementById("populateCodeIframe").src="ProjectsData/0005_MyFifthWebsite/PreviewDocs/About_html.pdf"
-
-                        }
+                    }
 
 
-                        codeTabButtonInner[8].textContent = "Style.css";
+                    codeTabButtonInner[2].textContent = "Cork.html";
 
-                        codeTabButtonInner[8].onclick = () => {
-                            document.getElementById("populateCodeIframe").src="ProjectsData/0005_MyFifthWebsite/PreviewDocs/Style.pdf"
+                    codeTabButtonInner[2].onclick = () => {
+                        document.getElementById("populateCodeIframe").src="ProjectsData/0005_MyFifthWebsite/PreviewDocs/Cork_html.pdf"
 
-                        }
+                    }
 
 
-                        codeTabButtonInner[9].textContent = "App.js";
+                    codeTabButtonInner[3].textContent = "Limerick.html";
 
-                        codeTabButtonInner[9].onclick = () => {
-                            document.getElementById("populateCodeIframe").src="ProjectsData/0005_MyFifthWebsite/PreviewDocs/app_js.pdf"
+                    codeTabButtonInner[3].onclick = () => {
+                        document.getElementById("populateCodeIframe").src="ProjectsData/0005_MyFifthWebsite/PreviewDocs/Limerick_html.pdf"
 
-                        }
+                    }
+
+
+                    codeTabButtonInner[4].textContent = "Galway.html";
+
+                    codeTabButtonInner[4].onclick = () => {
+                        document.getElementById("populateCodeIframe").src="ProjectsData/0005_MyFifthWebsite/PreviewDocs/Galway_html.pdf"
+
+                    }
+
+                    codeTabButtonInner[5].textContent = "Waterford.html";
+
+                    codeTabButtonInner[5].onclick = () => {
+                        document.getElementById("populateCodeIframe").src="ProjectsData/0005_MyFifthWebsite/PreviewDocs/Waterford_html.pdf"
+
+                    }
+
+
+                    codeTabButtonInner[6].textContent = "Drogheda.html";
+
+                    codeTabButtonInner[6].onclick = () => {
+                        document.getElementById("populateCodeIframe").src="ProjectsData/0005_MyFifthWebsite/PreviewDocs/Drogheda_html.pdf"
+
+                    }
+
+
+                    codeTabButtonInner[7].textContent = "About.html";
+
+                    codeTabButtonInner[7].onclick = () => {
+                        document.getElementById("populateCodeIframe").src="ProjectsData/0005_MyFifthWebsite/PreviewDocs/About_html.pdf"
+
+                    }
+
+
+                    codeTabButtonInner[8].textContent = "Style.css";
+
+                    codeTabButtonInner[8].onclick = () => {
+                        document.getElementById("populateCodeIframe").src="ProjectsData/0005_MyFifthWebsite/PreviewDocs/Style.pdf"
+
+                    }
+
+
+                    codeTabButtonInner[9].textContent = "App.js";
+
+                    codeTabButtonInner[9].onclick = () => {
+                        document.getElementById("populateCodeIframe").src="ProjectsData/0005_MyFifthWebsite/PreviewDocs/app_js.pdf"
+
+                    }
 
 
                     cardFlip(cardsClassArray[i]);
@@ -804,61 +802,61 @@ function overlayBuilder (e) { // build overlay for each project depending on car
 
                 case "JavaLotteryGame":
 
-                        gitHubOverlayLink.href="https://github.com/RickyIE/Java-Lottery-Game"; // AMEND
-                        downloadCodeOverlayLink.href="Files/Java/AleksandarMladenovLotteryGame.zip"; // AMEND
-                        projectReference = "JavaLotteryGame"; // AMEND
+                    gitHubOverlayLink.href="https://github.com/RickyIE/Java-Lottery-Game"; // AMEND
+                    downloadCodeOverlayLink.href="Files/Java/AleksandarMladenovLotteryGame.zip"; // AMEND
+                    projectReference = "JavaLotteryGame"; // AMEND
 
 
 
-                        for (var j=0; j<2; j++) { // AMEND
-                            documentButton[j] = document.createElement('div');
-                            documentButton[j].setAttribute('class', 'DocumentButton');
-                            documentTabsSelector.appendChild(documentButton[j]);
+                    for (var j=0; j<2; j++) { // AMEND
+                        documentButton[j] = document.createElement('div');
+                        documentButton[j].setAttribute('class', 'DocumentButton');
+                        documentTabsSelector.appendChild(documentButton[j]);
 
-                            documentButtonInner[j] = document.createElement("div");
-                            documentButtonInner[j].setAttribute("class", "DocumentButtonInner");
-                            documentButtonInner[j].textContent = "Placeholder";
-                            documentButton[j].appendChild(documentButtonInner[j]);
+                        documentButtonInner[j] = document.createElement("div");
+                        documentButtonInner[j].setAttribute("class", "DocumentButtonInner");
+                        documentButtonInner[j].textContent = "Placeholder";
+                        documentButton[j].appendChild(documentButtonInner[j]);
 
-                        }
+                    }
 
-                        document.getElementById("populateDocumentsIframe").src = "ProjectsData/0006_LotteryGame/Documents/introduction.pdf"  // AMEND
+                    document.getElementById("populateDocumentsIframe").src = "ProjectsData/0006_LotteryGame/Documents/introduction.pdf"  // AMEND
 
-                        documentButtonInner[0].textContent = "Introduction";
+                    documentButtonInner[0].textContent = "Introduction";
 
-                        documentButtonInner[0].onclick = () => {
-                            document.getElementById("populateDocumentsIframe").src="ProjectsData/0006_LotteryGame/Documents/introduction.pdf";
+                    documentButtonInner[0].onclick = () => {
+                        document.getElementById("populateDocumentsIframe").src="ProjectsData/0006_LotteryGame/Documents/introduction.pdf";
 
-                        }
-                        documentButtonInner[1].textContent = "Requirements";
+                    }
+                    documentButtonInner[1].textContent = "Requirements";
 
-                        documentButtonInner[1].onclick = () => {
-                            document.getElementById("populateDocumentsIframe").src="ProjectsData/0006_LotteryGame/Documents/Assignment1.pdf";
+                    documentButtonInner[1].onclick = () => {
+                        document.getElementById("populateDocumentsIframe").src="ProjectsData/0006_LotteryGame/Documents/Assignment1.pdf";
 
-                        }
+                    }
 
 
 
-                        for (var k=0; k<1; k++) {
-                            codeTabButton[k] = document.createElement('div');
-                            codeTabButton[k].setAttribute('class', 'CodeTabButton');
-                            codeTabsSelector.appendChild(codeTabButton[k]);
+                    for (var k=0; k<1; k++) {
+                        codeTabButton[k] = document.createElement('div');
+                        codeTabButton[k].setAttribute('class', 'CodeTabButton');
+                        codeTabsSelector.appendChild(codeTabButton[k]);
 
-                            codeTabButtonInner[k] = document.createElement("div");
-                            codeTabButtonInner[k].setAttribute("class", "CodeTabButtonInner");
-                            codeTabButtonInner[k].textContent = "Placeholder";
-                            codeTabButton[k].appendChild(codeTabButtonInner[k]);
+                        codeTabButtonInner[k] = document.createElement("div");
+                        codeTabButtonInner[k].setAttribute("class", "CodeTabButtonInner");
+                        codeTabButtonInner[k].textContent = "Placeholder";
+                        codeTabButton[k].appendChild(codeTabButtonInner[k]);
 
-                        }
+                    }
 
-                        document.getElementById("populateCodeIframe").src = "ProjectsData/0006_LotteryGame/Code/LotteryGameAlex2.pdf"  // AMEND
+                    document.getElementById("populateCodeIframe").src = "ProjectsData/0006_LotteryGame/Code/LotteryGameAlex2.pdf"  // AMEND
 
-                        codeTabButtonInner[0].textContent = "LotteryGameAlex2.java";
+                    codeTabButtonInner[0].textContent = "LotteryGameAlex2.java";
 
-                        codeTabButtonInner[0].onclick = () => {
-                            document.getElementById("populateCodeIframe").src="ProjectsData/0006_LotteryGame/Code/LotteryGameAlex2.pdf"
+                    codeTabButtonInner[0].onclick = () => {
+                        document.getElementById("populateCodeIframe").src="ProjectsData/0006_LotteryGame/Code/LotteryGameAlex2.pdf"
 
-                        }
+                    }
 
                     cardFlip(cardsClassArray[i]);
                     break;
@@ -1221,38 +1219,38 @@ function overlayButtonsControl (e) {
 
 function cardFlip(card){
 
-        currentCardOnDisplay = card;
+    currentCardOnDisplay = card;
 
 
-        if (flipped === false) {
-            card.style.transform = "scale(0.3)";
-            card.style.zIndex = "2000";
-            card.style.rotate = "-5deg";
-            document.querySelector(".HaloIcon").appendChild(card);
+    if (flipped === false) {
+        card.style.transform = "scale(0.3)";
+        card.style.zIndex = "2000";
+        card.style.rotate = "-5deg";
+        document.querySelector(".HaloIcon").appendChild(card);
 
-            projectsWrapper.style.filter = "blur(10px)";
-            overlay.style.display = "grid";
-            flipped = true;
-            console.log(card)
-        }
-        else if (flipped === true) {
-            for(var i=0; i<cardsOriginalValues.length; i++) {
-                if (card === cardsOriginalValues[i][0]) {
+        projectsWrapper.style.filter = "blur(10px)";
+        overlay.style.display = "grid";
+        flipped = true;
+        console.log(card)
+    }
+    else if (flipped === true) {
+        for(var i=0; i<cardsOriginalValues.length; i++) {
+            if (card === cardsOriginalValues[i][0]) {
 
-                    card.style.transform = cardsOriginalValues [i][1]
-                    card.style.zIndex = cardsOriginalValues [i][2];
-                    card.style.rotate = cardsOriginalValues [i][3];
-                    var cardClassName = "." + cardsOriginalValues [i][4];
-                    document.querySelector(cardClassName).append(card);
-                    break;
-                }
+                card.style.transform = cardsOriginalValues [i][1]
+                card.style.zIndex = cardsOriginalValues [i][2];
+                card.style.rotate = cardsOriginalValues [i][3];
+                var cardClassName = "." + cardsOriginalValues [i][4];
+                document.querySelector(cardClassName).append(card);
+                break;
             }
-
-
-            projectsWrapper.style.filter = "none";
-            overlay.style.display = "none";
-            flipped = false;
         }
+
+
+        projectsWrapper.style.filter = "none";
+        overlay.style.display = "none";
+        flipped = false;
+    }
 }
 
 
