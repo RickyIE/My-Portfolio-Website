@@ -1,3 +1,13 @@
+
+<!-- Author: Aleksandar Tsankov Mladenov
+
+    Project: Smartsode intern application.If you have any issues running the code the live version is up on the below
+    address and can be viewed from a range of devices. It's fully responsive for mobile, tablet, large screen TV ext.
+
+    Domain: https://meetalex.org/interview/smartsode/smart-sode-index.html
+    (it's not a virus I promise this is a good, honest, hard-working link a trustworthy link )
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +16,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <meta name="viewport" content="width=device-width, initial - scale=1.0">
     <!-- Meta tag to scale for mobile devices setting the scale to 1 to avoid elements appearing to small   -->
-    <link href="../../CSS/all.css" rel="stylesheet"> <!-- CSS reference for font awesome  -->
+    <link href="css-font-awesome/all.css
+" rel="stylesheet"> <!-- add font awesome-->
 
     <style>
 
@@ -20,7 +31,7 @@
         }
 
         body {
-            background: url("abstract-background-1061100_1920.jpg") fixed no-repeat;
+            background: url("images/abstract-background-1061100_1920.jpg") fixed no-repeat;
             /*Credits - https://pixabay.com/bg/illustrations/%D0%B0%D0%B1%D1%81%D1%82%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D0%BD-%D1%84%D0%BE%D0%BD-%D0%B0%D0%B1%D1%81%D1%82%D1%80%D0%B0%D0%BA%D1%82%D0%BD%D0%BE-%D0%BC%D0%B8%D0%BD%D0%B8%D0%BC%D0%B0%D0%BB%D0%BD%D0%BE-1061100/*/
             background-size: cover;
             margin: 0;
@@ -450,6 +461,28 @@
                 font-size: 0.8rem;
             }
 
+            .fab {
+                color: limegreen;
+                font-size: 2rem;
+            }
+
+            .fas {
+                font-size: 2rem;
+                color: limegreen;
+            }
+
+            .fab:hover, .fas:hover{
+                transform: scale(1.3);
+                color: orange;
+                cursor: pointer;
+
+            }
+            .fab:active, .fas:active{
+                transform: scale(0.980);
+
+            }
+
+
             /*  ---------------------------------------- Footer ---------------------------------------- */
             /*  ---------------------------------------- Projects ---------------------------------------- */
             .panel {
@@ -501,7 +534,7 @@
                 <br><a href="https://meetalex.org/interview/smartsode/smart-sode-index.html" target="_blank"><span
                             style="color:whitesmoke">
                 https://meetalex.org/interview/smartsode/smart-sode-index.html</span></a>
-                <br>(it's not a virus I promise this is a good, honest, hard-working link )
+                <br>(it's not a virus I promise this is a good, honest, hard-working link a trustworthy link)
             </p></div>
         <div class="text-panel"><p>Task 1 </p></div>
 
@@ -553,7 +586,7 @@
         <div class="social-content-load-bar-bottom"></div>
     </div>
     <div class="footer-section-3"></div>
-    <div class="disclaimer"><p>* Made with love and i little bit of code :)</p></div>
+    <div class="disclaimer"><p>* Made with love and a little bit of code :)</p></div>
 </footer>
 </body>
 </html>
@@ -595,7 +628,6 @@
         document.querySelector(".FooterSection1").style.filter = "none";
         document.querySelector(".FooterSection3").style.filter = "none";
         document.querySelector(".footer-section-2").style.transform = "Scale(1.000)";
-        alert("Hello")
     }
 
     function clearText() {
