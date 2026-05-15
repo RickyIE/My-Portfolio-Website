@@ -30,7 +30,7 @@
     </section>
     <section class="MyCV">
         <div class="MyCVContainer">
-            <iframe class="CV" src="Documents/AleksandarMladenovCV.pdf"></iframe>
+            <iframe class="CV" src="Documents/Aleksandar_Mladenov_CV.pdf"></iframe>
         </div>
     </section>
     <section class="Education">
